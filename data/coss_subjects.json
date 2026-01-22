@@ -1,0 +1,243 @@
+[
+  {
+    "id": "COSS_01",
+    "title": "Introduction to Programming",
+    "concepts": [
+      "Variables",
+      "Control Flow",
+      "Functions",
+      "Syntax",
+      "Debugging"
+    ],
+    "prerequisites": [],
+    "coss_link": "Foundation",
+    "competency": "Basic Python Coding"
+  },
+  {
+    "id": "COSS_02",
+    "title": "Data Structures",
+    "concepts": [
+      "Arrays",
+      "Linked Lists",
+      "Stacks",
+      "Queues",
+      "Trees",
+      "Graphs"
+    ],
+    "prerequisites": [
+      "COSS_01"
+    ],
+    "coss_link": "CS Core",
+    "competency": "Data Organization"
+  },
+  {
+    "id": "COSS_03",
+    "title": "Algorithms",
+    "concepts": [
+      "Sorting",
+      "Searching",
+      "Recursion",
+      "Dynamic Programming",
+      "Optimization",
+      "Complexity"
+    ],
+    "prerequisites": [
+      "COSS_02"
+    ],
+    "coss_link": "CS Core",
+    "competency": "Problem Solving efficiency"
+  },
+  {
+    "id": "COSS_04",
+    "title": "Linear Algebra for AI",
+    "concepts": [
+      "Vectors",
+      "Matrices",
+      "Eigenvalues",
+      "Transformations",
+      "Dimensionality Reduction"
+    ],
+    "prerequisites": [],
+    "coss_link": "Foundation",
+    "competency": "Mathematical Foundations"
+  },
+  {
+    "id": "COSS_05",
+    "title": "Probability and Statistics",
+    "concepts": [
+      "Distributions",
+      "Hypothesis Testing",
+      "Bayes Theorem",
+      "Regression"
+    ],
+    "prerequisites": [],
+    "coss_link": "Foundation",
+    "competency": "Statistical Analysis"
+  },
+  {
+    "id": "COSS_06",
+    "title": "Database Systems",
+    "concepts": [
+      "SQL",
+      "Relational Model",
+      "Normalization",
+      "Indexing",
+      "Transactions"
+    ],
+    "prerequisites": [
+      "COSS_02"
+    ],
+    "coss_link": "Data Engineering",
+    "competency": "SQL & Data Modeling"
+  },
+  {
+    "id": "COSS_07",
+    "title": "Machine Learning Basics",
+    "concepts": [
+      "Supervised Learning",
+      "Unsupervised Learning",
+      "Numpy",
+      "Scikit-Learn",
+      "Model Evaluation"
+    ],
+    "prerequisites": [
+      "COSS_01",
+      "COSS_04",
+      "COSS_05"
+    ],
+    "coss_link": "AI Core",
+    "competency": "ML Model Building"
+  },
+  {
+    "id": "COSS_08",
+    "title": "Deep Learning",
+    "concepts": [
+      "Neural Networks",
+      "Backpropagation",
+      "CNN",
+      "RNN",
+      "PyTorch",
+      "TensorFlow"
+    ],
+    "prerequisites": [
+      "COSS_07",
+      "COSS_03"
+    ],
+    "coss_link": "AI Advanced",
+    "competency": "Deep Learning implementation"
+  },
+  {
+    "id": "COSS_09",
+    "title": "Big Data Processing",
+    "concepts": [
+      "Hadoop",
+      "Spark",
+      "Distributed Computing",
+      "MapReduce",
+      "NoSQL"
+    ],
+    "prerequisites": [
+      "COSS_06",
+      "COSS_03"
+    ],
+    "coss_link": "Data Engineering",
+    "competency": "Large Scale Data Processing"
+  },
+  {
+    "id": "COSS_10",
+    "title": "Natural Language Processing",
+    "concepts": [
+      "Tokenization",
+      "Embeddings",
+      "Transformers",
+      "LLM",
+      "Sentiment Analysis"
+    ],
+    "prerequisites": [
+      "COSS_08"
+    ],
+    "coss_link": "AI Advanced",
+    "competency": "NLP Applications"
+  },
+  {
+    "id": "COSS_11",
+    "title": "Computer Vision",
+    "concepts": [
+      "Image Processing",
+      "Object Detection",
+      "Segmentation",
+      "OpenCV"
+    ],
+    "prerequisites": [
+      "COSS_08"
+    ],
+    "coss_link": "AI Advanced",
+    "competency": "Vision Systems"
+  },
+  {
+    "id": "COSS_12",
+    "title": "Cloud Computing",
+    "concepts": [
+      "Virtualization",
+      "AWS",
+      "Docker",
+      "Kubernetes",
+      "Microservices"
+    ],
+    "prerequisites": [
+      "COSS_06"
+    ],
+    "coss_link": "Data Engineering",
+    "competency": "Cloud Architecture"
+  },
+  {
+    "id": "COSS_13",
+    "title": "Data Visualization",
+    "concepts": [
+      "Visual Encoding",
+      "Charts",
+      "Dashboards",
+      "Tableau",
+      "Plotly"
+    ],
+    "prerequisites": [
+      "COSS_01",
+      "COSS_05"
+    ],
+    "coss_link": "Data Science",
+    "competency": "Data Storytelling"
+  },
+  {
+    "id": "COSS_14",
+    "title": "Reinforcement Learning",
+    "concepts": [
+      "Agents",
+      "Rewards",
+      "Q-Learning",
+      "Policy Gradients",
+      "Markov Decision Process"
+    ],
+    "prerequisites": [
+      "COSS_08"
+    ],
+    "coss_link": "AI Advanced",
+    "competency": "RL Systems"
+  },
+  {
+    "id": "COSS_15",
+    "title": "AI Capstone Project",
+    "concepts": [
+      "Project Management",
+      "System Integration",
+      "Deployment",
+      "End-to-End ML"
+    ],
+    "prerequisites": [
+      "COSS_09",
+      "COSS_10",
+      "COSS_11"
+    ],
+    "coss_link": "Project",
+    "competency": "Full Stack AI Development"
+  }
+]
