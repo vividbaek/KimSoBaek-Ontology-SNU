@@ -1,0 +1,156 @@
+[
+    {
+        "ID": "JBNU_Activity_COALA",
+        "Type": "Club",
+        "Title": "COALA (코알라)",
+        "Source": "JBNU_Club_Recruitment",
+        "Description": "전북대학교 컴퓨터인공지능학부 소속 학술 동아리로, 웹/앱 개발 및 최신 기술 스터디를 주도함",
+        "Concepts": [
+            "Software Engineering",
+            "Web Development",
+            "Mobile App Development",
+            "Team Project",
+            "Open Source Contribution"
+        ],
+        "Tracks": [
+            {
+                "Name": "Beginner",
+                "Target": "코딩 입문자",
+                "Key_Concepts": [
+                    "Python Basics",
+                    "C Programming"
+                ],
+                "Description": "프로그래밍 기초 문법 습득"
+            },
+            {
+                "Name": "Advanced",
+                "Target": "웹/앱 서비스 개발 희망자",
+                "Key_Concepts": [
+                    "React",
+                    "Spring Boot",
+                    "UI/UX"
+                ],
+                "Description": "팀 단위 서비스 기획 및 배포"
+            }
+        ],
+        "Related_Courses": [
+            "JBNU_CE_09",
+            "JBNU_CE_10",
+            "JBNU_CE_11",
+            "JBNU_CE_14",
+            "JBNU_CE_17",
+            "JBNU_CE_20",
+            "JBNU_CE_25",
+            "JBNU_CE_27",
+            "JBNU_CE_29",
+            "JBNU_CE_33"
+        ],
+        "Recommendation_Logic": "객체지향 프로그래밍이나 웹/앱 관련 교과목(JBNU_CE_27, COSS_17 등)을 수강한 학생에게 '실전 프로젝트 경험'을 위해 추천됨"
+    },
+    {
+        "ID": "JBNU_Activity_RAMS",
+        "Type": "Club",
+        "Title": "RAMS (램스 - 정보보안)",
+        "Source": "JBNU_Club_Recruitment",
+        "Description": "시스템 해킹, 웹 보안, 암호학을 연구하는 정보보안 학술 동아리",
+        "Concepts": [
+            "Information Security",
+            "System Hacking",
+            "Network Security",
+            "Cryptography",
+            "Ethical Hacking"
+        ],
+        "Tracks": [
+            {
+                "Name": "Beginner",
+                "Target": "보안 입문자",
+                "Key_Concepts": [
+                    "Linux",
+                    "C Language",
+                    "Network Basics"
+                ],
+                "Description": "리눅스 및 네트워크 기초 학습"
+            },
+            {
+                "Name": "Advanced",
+                "Target": "CTF 참가 희망자",
+                "Key_Concepts": [
+                    "Exploit",
+                    "Reverse Engineering"
+                ],
+                "Description": "취약점 분석 및 해킹 방어 대회 준비"
+            }
+        ],
+        "Related_Courses": [
+            "JBNU_CE_04",
+            "JBNU_CE_05",
+            "JBNU_CE_08",
+            "JBNU_CE_10",
+            "JBNU_CE_11",
+            "JBNU_CE_15",
+            "JBNU_CE_20",
+            "JBNU_CE_26",
+            "JBNU_CE_27",
+            "JBNU_CE_31",
+            "JBNU_CE_37",
+            "JBNU_CE_42",
+            "JBNU_CE_43",
+            "COSS_46",
+            "COSS_47",
+            "COSS_48",
+            "COSS_49"
+        ],
+        "Recommendation_Logic": "네트워크(JBNU_CE_20)나 시스템 프로그래밍(COSS_46) 등 로우 레벨 이해도가 필요한 과목 수강생에게 '보안 전문가 트랙'으로 추천됨"
+    },
+    {
+        "ID": "JBNU_Activity_ALPS",
+        "Type": "Club",
+        "Title": "ALPS (알프스 - 알고리즘)",
+        "Source": "JBNU_Club_Website",
+        "Description": "자료구조와 알고리즘의 심화 학습 및 프로그래밍 경진대회(ICPC) 대비",
+        "Concepts": [
+            "Algorithm Design",
+            "Data Structures",
+            "Competitive Programming",
+            "Discrete Mathematics",
+            "Optimization"
+        ],
+        "Tracks": [
+            {
+                "Name": "Beginner",
+                "Target": "알고리즘 입문자",
+                "Key_Concepts": [
+                    "Sorting",
+                    "Stack/Queue",
+                    "Graph Search"
+                ],
+                "Description": "백준 실버/골드 난이도 문제 풀이"
+            },
+            {
+                "Name": "Advanced",
+                "Target": "대회 입상 목표",
+                "Key_Concepts": [
+                    "Dynamic Programming",
+                    "Segment Tree"
+                ],
+                "Description": "ICPC 및 교내 프로그래밍 경진대회 준비"
+            }
+        ],
+        "Related_Courses": [
+            "JBNU_CE_01",
+            "JBNU_CE_02",
+            "JBNU_CE_05",
+            "JBNU_CE_07",
+            "JBNU_CE_13",
+            "JBNU_CE_18",
+            "JBNU_CE_19",
+            "JBNU_CE_37",
+            "COSS_04",
+            "COSS_05",
+            "COSS_19",
+            "COSS_20",
+            "COSS_31"
+        ],
+        "Recommendation_Logic": "자료구조(JBNU_CE_01, COSS_04)나 이산수학 등 논리적 사고가 요구되는 과목에서 흥미를 느낀 학생에게 '문제 해결 능력 심화'를 위해 추천됨"
+    }
+]
