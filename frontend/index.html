@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Knowledge Graph</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.28.1/cytoscape.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+
+        #cy {
+            width: 100%;
+            height: 600px;
+            border: 1px solid #ddd;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .controls {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .legend {
+            display: flex;
+            gap: 15px;
+            margin-left: auto;
+            font-size: 0.9em;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        .jbnu {
+            background-color: #007bff;
+        }
+
+        .coss {
+            background-color: #fd7e14;
+        }
+
+        h1 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        #info {
+            margin-top: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            min-height: 100px;
+            border: 1px solid #eee;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>📊 Curriculum Knowledge Graph</h1>
+    </div>
+
+    <div class="controls">
+        <div style="border-right:1px solid #ddd; padding-right:15px; margin-right:15px;">
+            <strong>🔍 Roadmap Recommendation</strong>
+            <select id="track-select" style="padding:5px;">
+                <option value="AI 모델러">AI 모델러</option>
+                <option value="데이터 엔지니어">데이터 엔지니어</option>
+                <option value="백엔드 개발자">백엔드 개발자</option>
+            </select>
+            <button onclick="getRoadmap()"
+                style="padding: 5px 10px; background:#28a745; color:white; border:none; border-radius:4px; cursor:pointer;">Show
+                Roadmap</button>
+            <button onclick="resetHighlight()"
+                style="padding: 5px 10px; background:#6c757d; color:white; border:none; border-radius:4px; cursor:pointer;">Clear</button>
+        </div>
+        <button onclick="fitGraph()"
+            style="padding: 8px 16px; background:#007bff; color:white; border:none; border-radius:4px; cursor:pointer;">Reset
+            View</button>
+        <div class="legend">
+            <span style="display:flex; align-items:center; margin-right:10px;"><span class="dot jbnu"></span> JBNU
+                (전북대)</span>
+            <span style="display:flex; align-items:center; margin-right:10px;"><span class="dot coss"></span> COSS
+                (첨단분야)</span>
+            <span style="display:flex; align-items:center; margin-right:10px; color:#666;">──▶ 선수과목</span>
+            <span style="display:flex; align-items:center; color:#28a745;">- - - 동일과목</span>
+        </div>
+    </div>
+
+    <div id="cy"></div>
+
+    <div id="info">
+        <h3 id="node-title">Code</h3>
+        <p><strong>Type:</strong> <span id="node-type"></span></p>
+        <p><strong>Semester:</strong> <span id="node-semester"></span></p>
+        <p><strong>Concepts:</strong> <span id="node-concepts"></span></p>
+    </div>
+
+    <script>
+        let cy;
+
+        async function init() {
+            try {
+                const response = await fetch('http://127.0.0.1:8000/graph');
+                const data = await response.json();
+
+                // Transform data for Cytoscape
+                const elements = [
+                    ...data.nodes.map(n => ({
+                        data: {
+                            id: n.id,
+                            label: n.label,
+                            type: n.type,
+                            semester: n.semester,
+                            concepts: n.concepts.join(', ')
+                        }
+                    })),
+                    ...data.edges.map((e, i) => ({
+                        data: {
+                            id: 'e' + i,
+                            source: e.source,
+                            target: e.target,
+                            type: e.type
+                        }
+                    }))
+                ];
+
+                cy = cytoscape({
+                    container: document.getElementById('cy'),
+                    elements: elements,
+                    style: [
+                        {
+                            selector: 'node',
+                            style: {
+                                'label': 'data(label)',
+                                'text-valign': 'center',
+                                'text-halign': 'center',
+                                'color': '#fff',
+                                'text-outline-width': 2,
+                                'text-outline-color': '#555',
+                                'background-color': '#666',
+                                'width': 'label',
+                                'height': 'label',
+                                'padding': '10px',
+                                'shape': 'round-rectangle'
+                            }
+                        },
+                        {
+                            selector: 'node[type="JBNU"]',
+                            style: {
+                                'background-color': '#007bff',
+                                'text-outline-color': '#0056b3'
+                            }
+                        },
+                        {
+                            selector: 'node[type="COSS"]',
+                            style: {
+                                'background-color': '#fd7e14',
+                                'text-outline-color': '#d96704'
+                            }
+                        },
+                        {
+                            selector: 'edge',
+                            style: {
+                                'width': 2,
+                                'line-color': '#ccc',
+                                'target-arrow-color': '#ccc',
+                                'target-arrow-shape': 'triangle',
+                                'curve-style': 'bezier'
+                            }
+                        },
+                        {
+                            selector: 'edge[type="sameAs"]',
+                            style: {
+                                'line-style': 'dashed',
+                                'line-color': '#28a745',
+                                'width': 3
+                            }
+                        },
+                        {
+                            selector: '.faded',
+                            style: {
+                                'opacity': 0.1,
+                                'label': ''
+                            }
+                        },
+                        {
+                            selector: '.highlighted',
+                            style: {
+                                'background-color': '#d63384',
+                                'line-color': '#d63384',
+                                'target-arrow-color': '#d63384',
+                                'border-width': 4,
+                                'border-color': '#ffc107',
+                                'z-index': 9999
+                            }
+                        },
+                        {
+                            selector: ':selected',
+                            style: {
+                                'border-width': 4,
+                                'border-color': '#333'
+                            }
+                        }
+                    ],
+                    layout: {
+                        name: 'cose',
+                        animate: false,
+                        nodeRepulsion: 8000,
+                        idealEdgeLength: 100,
+                        componentSpacing: 100,
+                    }
+                });
+
+                // Event Listener
+                cy.on('tap', 'node', function (evt) {
+                    const node = evt.target;
+                    document.getElementById('info').style.display = 'block';
+                    document.getElementById('node-title').innerText = node.data('label') + " (" + node.data('id') + ")";
+                    document.getElementById('node-type').innerText = node.data('type');
+                    document.getElementById('node-semester').innerText = node.data('semester');
+                    document.getElementById('node-concepts').innerText = node.data('concepts');
+                });
+
+            } catch (err) {
+                console.error(err);
+                alert("Failed to load graph data. Make sure backend is running on port 8000.");
+            }
+        }
+
+        async function getRoadmap() {
+            const track = document.getElementById('track-select').value;
+            // Grade is hardcoded for demo or we can add input. Default to "1" to get full path.
+            const grade = "1";
+
+            try {
+                const response = await fetch(`http://127.0.0.1:8000/roadmap?grade=${grade}&track=${track}`);
+                const subjects = await response.json();
+
+                highlightRoadmap(subjects);
+
+                // Show list in info panel
+                const infoPanel = document.getElementById('info');
+                infoPanel.style.display = 'block';
+                document.getElementById('node-title').innerText = `Recommended Path: ${track}`;
+                document.getElementById('node-type').innerText = `${subjects.length} Subjects`;
+
+                const names = subjects.map(s => s.Title + (s.Semester !== 'Unknown' ? ` (${s.Semester})` : ''));
+                document.getElementById('node-concepts').innerHTML = "<ol>" + names.map(n => `<li>${n}</li>`).join('') + "</ol>";
+
+            } catch (err) {
+                console.error(err);
+                alert("Failed to fetch roadmap.");
+            }
+        }
+
+        function highlightRoadmap(subjects) {
+            // Reset styles
+            cy.elements().removeClass('highlighted faded');
+
+            if (!subjects || subjects.length === 0) {
+                alert("No subjects found for this track.");
+                return;
+            }
+
+            const subjectIds = new Set(subjects.map(s => s.ID));
+
+            cy.batch(() => {
+                // Fade all
+                cy.elements().addClass('faded');
+
+                // Highlight nodes
+                subjects.forEach(s => {
+                    cy.$id(s.ID).removeClass('faded').addClass('highlighted');
+                });
+
+                // Highlight edges between highlighted nodes
+                cy.edges().forEach(edge => {
+                    if (subjectIds.has(edge.source().id()) && subjectIds.has(edge.target().id())) {
+                        edge.removeClass('faded').addClass('highlighted');
+                    }
+                });
+            });
+        }
+
+        function resetHighlight() {
+            cy.elements().removeClass('highlighted faded');
+            document.getElementById('info').style.display = 'none';
+        }
+
+        function fitGraph() {
+            if (cy) cy.fit();
+        }
+
+        init();
+    </script>
+</body>
+
+</html>
