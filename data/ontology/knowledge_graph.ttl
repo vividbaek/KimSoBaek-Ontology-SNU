@@ -62,7 +62,6 @@ curr:COSS_22 a curr:COSSSubject,
     curr:hasPrerequisite curr:COSS_21,
         curr:COSS_28,
         curr:JBNU_CE_04,
-        curr:JBNU_CE_05,
         curr:JBNU_CE_13 ;
     curr:hasSemester "3-1"^^xsd:string ;
     curr:hasTeachingMethod curr:Method_Project ;
@@ -72,7 +71,11 @@ curr:COSS_22 a curr:COSSSubject,
         curr:Competency_Information_Theory,
         curr:Competency_Probabilistic_Reasoning,
         curr:Competency_Statistical_Learning_Theory,
-        curr:Competency_Uncertainty_Quantification .
+        curr:Competency_Uncertainty_Quantification ;
+    curr:usesTechStack curr:Tech_Excel,
+        curr:Tech_R,
+        curr:Tech_SPSS,
+        curr:Tech_Tableau .
 
 curr:COSS_23 a curr:COSSSubject,
         curr:Subject ;
@@ -84,8 +87,7 @@ curr:COSS_23 a curr:COSSSubject,
         curr:JBNU_CE_01,
         curr:JBNU_CE_04,
         curr:JBNU_CE_05,
-        curr:JBNU_CE_07,
-        curr:JBNU_CE_13 ;
+        curr:JBNU_CE_07 ;
     curr:hasSemester "3-1"^^xsd:string ;
     curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "인공지능과기계학습"^^xsd:string ;
@@ -106,8 +108,7 @@ curr:COSS_25 a curr:COSSSubject,
         curr:JBNU_CE_01,
         curr:JBNU_CE_04,
         curr:JBNU_CE_05,
-        curr:JBNU_CE_07,
-        curr:JBNU_CE_13 ;
+        curr:JBNU_CE_07 ;
     curr:hasSemester "2-1"^^xsd:string ;
     curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "인공지능기초"^^xsd:string ;
@@ -127,8 +128,7 @@ curr:COSS_26 a curr:COSSSubject,
     curr:hasPrerequisite curr:JBNU_CE_01,
         curr:JBNU_CE_04,
         curr:JBNU_CE_05,
-        curr:JBNU_CE_07,
-        curr:JBNU_CE_13 ;
+        curr:JBNU_CE_07 ;
     curr:hasSemester "2-2"^^xsd:string ;
     curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "인공지능입문"^^xsd:string ;
@@ -146,7 +146,6 @@ curr:COSS_30 a curr:COSSSubject,
     curr:hasDomain "데이터사이언스"^^xsd:string ;
     curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:JBNU_CE_04,
-        curr:JBNU_CE_05,
         curr:JBNU_CE_13 ;
     curr:hasSemester "Any"^^xsd:string ;
     curr:hasTeachingMethod curr:Method_Project ;
@@ -156,7 +155,11 @@ curr:COSS_30 a curr:COSSSubject,
         curr:Competency_Data_Summary,
         curr:Competency_Frequency_Analysis,
         curr:Competency_Graphic_Representation,
-        curr:Competency_Measurement_Scales .
+        curr:Competency_Measurement_Scales ;
+    curr:usesTechStack curr:Tech_Excel,
+        curr:Tech_R,
+        curr:Tech_SPSS,
+        curr:Tech_Tableau .
 
 curr:COSS_38 a curr:COSSSubject,
         curr:Subject ;
@@ -166,8 +169,10 @@ curr:COSS_38 a curr:COSSSubject,
     curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_01,
         curr:JBNU_CE_01,
+        curr:JBNU_CE_10,
         curr:JBNU_CE_13,
-        curr:JBNU_CE_14 ;
+        curr:JBNU_CE_14,
+        curr:JBNU_CE_22 ;
     curr:hasSemester "Any-1"^^xsd:string ;
     curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "빅데이터윤리"^^xsd:string ;
@@ -178,6 +183,8 @@ curr:COSS_38 a curr:COSSSubject,
         curr:Competency_Digital_Governance,
         curr:Competency_Social_Impact_Analysis ;
     curr:usesTechStack curr:Tech_Hadoop,
+        curr:Tech_Hive,
+        curr:Tech_Kafka,
         curr:Tech_Spark .
 
 curr:COSS_45 a curr:COSSSubject,
@@ -222,7 +229,10 @@ curr:COSS_55 a curr:COSSSubject,
     curr:hasDomain "데이터사이언스"^^xsd:string ;
     curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_01,
-        curr:JBNU_CE_01 ;
+        curr:JBNU_CE_01,
+        curr:JBNU_CE_10,
+        curr:JBNU_CE_14,
+        curr:JBNU_CE_22 ;
     curr:hasSemester "4-1"^^xsd:string ;
     curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "데이터마이닝개론"^^xsd:string ;
@@ -261,8 +271,10 @@ curr:COSS_57 a curr:COSSSubject,
     curr:hasPrerequisite curr:COSS_29,
         curr:COSS_32,
         curr:JBNU_CE_04,
-        curr:JBNU_CE_05,
-        curr:JBNU_CE_13 ;
+        curr:JBNU_CE_10,
+        curr:JBNU_CE_13,
+        curr:JBNU_CE_14,
+        curr:JBNU_CE_22 ;
     curr:hasSemester "3-2"^^xsd:string ;
     curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "다변량통계분석"^^xsd:string ;
@@ -271,7 +283,11 @@ curr:COSS_57 a curr:COSSSubject,
         curr:Competency_Factor_Analysis,
         curr:Competency_Latent_Variable_Modeling,
         curr:Competency_Multivariate_Probability,
-        curr:Competency_Principal_Component_Analysis .
+        curr:Competency_Principal_Component_Analysis ;
+    curr:usesTechStack curr:Tech_Excel,
+        curr:Tech_R,
+        curr:Tech_SPSS,
+        curr:Tech_Tableau .
 
 curr:COSS_58 a curr:COSSSubject,
         curr:Subject ;
@@ -301,7 +317,8 @@ curr:COSS_62 a curr:COSSSubject,
         curr:COSS_33,
         curr:JBNU_CE_04,
         curr:JBNU_CE_07,
-        curr:JBNU_CE_16 ;
+        curr:JBNU_CE_16,
+        curr:JBNU_CE_21 ;
     curr:hasSemester "3-2"^^xsd:string ;
     curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "딥러닝개론"^^xsd:string ;
@@ -311,7 +328,8 @@ curr:COSS_62 a curr:COSSSubject,
         curr:Competency_Layered_Architectures,
         curr:Competency_Optimization_Algorithms,
         curr:Competency_Regularization_Techniques ;
-    curr:usesTechStack curr:Tech_PyTorch,
+    curr:usesTechStack curr:Tech_Keras,
+        curr:Tech_PyTorch,
         curr:Tech_TensorFlow .
 
 curr:COSS_63 a curr:COSSSubject,
@@ -323,7 +341,6 @@ curr:COSS_63 a curr:COSSSubject,
     curr:hasPrerequisite curr:COSS_11,
         curr:COSS_31,
         curr:JBNU_CE_04,
-        curr:JBNU_CE_05,
         curr:JBNU_CE_13 ;
     curr:hasSemester "3-1"^^xsd:string ;
     curr:hasTeachingMethod curr:Method_Project ;
@@ -333,7 +350,11 @@ curr:COSS_63 a curr:COSSSubject,
         curr:Competency_Monte_Carlo_Methods,
         curr:Competency_Numerical_Integration,
         curr:Competency_Optimization_Algorithms,
-        curr:Competency_Resampling_%26_Bootstrapping .
+        curr:Competency_Resampling_%26_Bootstrapping ;
+    curr:usesTechStack curr:Tech_Excel,
+        curr:Tech_R,
+        curr:Tech_SPSS,
+        curr:Tech_Tableau .
 
 curr:COSS_64 a curr:COSSSubject,
         curr:Subject ;
@@ -342,7 +363,10 @@ curr:COSS_64 a curr:COSSSubject,
     curr:hasDomain "데이터사이언스/통계"^^xsd:string ;
     curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_29,
-        curr:COSS_65 ;
+        curr:COSS_65,
+        curr:JBNU_CE_10,
+        curr:JBNU_CE_14,
+        curr:JBNU_CE_22 ;
     curr:hasSemester "Any"^^xsd:string ;
     curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "회귀분석"^^xsd:string ;
@@ -363,8 +387,10 @@ curr:COSS_66 a curr:COSSSubject,
         curr:COSS_43,
         curr:COSS_47,
         curr:JBNU_CE_01,
+        curr:JBNU_CE_10,
         curr:JBNU_CE_13,
-        curr:JBNU_CE_14 ;
+        curr:JBNU_CE_14,
+        curr:JBNU_CE_22 ;
     curr:hasSemester "3-1"^^xsd:string ;
     curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "빅데이터처리"^^xsd:string ;
@@ -375,6 +401,8 @@ curr:COSS_66 a curr:COSSSubject,
         curr:Competency_MapReduce_Paradigm,
         curr:Competency_System_Scalability ;
     curr:usesTechStack curr:Tech_Hadoop,
+        curr:Tech_Hive,
+        curr:Tech_Kafka,
         curr:Tech_Spark .
 
 curr:COSS_71 a curr:COSSSubject,
@@ -383,7 +411,8 @@ curr:COSS_71 a curr:COSSSubject,
     curr:hasDescription "단순 처리를 넘어 지능적으로 언어를 이해하고 지식 베이스와 연결하는 고도화된 기술"^^xsd:string ;
     curr:hasDomain "인공지능"^^xsd:string ;
     curr:hasFocus curr:Focus_Application ;
-    curr:hasPrerequisite curr:COSS_51 ;
+    curr:hasPrerequisite curr:COSS_51,
+        curr:JBNU_CE_16 ;
     curr:hasSemester "4-2"^^xsd:string ;
     curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "지능형언어처리"^^xsd:string ;
@@ -402,7 +431,8 @@ curr:COSS_72 a curr:COSSSubject,
     curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_51,
         curr:COSS_61,
-        curr:JBNU_CE_16 ;
+        curr:JBNU_CE_16,
+        curr:JBNU_CE_21 ;
     curr:hasSemester "4-1"^^xsd:string ;
     curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "자연어처리와언어모델"^^xsd:string ;
@@ -478,7 +508,8 @@ curr:COSS_78 a curr:COSSSubject,
     curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_68,
         curr:COSS_70,
-        curr:JBNU_CE_15 ;
+        curr:JBNU_CE_15,
+        curr:JBNU_CE_16 ;
     curr:hasSemester "4-1"^^xsd:string ;
     curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "지능형시스템개발"^^xsd:string ;
@@ -498,8 +529,10 @@ curr:COSS_79 a curr:COSSSubject,
     curr:hasPrerequisite curr:COSS_40,
         curr:COSS_67,
         curr:JBNU_CE_04,
-        curr:JBNU_CE_05,
+        curr:JBNU_CE_10,
         curr:JBNU_CE_13,
+        curr:JBNU_CE_14,
+        curr:JBNU_CE_22,
         curr:JBNU_CE_25 ;
     curr:hasSemester "3/4-1"^^xsd:string ;
     curr:hasTeachingMethod curr:Method_Project ;
@@ -509,7 +542,11 @@ curr:COSS_79 a curr:COSSSubject,
         curr:Competency_Data-driven_Storytelling,
         curr:Competency_Evidence-based_Decision,
         curr:Competency_Experimental_Methodology,
-        curr:Competency_Statistical_Validation .
+        curr:Competency_Statistical_Validation ;
+    curr:usesTechStack curr:Tech_Excel,
+        curr:Tech_R,
+        curr:Tech_SPSS,
+        curr:Tech_Tableau .
 
 curr:COSS_80 a curr:COSSSubject,
         curr:Subject ;
@@ -520,8 +557,10 @@ curr:COSS_80 a curr:COSSSubject,
     curr:hasPrerequisite curr:COSS_11,
         curr:COSS_29,
         curr:JBNU_CE_04,
-        curr:JBNU_CE_05,
-        curr:JBNU_CE_13 ;
+        curr:JBNU_CE_10,
+        curr:JBNU_CE_13,
+        curr:JBNU_CE_14,
+        curr:JBNU_CE_22 ;
     curr:hasSemester "3-2"^^xsd:string ;
     curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "통계분석실습"^^xsd:string ;
@@ -530,7 +569,11 @@ curr:COSS_80 a curr:COSSSubject,
         curr:Competency_Exploratory_Visualization,
         curr:Competency_Predictive_Diagnostics,
         curr:Competency_Real-world_Data_Cleansing,
-        curr:Competency_Statistical_Software_Proficiency .
+        curr:Competency_Statistical_Software_Proficiency ;
+    curr:usesTechStack curr:Tech_Excel,
+        curr:Tech_R,
+        curr:Tech_SPSS,
+        curr:Tech_Tableau .
 
 curr:JBNU_12 curr:hasPrerequisite curr:JBNU_3 .
 
@@ -565,25 +608,6 @@ curr:JBNU_CE_18 a curr:JBNUSubject,
         curr:Competency_Numerical_Integration,
         curr:Competency_Optimization_Algorithms,
         curr:Competency_Root_Finding .
-
-curr:JBNU_CE_22 a curr:JBNUSubject,
-        curr:Subject ;
-    rdfs:label "데이터마이닝" ;
-    curr:equivalentTo curr:COSS_54 ;
-    curr:hasDescription "대규모 데이터에서 정보를 분석하는 이론과 알고리즘(군집화, 추천 시스템 등)을 학습하고 Python을 활용해 실제 데이터를 분석함"^^xsd:string ;
-    curr:hasDomain "데이터사이언스"^^xsd:string ;
-    curr:hasFocus curr:Focus_Theory ;
-    curr:hasPrerequisite curr:JBNU_CE_07,
-        curr:JBNU_CE_14 ;
-    curr:hasSemester "Unknown"^^xsd:string ;
-    curr:hasTeachingMethod curr:Method_Lecture ;
-    curr:hasTitle "데이터마이닝"^^xsd:string ;
-    curr:offeredInSource "JBNU"^^xsd:string ;
-    curr:teaches curr:Competency_Association_Rule_Mining,
-        curr:Competency_Classification_%26_Regression,
-        curr:Competency_Clustering,
-        curr:Competency_Dimensionality_Reduction,
-        curr:Competency_Recommender_Systems .
 
 curr:JBNU_CE_23 a curr:JBNUSubject,
         curr:Subject ;
@@ -622,6 +646,7 @@ curr:JBNU_CE_29 a curr:JBNUSubject,
         curr:Competency_Deployment_Pipeline,
         curr:Competency_Virtualization ;
     curr:usesTechStack curr:Tech_AWS,
+        curr:Tech_Azure,
         curr:Tech_Docker,
         curr:Tech_Kubernetes .
 
@@ -861,7 +886,6 @@ curr:COSS_03 a curr:COSSSubject,
     curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:JBNU_CE_01,
         curr:JBNU_CE_04,
-        curr:JBNU_CE_05,
         curr:JBNU_CE_13 ;
     curr:hasSemester "1-1"^^xsd:string ;
     curr:hasTeachingMethod curr:Method_Project ;
@@ -871,7 +895,11 @@ curr:COSS_03 a curr:COSSSubject,
         curr:Competency_Mathematical_Foundations,
         curr:Competency_Probability_Theory,
         curr:Competency_Sampling_Distributions,
-        curr:Competency_Statistical_Inference .
+        curr:Competency_Statistical_Inference ;
+    curr:usesTechStack curr:Tech_Excel,
+        curr:Tech_R,
+        curr:Tech_SPSS,
+        curr:Tech_Tableau .
 
 curr:COSS_14 a curr:COSSSubject,
         curr:Subject ;
@@ -948,8 +976,7 @@ curr:COSS_24 a curr:COSSSubject,
         curr:JBNU_CE_01,
         curr:JBNU_CE_04,
         curr:JBNU_CE_05,
-        curr:JBNU_CE_07,
-        curr:JBNU_CE_13 ;
+        curr:JBNU_CE_07 ;
     curr:hasSemester "4-1"^^xsd:string ;
     curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "인공지능"^^xsd:string ;
@@ -967,7 +994,6 @@ curr:COSS_27 a curr:COSSSubject,
     curr:hasDomain "데이터사이언스"^^xsd:string ;
     curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:JBNU_CE_04,
-        curr:JBNU_CE_05,
         curr:JBNU_CE_13 ;
     curr:hasSemester "Any"^^xsd:string ;
     curr:hasTeachingMethod curr:Method_Project ;
@@ -977,7 +1003,11 @@ curr:COSS_27 a curr:COSSSubject,
         curr:Competency_Experimental_Design,
         curr:Competency_Numerical_Description,
         curr:Competency_Sampling_Theory,
-        curr:Competency_Statistical_Literacy .
+        curr:Competency_Statistical_Literacy ;
+    curr:usesTechStack curr:Tech_Excel,
+        curr:Tech_R,
+        curr:Tech_SPSS,
+        curr:Tech_Tableau .
 
 curr:COSS_32 a curr:COSSSubject,
         curr:Subject ;
@@ -987,7 +1017,6 @@ curr:COSS_32 a curr:COSSSubject,
     curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_31,
         curr:JBNU_CE_04,
-        curr:JBNU_CE_05,
         curr:JBNU_CE_13 ;
     curr:hasSemester "Any-2"^^xsd:string ;
     curr:hasTeachingMethod curr:Method_Project ;
@@ -997,7 +1026,11 @@ curr:COSS_32 a curr:COSSSubject,
         curr:Competency_Mathematical_Optimization,
         curr:Competency_Multivariate_Analysis,
         curr:Competency_Partial_Differentiation,
-        curr:Competency_Vector_Space .
+        curr:Competency_Vector_Space ;
+    curr:usesTechStack curr:Tech_Excel,
+        curr:Tech_R,
+        curr:Tech_SPSS,
+        curr:Tech_Tableau .
 
 curr:COSS_34 a curr:COSSSubject,
         curr:Subject ;
@@ -1040,7 +1073,11 @@ curr:COSS_36 a curr:COSSSubject,
     curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_02,
         curr:COSS_28,
-        curr:JBNU_CE_01 ;
+        curr:JBNU_CE_01,
+        curr:JBNU_CE_10,
+        curr:JBNU_CE_13,
+        curr:JBNU_CE_14,
+        curr:JBNU_CE_22 ;
     curr:hasSemester "4-1"^^xsd:string ;
     curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "데이터분석및활용"^^xsd:string ;
@@ -1061,9 +1098,10 @@ curr:COSS_40 a curr:COSSSubject,
         curr:COSS_29,
         curr:JBNU_CE_01,
         curr:JBNU_CE_04,
-        curr:JBNU_CE_05,
+        curr:JBNU_CE_10,
         curr:JBNU_CE_13,
-        curr:JBNU_CE_14 ;
+        curr:JBNU_CE_14,
+        curr:JBNU_CE_22 ;
     curr:hasSemester "3-1"^^xsd:string ;
     curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "빅데이터통계분석"^^xsd:string ;
@@ -1073,8 +1111,14 @@ curr:COSS_40 a curr:COSSSubject,
         curr:Competency_Large-scale_Inference,
         curr:Competency_Resampling_Methods,
         curr:Competency_Statistical_Scalability ;
-    curr:usesTechStack curr:Tech_Hadoop,
-        curr:Tech_Spark .
+    curr:usesTechStack curr:Tech_Excel,
+        curr:Tech_Hadoop,
+        curr:Tech_Hive,
+        curr:Tech_Kafka,
+        curr:Tech_R,
+        curr:Tech_SPSS,
+        curr:Tech_Spark,
+        curr:Tech_Tableau .
 
 curr:COSS_42 a curr:COSSSubject,
         curr:Subject ;
@@ -1095,7 +1139,9 @@ curr:COSS_42 a curr:COSSSubject,
         curr:Competency_Object-Relational_Mapping,
         curr:Competency_Stored_Procedures ;
     curr:usesTechStack curr:Tech_MongoDB,
-        curr:Tech_MySQL .
+        curr:Tech_MySQL,
+        curr:Tech_Redis,
+        curr:Tech_SQL .
 
 curr:COSS_43 a curr:COSSSubject,
         curr:Subject ;
@@ -1135,7 +1181,10 @@ curr:COSS_48 a curr:COSSSubject,
         curr:Competency_Infrastructure_Management,
         curr:Competency_Network_Services,
         curr:Competency_Service_Configuration,
-        curr:Competency_System_Hardening .
+        curr:Competency_System_Hardening ;
+    curr:usesTechStack curr:Tech_Linux,
+        curr:Tech_Network,
+        curr:Tech_Nginx .
 
 curr:COSS_49 a curr:COSSSubject,
         curr:Subject ;
@@ -1166,7 +1215,9 @@ curr:COSS_54 a curr:COSSSubject,
     curr:hasDomain "데이터사이언스"^^xsd:string ;
     curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_53,
-        curr:JBNU_CE_01 ;
+        curr:JBNU_CE_01,
+        curr:JBNU_CE_10,
+        curr:JBNU_CE_14 ;
     curr:hasSemester "3-2"^^xsd:string ;
     curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "데이터마이닝"^^xsd:string ;
@@ -1219,7 +1270,10 @@ curr:COSS_65 a curr:COSSSubject,
     curr:hasDescription "회귀 분석의 기초 개념을 익히고 실데이터에 적용하여 변수 간 관계를 파악하는 입문 과정"^^xsd:string ;
     curr:hasDomain "데이터사이언스/통계"^^xsd:string ;
     curr:hasFocus curr:Focus_Application ;
-    curr:hasPrerequisite curr:COSS_28 ;
+    curr:hasPrerequisite curr:COSS_28,
+        curr:JBNU_CE_10,
+        curr:JBNU_CE_14,
+        curr:JBNU_CE_22 ;
     curr:hasSemester "2-1"^^xsd:string ;
     curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "회귀분석입문"^^xsd:string ;
@@ -1240,8 +1294,7 @@ curr:COSS_68 a curr:COSSSubject,
         curr:JBNU_CE_01,
         curr:JBNU_CE_04,
         curr:JBNU_CE_05,
-        curr:JBNU_CE_07,
-        curr:JBNU_CE_13 ;
+        curr:JBNU_CE_07 ;
     curr:hasSemester "4-1"^^xsd:string ;
     curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "인공지능산업체특강"^^xsd:string ;
@@ -1274,6 +1327,7 @@ curr:COSS_69 a curr:COSSSubject,
         curr:Competency_Infrastructure_as_Code,
         curr:Competency_Virtualization_Technology ;
     curr:usesTechStack curr:Tech_AWS,
+        curr:Tech_Azure,
         curr:Tech_Docker,
         curr:Tech_Kubernetes .
 
@@ -2954,25 +3008,6 @@ curr:JBNU_CE_06 a curr:JBNUSubject,
         curr:Competency_Recent_Tech_Trends,
         curr:Competency_Software_Life_Cycle .
 
-curr:JBNU_CE_21 a curr:JBNUSubject,
-        curr:Subject ;
-    rdfs:label "기계학습" ;
-    curr:hasDescription "인공지능 전공 필수 과목으로, 인식 문제를 푸는 기초 이론과 신경망, SVM 등을 학습하고 오픈 소스를 활용한 실습을 통해 실무 능력을 배양함"^^xsd:string ;
-    curr:hasDomain "머신러닝/딥러닝"^^xsd:string ;
-    curr:hasFocus curr:Focus_Theory ;
-    curr:hasPrerequisite curr:JBNU_CE_04,
-        curr:JBNU_CE_13,
-        curr:JBNU_CE_16 ;
-    curr:hasSemester "Unknown"^^xsd:string ;
-    curr:hasTeachingMethod curr:Method_Lecture ;
-    curr:hasTitle "기계학습"^^xsd:string ;
-    curr:offeredInSource "JBNU"^^xsd:string ;
-    curr:teaches curr:Competency_Deep_Learning_Basics,
-        curr:Competency_Ensemble_Methods,
-        curr:Competency_Neural_Networks,
-        curr:Competency_Pattern_Recognition,
-        curr:Competency_Support_Vector_Machine .
-
 curr:JBNU_CE_24 a curr:JBNUSubject,
         curr:Subject ;
     rdfs:label "산학실전캡스톤1" ;
@@ -3007,7 +3042,9 @@ curr:JBNU_CE_27 a curr:JBNUSubject,
         curr:Competency_REST_API_Design,
         curr:Competency_Web_Architecture,
         curr:Competency_Web_Interface_Design ;
-    curr:usesTechStack curr:Tech_React,
+    curr:usesTechStack <http://example.org/curriculum/Tech_HTML/CSS>,
+        curr:Tech_Node.js,
+        curr:Tech_React,
         curr:Tech_Spring .
 
 curr:JBNU_CE_28 a curr:JBNUSubject,
@@ -3045,8 +3082,23 @@ curr:JBNU_CE_32 a curr:JBNUSubject,
         curr:Competency_Team_Management,
         curr:Competency_Technical_Presentation .
 
+curr:Tech_AutoML a curr:TechStack ;
+    rdfs:label "AutoML" .
+
+curr:Tech_JPA a curr:TechStack ;
+    rdfs:label "JPA" .
+
 curr:Tech_Java a curr:TechStack ;
     rdfs:label "Java" .
+
+curr:Tech_Linux a curr:TechStack ;
+    rdfs:label "Linux" .
+
+curr:Tech_Network a curr:TechStack ;
+    rdfs:label "Network" .
+
+curr:Tech_Nginx a curr:TechStack ;
+    rdfs:label "Nginx" .
 
 curr:Tech_Python a curr:TechStack ;
     rdfs:label "Python" .
@@ -3082,7 +3134,9 @@ curr:COSS_09 a curr:COSSSubject,
         curr:Competency_Network_Communication,
         curr:Competency_System_Modeling,
         curr:Competency_Web_Protocols ;
-    curr:usesTechStack curr:Tech_React,
+    curr:usesTechStack <http://example.org/curriculum/Tech_HTML/CSS>,
+        curr:Tech_Node.js,
+        curr:Tech_React,
         curr:Tech_Spring .
 
 curr:COSS_12 a curr:COSSSubject,
@@ -3147,7 +3201,9 @@ curr:COSS_17 a curr:COSSSubject,
         curr:Competency_Markup_Semantics,
         curr:Competency_Style_Architecture,
         curr:Competency_Web_Accessibility ;
-    curr:usesTechStack curr:Tech_React,
+    curr:usesTechStack <http://example.org/curriculum/Tech_HTML/CSS>,
+        curr:Tech_Node.js,
+        curr:Tech_React,
         curr:Tech_Spring .
 
 curr:COSS_18 a curr:COSSSubject,
@@ -3177,7 +3233,9 @@ curr:COSS_18 a curr:COSSSubject,
         curr:Competency_Dynamic_Content_Management,
         curr:Competency_Full-stack_Architecture,
         curr:Competency_Web_Service_Integration ;
-    curr:usesTechStack curr:Tech_React,
+    curr:usesTechStack <http://example.org/curriculum/Tech_HTML/CSS>,
+        curr:Tech_Node.js,
+        curr:Tech_React,
         curr:Tech_Spring .
 
 curr:COSS_19 a curr:COSSSubject,
@@ -3213,7 +3271,6 @@ curr:COSS_37 a curr:COSSSubject,
     curr:hasPrerequisite curr:COSS_21,
         curr:COSS_36,
         curr:JBNU_CE_01,
-        curr:JBNU_CE_13,
         curr:JBNU_CE_14 ;
     curr:hasSemester "4-2"^^xsd:string ;
     curr:hasTeachingMethod curr:Method_Project ;
@@ -3270,7 +3327,11 @@ curr:COSS_51 a curr:COSSSubject,
     curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_02,
         curr:COSS_21,
-        curr:JBNU_CE_16 ;
+        curr:JBNU_CE_10,
+        curr:JBNU_CE_14,
+        curr:JBNU_CE_16,
+        curr:JBNU_CE_21,
+        curr:JBNU_CE_22 ;
     curr:hasSemester "4-1"^^xsd:string ;
     curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "텍스트마이닝과자연어처리"^^xsd:string ;
@@ -3289,7 +3350,10 @@ curr:COSS_53 a curr:COSSSubject,
     curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_28,
         curr:COSS_39,
-        curr:JBNU_CE_01 ;
+        curr:JBNU_CE_01,
+        curr:JBNU_CE_10,
+        curr:JBNU_CE_14,
+        curr:JBNU_CE_22 ;
     curr:hasSemester "2-2"^^xsd:string ;
     curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "데이터마이닝및분석"^^xsd:string ;
@@ -3310,7 +3374,8 @@ curr:COSS_60 a curr:COSSSubject,
         curr:COSS_33,
         curr:JBNU_CE_04,
         curr:JBNU_CE_07,
-        curr:JBNU_CE_16 ;
+        curr:JBNU_CE_16,
+        curr:JBNU_CE_21 ;
     curr:hasSemester "3-2"^^xsd:string ;
     curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "딥러닝원리와응용"^^xsd:string ;
@@ -3320,7 +3385,8 @@ curr:COSS_60 a curr:COSSSubject,
         curr:Competency_Deep_Architecture_Design,
         curr:Competency_Nonlinear_Transformations,
         curr:Competency_Representation_Learning ;
-    curr:usesTechStack curr:Tech_PyTorch,
+    curr:usesTechStack curr:Tech_Keras,
+        curr:Tech_PyTorch,
         curr:Tech_TensorFlow .
 
 curr:COSS_67 a curr:COSSSubject,
@@ -3331,7 +3397,10 @@ curr:COSS_67 a curr:COSSSubject,
     curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_37,
         curr:COSS_53,
-        curr:JBNU_CE_01 ;
+        curr:JBNU_CE_01,
+        curr:JBNU_CE_10,
+        curr:JBNU_CE_14,
+        curr:JBNU_CE_22 ;
     curr:hasSemester "Any"^^xsd:string ;
     curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "데이터종합분석"^^xsd:string ;
@@ -3364,6 +3433,7 @@ curr:COSS_70 a curr:COSSSubject,
         curr:Competency_Scalable_Service_Architecture,
         curr:Competency_Service_Level_Agreements ;
     curr:usesTechStack curr:Tech_AWS,
+        curr:Tech_Azure,
         curr:Tech_Docker,
         curr:Tech_Kubernetes .
 
@@ -3375,7 +3445,8 @@ curr:COSS_74 a curr:COSSSubject,
     curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_60,
         curr:COSS_73,
-        curr:JBNU_CE_16 ;
+        curr:JBNU_CE_16,
+        curr:JBNU_CE_21 ;
     curr:hasSemester "4-2"^^xsd:string ;
     curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "컴퓨터비전"^^xsd:string ;
@@ -3495,22 +3566,6 @@ curr:JBNU_CE_03 a curr:JBNUSubject,
         curr:Competency_Logic_Gates,
         curr:Competency_Sequential_Circuits .
 
-curr:JBNU_CE_10 a curr:JBNUSubject,
-        curr:Subject ;
-    rdfs:label "데이터통신" ;
-    curr:hasDescription "네트워크 통신을 위한 요소 기술과 인터네트워킹 기술, 근거리 네트워크 시스템 기술을 습득한다."^^xsd:string ;
-    curr:hasDomain "네트워크/IoT"^^xsd:string ;
-    curr:hasFocus curr:Focus_Theory ;
-    curr:hasSemester "Unknown"^^xsd:string ;
-    curr:hasTeachingMethod curr:Method_Lecture ;
-    curr:hasTitle "데이터통신"^^xsd:string ;
-    curr:offeredInSource "JBNU"^^xsd:string ;
-    curr:teaches curr:Competency_Error_Detection_%26_Correction,
-        curr:Competency_Multiplexing,
-        curr:Competency_OSI_7_Layer_Model,
-        curr:Competency_Packet_Switching,
-        curr:Competency_Signal_Encoding .
-
 curr:JBNU_CE_12 a curr:JBNUSubject,
         curr:Subject ;
     rdfs:label "초급프로젝트" ;
@@ -3547,6 +3602,9 @@ curr:JBNU_CE_26 a curr:JBNUSubject,
         curr:Competency_Public_Key_Cryptography,
         curr:Competency_Symmetric_Key_Cryptography .
 
+curr:Tech_Keras a curr:TechStack ;
+    rdfs:label "Keras" .
+
 curr:Tech_PyTorch a curr:TechStack ;
     rdfs:label "PyTorch" .
 
@@ -3560,7 +3618,6 @@ curr:COSS_01 a curr:COSSSubject,
     curr:hasDomain "데이터사이언스"^^xsd:string ;
     curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:JBNU_CE_01,
-        curr:JBNU_CE_13,
         curr:JBNU_CE_14 ;
     curr:hasSemester "2-1"^^xsd:string ;
     curr:hasTeachingMethod curr:Method_Project ;
@@ -3593,7 +3650,8 @@ curr:COSS_07 a curr:COSSSubject,
         curr:Competency_Multithreading,
         curr:Competency_Object-Oriented_Paradigm,
         curr:Competency_Platform_Independence ;
-    curr:usesTechStack curr:Tech_Java,
+    curr:usesTechStack curr:Tech_JPA,
+        curr:Tech_Java,
         curr:Tech_Spring .
 
 curr:COSS_31 a curr:COSSSubject,
@@ -3603,7 +3661,6 @@ curr:COSS_31 a curr:COSSSubject,
     curr:hasDomain "데이터사이언스/수학"^^xsd:string ;
     curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:JBNU_CE_04,
-        curr:JBNU_CE_05,
         curr:JBNU_CE_13 ;
     curr:hasSemester "Any"^^xsd:string ;
     curr:hasTeachingMethod curr:Method_Project ;
@@ -3613,7 +3670,11 @@ curr:COSS_31 a curr:COSSSubject,
         curr:Competency_Functional_Mapping,
         curr:Competency_Mathematical_Analysis,
         curr:Competency_Matrix_Foundations,
-        curr:Competency_Numerical_Sequences .
+        curr:Competency_Numerical_Sequences ;
+    curr:usesTechStack curr:Tech_Excel,
+        curr:Tech_R,
+        curr:Tech_SPSS,
+        curr:Tech_Tableau .
 
 curr:COSS_33 a curr:COSSSubject,
         curr:Subject ;
@@ -3651,7 +3712,9 @@ curr:COSS_39 a curr:COSSSubject,
         curr:Competency_Relational_Algebra,
         curr:Competency_Schema_Architecture ;
     curr:usesTechStack curr:Tech_MongoDB,
-        curr:Tech_MySQL .
+        curr:Tech_MySQL,
+        curr:Tech_Redis,
+        curr:Tech_SQL .
 
 curr:COSS_41 a curr:COSSSubject,
         curr:Subject ;
@@ -3671,7 +3734,9 @@ curr:COSS_41 a curr:COSSSubject,
         curr:Competency_Relational_Model,
         curr:Competency_Transaction_Management ;
     curr:usesTechStack curr:Tech_MongoDB,
-        curr:Tech_MySQL .
+        curr:Tech_MySQL,
+        curr:Tech_Redis,
+        curr:Tech_SQL .
 
 curr:COSS_44 a curr:COSSSubject,
         curr:Subject ;
@@ -3744,11 +3809,20 @@ curr:JBNU_CE_08 a curr:JBNUSubject,
 curr:Tech_AWS a curr:TechStack ;
     rdfs:label "AWS" .
 
+curr:Tech_Azure a curr:TechStack ;
+    rdfs:label "Azure" .
+
 curr:Tech_Docker a curr:TechStack ;
     rdfs:label "Docker" .
 
 curr:Tech_Hadoop a curr:TechStack ;
     rdfs:label "Hadoop" .
+
+curr:Tech_Hive a curr:TechStack ;
+    rdfs:label "Hive" .
+
+curr:Tech_Kafka a curr:TechStack ;
+    rdfs:label "Kafka" .
 
 curr:Tech_Kubernetes a curr:TechStack ;
     rdfs:label "Kubernetes" .
@@ -3765,7 +3839,6 @@ curr:COSS_11 a curr:COSSSubject,
     curr:hasPrerequisite curr:COSS_02,
         curr:COSS_03,
         curr:JBNU_CE_04,
-        curr:JBNU_CE_05,
         curr:JBNU_CE_13 ;
     curr:hasSemester "1-2"^^xsd:string ;
     curr:hasTeachingMethod curr:Method_Project ;
@@ -3775,7 +3848,11 @@ curr:COSS_11 a curr:COSSSubject,
         curr:Competency_Data_Simulation,
         curr:Competency_Quantitative_Analysis,
         curr:Competency_Reproducible_Research,
-        curr:Competency_Statistical_Computation .
+        curr:Competency_Statistical_Computation ;
+    curr:usesTechStack curr:Tech_Excel,
+        curr:Tech_R,
+        curr:Tech_SPSS,
+        curr:Tech_Tableau .
 
 curr:COSS_13 a curr:COSSSubject,
         curr:Subject ;
@@ -3802,7 +3879,6 @@ curr:COSS_29 a curr:COSSSubject,
     curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_28,
         curr:JBNU_CE_04,
-        curr:JBNU_CE_05,
         curr:JBNU_CE_13 ;
     curr:hasSemester "Any-2"^^xsd:string ;
     curr:hasTeachingMethod curr:Method_Project ;
@@ -3812,7 +3888,14 @@ curr:COSS_29 a curr:COSSSubject,
         curr:Competency_Linear_Regression_Models,
         curr:Competency_Multivariate_Analysis,
         curr:Competency_Quantitative_Evidence,
-        curr:Competency_Variance_Analysis .
+        curr:Competency_Variance_Analysis ;
+    curr:usesTechStack curr:Tech_Excel,
+        curr:Tech_R,
+        curr:Tech_SPSS,
+        curr:Tech_Tableau .
+
+<http://example.org/curriculum/Tech_HTML/CSS> a curr:TechStack ;
+    rdfs:label "HTML/CSS" .
 
 curr:Tech_MongoDB a curr:TechStack ;
     rdfs:label "MongoDB" .
@@ -3820,8 +3903,17 @@ curr:Tech_MongoDB a curr:TechStack ;
 curr:Tech_MySQL a curr:TechStack ;
     rdfs:label "MySQL" .
 
+curr:Tech_Node.js a curr:TechStack ;
+    rdfs:label "Node.js" .
+
 curr:Tech_React a curr:TechStack ;
     rdfs:label "React" .
+
+curr:Tech_Redis a curr:TechStack ;
+    rdfs:label "Redis" .
+
+curr:Tech_SQL a curr:TechStack ;
+    rdfs:label "SQL" .
 
 curr:COSS_02 a curr:COSSSubject,
         curr:Subject ;
@@ -3834,9 +3926,13 @@ curr:COSS_02 a curr:COSSSubject,
         curr:JBNU_CE_01,
         curr:JBNU_CE_02,
         curr:JBNU_CE_09,
+        curr:JBNU_CE_10,
         curr:JBNU_CE_11,
+        curr:JBNU_CE_13,
+        curr:JBNU_CE_14,
         curr:JBNU_CE_17,
-        curr:JBNU_CE_19 ;
+        curr:JBNU_CE_19,
+        curr:JBNU_CE_22 ;
     curr:hasSemester "1-2"^^xsd:string ;
     curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "파이썬데이터분석"^^xsd:string ;
@@ -3872,6 +3968,25 @@ curr:COSS_04 a curr:COSSSubject,
 curr:Tech_Spring a curr:TechStack ;
     rdfs:label "Spring" .
 
+curr:JBNU_CE_21 a curr:JBNUSubject,
+        curr:Subject ;
+    rdfs:label "기계학습" ;
+    curr:hasDescription "인공지능 전공 필수 과목으로, 인식 문제를 푸는 기초 이론과 신경망, SVM 등을 학습하고 오픈 소스를 활용한 실습을 통해 실무 능력을 배양함"^^xsd:string ;
+    curr:hasDomain "머신러닝/딥러닝"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
+    curr:hasPrerequisite curr:JBNU_CE_04,
+        curr:JBNU_CE_13,
+        curr:JBNU_CE_16 ;
+    curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
+    curr:hasTitle "기계학습"^^xsd:string ;
+    curr:offeredInSource "JBNU"^^xsd:string ;
+    curr:teaches curr:Competency_Deep_Learning_Basics,
+        curr:Competency_Ensemble_Methods,
+        curr:Competency_Neural_Networks,
+        curr:Competency_Pattern_Recognition,
+        curr:Competency_Support_Vector_Machine .
+
 curr:COSS_10 a curr:COSSSubject,
         curr:Subject ;
     rdfs:label "프로그래밍개론" ;
@@ -3896,7 +4011,6 @@ curr:COSS_28 a curr:COSSSubject,
     curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_27,
         curr:JBNU_CE_04,
-        curr:JBNU_CE_05,
         curr:JBNU_CE_13 ;
     curr:hasSemester "Any"^^xsd:string ;
     curr:hasTeachingMethod curr:Method_Project ;
@@ -3906,7 +4020,11 @@ curr:COSS_28 a curr:COSSSubject,
         curr:Competency_Hypothesis_Validation,
         curr:Competency_Inferential_Statistics,
         curr:Competency_Probability_Distribution,
-        curr:Competency_Uncertainty_Quantification .
+        curr:Competency_Uncertainty_Quantification ;
+    curr:usesTechStack curr:Tech_Excel,
+        curr:Tech_R,
+        curr:Tech_SPSS,
+        curr:Tech_Tableau .
 
 curr:JBNU_CE_31 a curr:JBNUSubject,
         curr:Subject ;
@@ -3943,6 +4061,22 @@ curr:JBNU_CE_36 a curr:JBNUSubject,
         curr:Competency_WSN_Architecture,
         <http://example.org/curriculum/Competency_Zigbee/IEEE_802.15.4> .
 
+curr:JBNU_CE_05 a curr:JBNUSubject,
+        curr:Subject ;
+    rdfs:label "이산수학" ;
+    curr:hasDescription "이산 수학의 이론을 디지털 컴퓨터 기능에 맞게 재구성하고, 전산 분야 이론을 수학적 언어로 정리하는 방법론을 공부한다."^^xsd:string ;
+    curr:hasDomain "알고리즘/AI기초"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
+    curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
+    curr:hasTitle "이산수학"^^xsd:string ;
+    curr:offeredInSource "JBNU"^^xsd:string ;
+    curr:teaches curr:Competency_Combinatorics,
+        curr:Competency_Graph_Theory,
+        curr:Competency_Propositional_Logic,
+        curr:Competency_Recurrence_Relations,
+        curr:Competency_Set_Theory .
+
 curr:COSS_21 a curr:COSSSubject,
         curr:Subject ;
     rdfs:label "머신러닝" ;
@@ -3953,6 +4087,7 @@ curr:COSS_21 a curr:COSSSubject,
         curr:COSS_11,
         curr:COSS_28,
         curr:JBNU_CE_04,
+        curr:JBNU_CE_05,
         curr:JBNU_CE_07,
         curr:JBNU_CE_13,
         curr:JBNU_CE_16 ;
@@ -3965,27 +4100,9 @@ curr:COSS_21 a curr:COSSSubject,
         curr:Competency_Mathematical_Optimization,
         curr:Competency_Pattern_Recognition,
         curr:Competency_Predictive_Modeling ;
-    curr:usesTechStack curr:Tech_Python,
+    curr:usesTechStack curr:Tech_AutoML,
+        curr:Tech_Python,
         curr:Tech_ScikitLearn .
-
-curr:JBNU_CE_16 a curr:JBNUSubject,
-        curr:Subject ;
-    rdfs:label "인공지능" ;
-    curr:equivalentTo curr:COSS_24 ;
-    curr:hasDescription "인간의 지능 영역을 공학적으로 구현하기 위한 제반 기술을 학습하고, 머신러닝 및 지능형 프로그램 개발 능력을 함양함"^^xsd:string ;
-    curr:hasDomain "인공지능 핵심"^^xsd:string ;
-    curr:hasFocus curr:Focus_Theory ;
-    curr:hasPrerequisite curr:JBNU_CE_01,
-        curr:JBNU_CE_13 ;
-    curr:hasSemester "Unknown"^^xsd:string ;
-    curr:hasTeachingMethod curr:Method_Lecture ;
-    curr:hasTitle "인공지능"^^xsd:string ;
-    curr:offeredInSource "JBNU"^^xsd:string ;
-    curr:teaches curr:Competency_Intelligent_Agents,
-        curr:Competency_Knowledge_Representation,
-        curr:Competency_Machine_Learning_Basics,
-        curr:Competency_Neural_Networks_Intro,
-        curr:Competency_Search_Algorithms .
 
 curr:JBNU_CE_20 a curr:JBNUSubject,
         curr:Subject ;
@@ -4040,26 +4157,6 @@ curr:JBNU_CE_07 a curr:JBNUSubject,
         curr:Competency_Greedy_Algorithms,
         curr:Competency_Time_Complexity_Analysis .
 
-curr:JBNU_CE_14 a curr:JBNUSubject,
-        curr:Subject ;
-    rdfs:label "데이터베이스" ;
-    curr:equivalentTo curr:COSS_41 ;
-    curr:hasDescription "대량의 데이터로부터 효율적인 데이터베이스를 구축하고 검색하는 이론을 학습하며, SQL 및 데이터 모델링 기술을 습득함"^^xsd:string ;
-    curr:hasDomain "데이터 엔지니어링"^^xsd:string ;
-    curr:hasFocus curr:Focus_Theory ;
-    curr:hasPrerequisite curr:JBNU_CE_01 ;
-    curr:hasSemester "Unknown"^^xsd:string ;
-    curr:hasTeachingMethod curr:Method_Lecture ;
-    curr:hasTitle "데이터베이스"^^xsd:string ;
-    curr:offeredInSource "JBNU"^^xsd:string ;
-    curr:teaches curr:Competency_Data_Indexing,
-        curr:Competency_Normalization,
-        curr:Competency_Relational_Database_Model,
-        curr:Competency_SQL,
-        curr:Competency_Transaction_Management ;
-    curr:usesTechStack curr:Tech_MongoDB,
-        curr:Tech_MySQL .
-
 curr:JBNU_CE_17 a curr:JBNUSubject,
         curr:Subject ;
     rdfs:label "모바일프로그래밍" ;
@@ -4093,6 +4190,25 @@ curr:JBNU_CE_11 a curr:JBNUSubject,
         curr:Competency_Shell_Scripting,
         curr:Competency_Socket_Programming,
         curr:Competency_System_Calls .
+
+curr:JBNU_CE_16 a curr:JBNUSubject,
+        curr:Subject ;
+    rdfs:label "인공지능" ;
+    curr:equivalentTo curr:COSS_24 ;
+    curr:hasDescription "인간의 지능 영역을 공학적으로 구현하기 위한 제반 기술을 학습하고, 머신러닝 및 지능형 프로그램 개발 능력을 함양함"^^xsd:string ;
+    curr:hasDomain "인공지능 핵심"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
+    curr:hasPrerequisite curr:JBNU_CE_01,
+        curr:JBNU_CE_13 ;
+    curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
+    curr:hasTitle "인공지능"^^xsd:string ;
+    curr:offeredInSource "JBNU"^^xsd:string ;
+    curr:teaches curr:Competency_Intelligent_Agents,
+        curr:Competency_Knowledge_Representation,
+        curr:Competency_Machine_Learning_Basics,
+        curr:Competency_Neural_Networks_Intro,
+        curr:Competency_Search_Algorithms .
 
 curr:JBNU_CE_19 a curr:JBNUSubject,
         curr:Subject ;
@@ -4146,6 +4262,25 @@ curr:JBNU_CE_15 a curr:JBNUSubject,
         curr:Competency_Process_Synchronization,
         curr:Competency_Virtual_Memory .
 
+curr:JBNU_CE_22 a curr:JBNUSubject,
+        curr:Subject ;
+    rdfs:label "데이터마이닝" ;
+    curr:equivalentTo curr:COSS_54 ;
+    curr:hasDescription "대규모 데이터에서 정보를 분석하는 이론과 알고리즘(군집화, 추천 시스템 등)을 학습하고 Python을 활용해 실제 데이터를 분석함"^^xsd:string ;
+    curr:hasDomain "데이터사이언스"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
+    curr:hasPrerequisite curr:JBNU_CE_07,
+        curr:JBNU_CE_14 ;
+    curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
+    curr:hasTitle "데이터마이닝"^^xsd:string ;
+    curr:offeredInSource "JBNU"^^xsd:string ;
+    curr:teaches curr:Competency_Association_Rule_Mining,
+        curr:Competency_Classification_%26_Regression,
+        curr:Competency_Clustering,
+        curr:Competency_Dimensionality_Reduction,
+        curr:Competency_Recommender_Systems .
+
 curr:JBNU_CE_02 a curr:JBNUSubject,
         curr:Subject ;
     rdfs:label "C++프로그래밍" ;
@@ -4163,37 +4298,33 @@ curr:JBNU_CE_02 a curr:JBNUSubject,
         curr:Competency_Operator_Overloading,
         curr:Competency_Template_%26_STL .
 
-curr:JBNU_CE_05 a curr:JBNUSubject,
-        curr:Subject ;
-    rdfs:label "이산수학" ;
-    curr:hasDescription "이산 수학의 이론을 디지털 컴퓨터 기능에 맞게 재구성하고, 전산 분야 이론을 수학적 언어로 정리하는 방법론을 공부한다."^^xsd:string ;
-    curr:hasDomain "알고리즘/AI기초"^^xsd:string ;
-    curr:hasFocus curr:Focus_Theory ;
-    curr:hasSemester "Unknown"^^xsd:string ;
-    curr:hasTeachingMethod curr:Method_Lecture ;
-    curr:hasTitle "이산수학"^^xsd:string ;
-    curr:offeredInSource "JBNU"^^xsd:string ;
-    curr:teaches curr:Competency_Combinatorics,
-        curr:Competency_Graph_Theory,
-        curr:Competency_Propositional_Logic,
-        curr:Competency_Recurrence_Relations,
-        curr:Competency_Set_Theory .
+curr:Tech_Excel a curr:TechStack ;
+    rdfs:label "Excel" .
 
-curr:JBNU_CE_04 a curr:JBNUSubject,
+curr:Tech_R a curr:TechStack ;
+    rdfs:label "R" .
+
+curr:Tech_SPSS a curr:TechStack ;
+    rdfs:label "SPSS" .
+
+curr:Tech_Tableau a curr:TechStack ;
+    rdfs:label "Tableau" .
+
+curr:JBNU_CE_10 a curr:JBNUSubject,
         curr:Subject ;
-    rdfs:label "선형대수학" ;
-    curr:hasDescription "공학 및 경제학 등에 필요한 선형대수 이론과 응용 방법을 습득하여 수학적 사고력과 컴퓨터공학 응용 능력을 기른다."^^xsd:string ;
-    curr:hasDomain "인공지능/딥러닝수학"^^xsd:string ;
+    rdfs:label "데이터통신" ;
+    curr:hasDescription "네트워크 통신을 위한 요소 기술과 인터네트워킹 기술, 근거리 네트워크 시스템 기술을 습득한다."^^xsd:string ;
+    curr:hasDomain "네트워크/IoT"^^xsd:string ;
     curr:hasFocus curr:Focus_Theory ;
     curr:hasSemester "Unknown"^^xsd:string ;
     curr:hasTeachingMethod curr:Method_Lecture ;
-    curr:hasTitle "선형대수학"^^xsd:string ;
+    curr:hasTitle "데이터통신"^^xsd:string ;
     curr:offeredInSource "JBNU"^^xsd:string ;
-    curr:teaches curr:Competency_Eigenvalues_%26_Eigenvectors,
-        curr:Competency_Linear_Transformation,
-        curr:Competency_Matrix_Operations,
-        curr:Competency_Orthogonality,
-        curr:Competency_Vector_Space .
+    curr:teaches curr:Competency_Error_Detection_%26_Correction,
+        curr:Competency_Multiplexing,
+        curr:Competency_OSI_7_Layer_Model,
+        curr:Competency_Packet_Switching,
+        curr:Competency_Signal_Encoding .
 
 curr:JBNU_CE_13 a curr:JBNUSubject,
         curr:Subject ;
@@ -4210,7 +4341,49 @@ curr:JBNU_CE_13 a curr:JBNUSubject,
         curr:Competency_Hypothesis_Testing,
         curr:Competency_Probability_Distributions,
         curr:Competency_Random_Variables,
-        curr:Competency_Statistical_Analysis .
+        curr:Competency_Statistical_Analysis ;
+    curr:usesTechStack curr:Tech_Excel,
+        curr:Tech_R,
+        curr:Tech_SPSS,
+        curr:Tech_Tableau .
+
+curr:JBNU_CE_14 a curr:JBNUSubject,
+        curr:Subject ;
+    rdfs:label "데이터베이스" ;
+    curr:equivalentTo curr:COSS_41 ;
+    curr:hasDescription "대량의 데이터로부터 효율적인 데이터베이스를 구축하고 검색하는 이론을 학습하며, SQL 및 데이터 모델링 기술을 습득함"^^xsd:string ;
+    curr:hasDomain "데이터 엔지니어링"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
+    curr:hasPrerequisite curr:JBNU_CE_01 ;
+    curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
+    curr:hasTitle "데이터베이스"^^xsd:string ;
+    curr:offeredInSource "JBNU"^^xsd:string ;
+    curr:teaches curr:Competency_Data_Indexing,
+        curr:Competency_Normalization,
+        curr:Competency_Relational_Database_Model,
+        curr:Competency_SQL,
+        curr:Competency_Transaction_Management ;
+    curr:usesTechStack curr:Tech_MongoDB,
+        curr:Tech_MySQL,
+        curr:Tech_Redis,
+        curr:Tech_SQL .
+
+curr:JBNU_CE_04 a curr:JBNUSubject,
+        curr:Subject ;
+    rdfs:label "선형대수학" ;
+    curr:hasDescription "공학 및 경제학 등에 필요한 선형대수 이론과 응용 방법을 습득하여 수학적 사고력과 컴퓨터공학 응용 능력을 기른다."^^xsd:string ;
+    curr:hasDomain "인공지능/딥러닝수학"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
+    curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
+    curr:hasTitle "선형대수학"^^xsd:string ;
+    curr:offeredInSource "JBNU"^^xsd:string ;
+    curr:teaches curr:Competency_Eigenvalues_%26_Eigenvectors,
+        curr:Competency_Linear_Transformation,
+        curr:Competency_Matrix_Operations,
+        curr:Competency_Orthogonality,
+        curr:Competency_Vector_Space .
 
 curr:JBNU_CE_01 a curr:JBNUSubject,
         curr:Subject ;

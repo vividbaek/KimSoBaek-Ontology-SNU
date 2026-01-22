@@ -78,6 +78,8 @@ def run_etl():
                 domain = "시스템/네트워크"
             elif any(k in t_norm for k in ["수학", "미적분", "선형대수"]):
                 domain = "기초수학"
+            elif any(k in t_norm for k in ["금융", "핀테크", "경제", "경영", "FinTech", "Finance"]):
+                domain = "금융/핀테크"
         
         g.add((sub_uri, CURR.hasDomain, Literal(domain, datatype=XSD.string)))
 
@@ -106,13 +108,16 @@ def run_etl():
         # 2. Tech Stack Injection (Keyword based)
         title_lower = title.lower()
         tech_map = {
-            "머신러닝": ["Python", "ScikitLearn"],
-            "딥러닝": ["PyTorch", "TensorFlow"],
-            "클라우드": ["AWS", "Docker", "Kubernetes"],
-            "빅데이터": ["Hadoop", "Spark"],
-            "웹": ["React", "Spring"],
-            "자바": ["Java", "Spring"],
-            "데이터베이스": ["MySQL", "MongoDB"],
+            "머신러닝": ["Python", "ScikitLearn", "AutoML"],
+            "딥러닝": ["PyTorch", "TensorFlow", "Keras"],
+            "클라우드": ["AWS", "Docker", "Kubernetes", "Azure"],
+            "빅데이터": ["Hadoop", "Spark", "Kafka", "Hive"],
+            "웹": ["React", "Spring", "Node.js", "HTML/CSS"],
+            "자바": ["Java", "Spring", "JPA"],
+            "데이터베이스": ["MySQL", "MongoDB", "Redis", "SQL"],
+            "서버": ["Linux", "Nginx", "Network"],
+            "통계": ["R", "SPSS", "Excel", "Tableau"],
+            "시각화": ["Tableau", "PowerBI", "Matplotlib"],
         }
         
         # Inject TechStack triples
@@ -191,16 +196,19 @@ def run_etl():
             # If JBNU has key, and COSS has any of values, link J -> C
             keyword_map = {
                 "프로그래밍": ["자바", "객체지향", "웹", "앱", "파이썬", "c++", "자료구조", "알고리즘"],
-                "자료구조": ["알고리즘", "데이터", "인공지능"],
+                "자료구조": ["알고리즘", "데이터", "인공지능", "데이터베이스"],
                 "알고리즘": ["인공지능", "머신러닝", "딥러닝", "최적화"],
+                "머신러닝": ["딥러닝", "심층신경망", "자연어처리", "컴퓨터비전", "AI", "영상처리"],
+                "기계학습": ["딥러닝", "심층신경망", "자연어처리", "컴퓨터비전"],
+                "인공지능": ["머신러닝", "딥러닝", "에이전트", "지능형"],
+                "데이터": ["빅데이터", "마이닝", "분석", "시각화"],
+                "통계": ["데이터분석", "머신러닝", "빅데이터"],
+                "수학": ["인공지능", "머신러닝", "암호학", "최적화"],
                 "데이터베이스": ["빅데이터", "데이터사이언스", "웹", "백엔드"],
                 "운영체제": ["시스템", "클라우드", "보안", "임베디드"],
                 "네트워크": ["보안", "클라우드", "웹", "iot", "사물인터넷"],
                 "소프트웨어공학": ["설계", "프로젝트", "캡스톤", "방법론"],
-                "인공지능": ["머신러닝", "딥러닝", "비전", "자연어", "로봇"],
                 "선형대수": ["머신러닝", "딥러닝", "그래픽스", "통계", "최적화"],
-                "통계": ["머신러닝", "데이터사이언스", "빅데이터", "인공지능"],
-                "수학": ["통계", "암호", "그래픽스", "인공지능"]
             }
 
             for key, targets in keyword_map.items():

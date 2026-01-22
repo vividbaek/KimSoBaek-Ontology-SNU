@@ -171,6 +171,42 @@
             color: #555;
             display: none;
         }
+
+        /* Typing Indicator */
+        .typing-indicator {
+            display: inline-block;
+            padding: 5px;
+        }
+
+        .typing-indicator span {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: #ccc;
+            border-radius: 50%;
+            animation: typing 1s infinite;
+            margin: 0 2px;
+        }
+
+        .typing-indicator span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .typing-indicator span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes typing {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-5px);
+            }
+        }
     </style>
 </head>
 
@@ -376,10 +412,16 @@
             addMsg(msg, 'user');
             input.value = '';
 
+            // Show Loading Indicator
+            const loadingId = addMsg('<div class="typing-indicator"><span></span><span></span><span></span></div>', 'bot', true);
+
             try {
                 // Call Chat API
                 const response = await fetch(`http://localhost:8000/chat?query=${encodeURIComponent(msg)}`);
                 const data = await response.json();
+
+                // Remove Loading
+                removeMsg(loadingId);
 
                 addMsg(data.answer, 'bot');
 
@@ -387,23 +429,33 @@
                 if (data.roadmap && data.roadmap.length > 0) {
                     highlightGraph(data.roadmap);
                 } else {
-                    // If simple conversation, maybe reset graph?
                     // resetGraph();
                 }
 
             } catch (err) {
                 console.error(err);
+                removeMsg(loadingId); // Ensure loading is removed on error
                 addMsg("Error connecting to server.", 'bot');
             }
         }
 
-        function addMsg(html, type) {
+        function addMsg(html, type, returnId = false) {
             const div = document.createElement('div');
             div.className = `msg ${type}`;
             div.innerHTML = html;
+            const id = 'msg_' + Date.now();
+            div.id = id;
+
             const hist = document.getElementById('chat-history');
             hist.appendChild(div);
             hist.scrollTop = hist.scrollHeight;
+
+            if (returnId) return id;
+        }
+
+        function removeMsg(elementId) {
+            const el = document.getElementById(elementId);
+            if (el) el.remove();
         }
 
         function sendSystemMessage(text) {
@@ -422,9 +474,11 @@
                 // Highlight Nodes
                 subjects.forEach(s => {
                     const el = cy.$id(s.ID);
-                    el.removeClass('faded').addClass('highlighted');
-                    // Also un-fade parent
-                    if (el.parent().length > 0) el.parent().removeClass('faded');
+                    if (el.length > 0) {
+                        el.removeClass('faded').addClass('highlighted');
+                        // Also un-fade parent
+                        if (el.parent().length > 0) el.parent().removeClass('faded');
+                    }
                 });
 
                 // Highlight Edges
