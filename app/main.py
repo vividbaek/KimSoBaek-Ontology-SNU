@@ -15,6 +15,7 @@ st.set_page_config(
     page_icon="🍲",
     layout="wide"
 )
+print("hello")
 
 # Constants
 ABOX_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), '../data/knowledge_graph/abox_inferred.ttl'))
