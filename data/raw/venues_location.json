@@ -1,0 +1,156 @@
+{
+  "metadata": {
+    "source": "Kakao Local API",
+    "campus": "Seoul National University Gwanak",
+    "campus_center": {
+      "lat": 37.459,
+      "lng": 126.952
+    },
+    "collected_at": "2026-01-13"
+  },
+  "venues": [
+    {
+      "venue_id": "학생회관식당",
+      "display_name": "학생회관식당 (880-5543)",
+      "place_name": "서울대학교 관악캠퍼스 학생회관",
+      "address": "서울특별시 관악구 관악로 1",
+      "lat": 37.4594,
+      "lng": 126.9507,
+      "phone": "880-5543",
+      "building": "학생회관"
+    },
+    {
+      "venue_id": "자하연식당 2층",
+      "display_name": "자하연식당 2층 (880-7888)",
+      "place_name": "서울대학교 관악캠퍼스 자하연식당",
+      "address": "서울특별시 관악구 관악로 1",
+      "lat": 37.4609,
+      "lng": 126.9525,
+      "phone": "880-7888",
+      "building": "자하연",
+      "floor": 2
+    },
+    {
+      "venue_id": "자하연식당 3층",
+      "display_name": "자하연식당 3층 (880-7889)",
+      "place_name": "서울대학교 관악캠퍼스 자하연식당",
+      "address": "서울특별시 관악구 관악로 1",
+      "lat": 37.4609,
+      "lng": 126.9525,
+      "phone": "880-7889",
+      "building": "자하연",
+      "floor": 3
+    },
+    {
+      "venue_id": "예술계식당",
+      "display_name": "예술계식당 (876-1006)",
+      "place_name": "서울대학교 관악캠퍼스 예술계식당",
+      "address": "서울특별시 관악구 관악로 1",
+      "lat": 37.4628,
+      "lng": 126.9533,
+      "phone": "876-1006",
+      "building": "74동 (음악대학)",
+      "floor": 1
+    },
+    {
+      "venue_id": "두레미담",
+      "display_name": "두레미담 (880-9358)",
+      "place_name": "두레미담 서울대1호점",
+      "address": "서울특별시 관악구 관악로 1",
+      "lat": 37.4566,
+      "lng": 126.9486,
+      "phone": "880-9358",
+      "building": "교수회관"
+    },
+    {
+      "venue_id": "동원관식당",
+      "display_name": "동원관식당 (880-8697)",
+      "place_name": "서울대학교 관악캠퍼스 동원관",
+      "address": "서울특별시 관악구 관악로 1",
+      "lat": 37.4651,
+      "lng": 126.9518,
+      "phone": "880-8697",
+      "building": "동원관"
+    },
+    {
+      "venue_id": "기숙사식당",
+      "display_name": "기숙사식당 (881-9072)",
+      "place_name": "서울대학교 관악학생생활관",
+      "address": "서울특별시 관악구 관악로 1",
+      "lat": 37.4604,
+      "lng": 126.9576,
+      "phone": "881-9072",
+      "building": "학생생활관"
+    },
+    {
+      "venue_id": "3식당",
+      "display_name": "3식당 (880-5545)",
+      "place_name": "서울대학교 관악캠퍼스 제3학생식당",
+      "address": "서울특별시 관악구 관악로 1",
+      "lat": 37.4564,
+      "lng": 126.9485,
+      "phone": "880-5545",
+      "building": "제3학생식당"
+    },
+    {
+      "venue_id": "302동식당",
+      "display_name": "302동식당 (880-1939)",
+      "place_name": "서울대학교 관악캠퍼스 제2공학관",
+      "address": "서울특별시 관악구 관악로 1",
+      "lat": 37.4489,
+      "lng": 126.9526,
+      "phone": "880-1939",
+      "building": "302동 (제2공학관)"
+    },
+    {
+      "venue_id": "301동식당",
+      "display_name": "301동식당 (889-8955)",
+      "place_name": "서울대학교 관악캠퍼스 제1공학관",
+      "address": "서울특별시 관악구 관악로 1",
+      "lat": 37.4502,
+      "lng": 126.9526,
+      "phone": "889-8955",
+      "building": "301동 (제1공학관)"
+    },
+    {
+      "venue_id": "220동식당",
+      "display_name": "220동식당 (887-1123)",
+      "place_name": "서울대학교 관악캠퍼스 종합교육연구동",
+      "address": "서울특별시 관악구 관악로 1",
+      "lat": 37.4645,
+      "lng": 126.9542,
+      "phone": "887-1123",
+      "building": "220동 (종합교육연구동)"
+    },
+    {
+      "venue_id": "75-1동 푸드코트",
+      "display_name": "75-1동 4층 푸드코트",
+      "place_name": "서울대학교 관악캠퍼스 사범대학",
+      "address": "서울특별시 관악구 관악로 1",
+      "lat": 37.4564,
+      "lng": 126.9485,
+      "phone": null,
+      "building": "75-1동"
+    },
+    {
+      "venue_id": "공대간이식당",
+      "display_name": "공대간이식당 (889-8956)",
+      "place_name": "서울대학교 관악캠퍼스 공대간이식당",
+      "address": "서울특별시 관악구 관악로 1",
+      "lat": 37.4573,
+      "lng": 126.9508,
+      "phone": "889-8956",
+      "building": "38동"
+    },
+    {
+      "venue_id": "버거운버거",
+      "display_name": "버거운버거 (878-9288)",
+      "place_name": "버거운버거 서울대점",
+      "address": "서울특별시 관악구 관악로 1",
+      "lat": 37.4633,
+      "lng": 126.9501,
+      "phone": "878-9288",
+      "building": "정문 근처"
+    }
+  ]
+}

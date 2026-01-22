@@ -1,0 +1,59 @@
+@prefix : <http://snu.ac.kr/dining/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Venue Shape
+:VenueShape a sh:NodeShape ;
+    sh:targetClass :Venue ;
+    sh:property [
+        sh:path :venueId ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path :name ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+    ] .
+
+# MealService Shape
+:MealServiceShape a sh:NodeShape ;
+    sh:targetClass :MealService ;
+    sh:property [
+        sh:path :providedAt ;
+        sh:minCount 1 ;
+        sh:class :Venue ;
+    ] ;
+    sh:property [
+        sh:path :date ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:date ;
+    ] ;
+    sh:property [
+        sh:path :mealType ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:in ("breakfast" "lunch" "dinner") ;
+    ] .
+
+# MenuItem Shape
+:MenuItemShape a sh:NodeShape ;
+    sh:targetClass :MenuItem ;
+    sh:property [
+        sh:path :partOfService ;
+        sh:minCount 1 ;
+        sh:class :MealService ;
+    ] ;
+    sh:property [
+        sh:path :menuName ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path :price ;
+        sh:datatype xsd:integer ;
+        sh:minInclusive 0 ;
+    ] .
