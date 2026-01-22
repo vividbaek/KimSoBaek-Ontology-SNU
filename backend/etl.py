@@ -90,6 +90,50 @@ def run_etl():
             g.add((comp_uri, RDF.type, CURR.Competency))
             g.add((comp_uri, RDFS.label, Literal(c_name)))
             g.add((sub_uri, CURR.teaches, comp_uri))
+            
+        # --- Schema 2.0: Value Proposition Heuristics ---
+        
+        # 1. Course Focus & method (JBNU vs COSS Differentiation)
+        if source == 'JBNU':
+            # JBNU defaults to Theory & Lecture
+            g.add((sub_uri, CURR.hasFocus, CURR.Focus_Theory))
+            g.add((sub_uri, CURR.hasTeachingMethod, CURR.Method_Lecture))
+        else:
+            # COSS defaults to Application & Project
+            g.add((sub_uri, CURR.hasFocus, CURR.Focus_Application))
+            g.add((sub_uri, CURR.hasTeachingMethod, CURR.Method_Project))
+            
+        # 2. Tech Stack Injection (Keyword based)
+        title_lower = title.lower()
+        tech_map = {
+            "머신러닝": ["Python", "ScikitLearn"],
+            "딥러닝": ["PyTorch", "TensorFlow"],
+            "클라우드": ["AWS", "Docker", "Kubernetes"],
+            "빅데이터": ["Hadoop", "Spark"],
+            "웹": ["React", "Spring"],
+            "자바": ["Java", "Spring"],
+            "데이터베이스": ["MySQL", "MongoDB"],
+        }
+        
+        # Inject TechStack triples
+        for key, techs in tech_map.items():
+            if key in title_lower or key in title:
+                for t in techs:
+                    t_uri = CURR[f"Tech_{t}"]
+                    g.add((t_uri, RDF.type, CURR.TechStack))
+                    g.add((t_uri, RDFS.label, Literal(t)))
+                    g.add((sub_uri, CURR.usesTechStack, t_uri))
+                    
+        # Add basic Focus definitions to graph (Idempotent)
+        g.add((CURR.Focus_Theory, RDF.type, CURR.CourseFocus))
+        g.add((CURR.Focus_Theory, RDFS.label, Literal("Theory & Principles")))
+        g.add((CURR.Focus_Application, RDF.type, CURR.CourseFocus))
+        g.add((CURR.Focus_Application, RDFS.label, Literal("Practical Application")))
+        
+        g.add((CURR.Method_Lecture, RDF.type, CURR.TeachingMethod))
+        g.add((CURR.Method_Lecture, RDFS.label, Literal("Lecture")))
+        g.add((CURR.Method_Project, RDF.type, CURR.TeachingMethod))
+        g.add((CURR.Method_Project, RDFS.label, Literal("Project Based Learning")))
 
     # 2. Create Relations (Prerequisites & SameAs)
     # Re-using the logic from DataLoader roughly, but doing it in RDF

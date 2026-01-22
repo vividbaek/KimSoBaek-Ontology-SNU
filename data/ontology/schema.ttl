@@ -8,6 +8,22 @@
                                   rdfs:comment "Ontology for Curriculum, Subjects, and Competencies"@en .
 
 #################################################################
+#    Value Proposition Classes (Schema 2.0)
+#################################################################
+
+:TeachingMethod a owl:Class ;
+    rdfs:label "Teaching Method" ;
+    rdfs:comment "e.g., Lecture, Project, Practice" .
+
+:TechStack a owl:Class ;
+    rdfs:label "Tech Stack" ;
+    rdfs:comment "Technologies/Tools used in the course (e.g., PyTorch, AWS)" .
+
+:CourseFocus a owl:Class ;
+    rdfs:label "Course Focus" ;
+    rdfs:comment "Focus of the course: Theory vs Application" .
+
+#################################################################
 #    Classes
 #################################################################
 
@@ -83,6 +99,21 @@
     rdfs:domain :Subject ;
     rdfs:range :CurriculumDomain ;
     rdfs:label "belongs to domain" .
+
+:hasTeachingMethod a owl:ObjectProperty ;
+    rdfs:domain :Subject ;
+    rdfs:range :TeachingMethod ;
+    rdfs:label "has teaching method" .
+
+:usesTechStack a owl:ObjectProperty ;
+    rdfs:domain :Subject ;
+    rdfs:range :TechStack ;
+    rdfs:label "uses tech stack" .
+
+:hasFocus a owl:ObjectProperty ;
+    rdfs:domain :Subject ;
+    rdfs:range :CourseFocus ;
+    rdfs:label "has course focus" .
 
 #################################################################
 #    Data Properties

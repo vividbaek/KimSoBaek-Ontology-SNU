@@ -7,9 +7,11 @@ curr:COSS_05 a curr:COSSSubject,
     rdfs:label "데이터구조" ;
     curr:hasDescription "데이터를 논리적으로 조직화하여 시스템 성능을 극대화하는 방법론 (자료구조와 유사)"^^xsd:string ;
     curr:hasDomain "CS기초"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_10,
         curr:JBNU_CE_01 ;
     curr:hasSemester "2-1"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "데이터구조"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Data_Abstraction,
@@ -23,7 +25,9 @@ curr:COSS_06 a curr:COSSSubject,
     rdfs:label "소프트웨어의이해" ;
     curr:hasDescription "현대 사회에서의 소프트웨어 역할과 컴퓨팅 사고의 기초 이해"^^xsd:string ;
     curr:hasDomain "SW기초"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasSemester "Any"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "소프트웨어의이해"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Algorithm_Literacy,
@@ -37,8 +41,10 @@ curr:COSS_08 a curr:COSSSubject,
     rdfs:label "윈도우프로그래밍" ;
     curr:hasDescription "윈도우 운영체제 환경에서 동작하는 사용자 중심 애플리케이션 개발"^^xsd:string ;
     curr:hasDomain "SW개발"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_07 ;
     curr:hasSemester "2-1"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "윈도우프로그래밍"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_API_Interaction,
@@ -52,12 +58,14 @@ curr:COSS_22 a curr:COSSSubject,
     rdfs:label "통계적기계학습" ;
     curr:hasDescription "통계적 관점에서 기계학습 알고리즘의 수학적 근거와 확률적 모델링 탐구"^^xsd:string ;
     curr:hasDomain "인공지능/통계"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_21,
         curr:COSS_28,
         curr:JBNU_CE_04,
         curr:JBNU_CE_05,
         curr:JBNU_CE_13 ;
     curr:hasSemester "3-1"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "통계적기계학습"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Bayesian_Inference,
@@ -71,6 +79,7 @@ curr:COSS_23 a curr:COSSSubject,
     rdfs:label "인공지능과기계학습" ;
     curr:hasDescription "기계학습 기술을 포함하여 인공지능 시스템이 문제를 해결하는 포괄적 방법론 학습"^^xsd:string ;
     curr:hasDomain "인공지능"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_21,
         curr:JBNU_CE_01,
         curr:JBNU_CE_04,
@@ -78,6 +87,7 @@ curr:COSS_23 a curr:COSSSubject,
         curr:JBNU_CE_07,
         curr:JBNU_CE_13 ;
     curr:hasSemester "3-1"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "인공지능과기계학습"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Algorithmic_Decision_Making,
@@ -91,6 +101,7 @@ curr:COSS_25 a curr:COSSSubject,
     rdfs:label "인공지능기초" ;
     curr:hasDescription "인공지능 연구의 역사를 이해하고 기본이 되는 수학 및 논리적 기초 습득"^^xsd:string ;
     curr:hasDomain "인공지능"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_12,
         curr:JBNU_CE_01,
         curr:JBNU_CE_04,
@@ -98,6 +109,7 @@ curr:COSS_25 a curr:COSSSubject,
         curr:JBNU_CE_07,
         curr:JBNU_CE_13 ;
     curr:hasSemester "2-1"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "인공지능기초"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Computational_Intelligence,
@@ -111,12 +123,14 @@ curr:COSS_26 a curr:COSSSubject,
     rdfs:label "인공지능입문" ;
     curr:hasDescription "인공지능이 사회와 산업에 미치는 영향과 기술적 개념에 대한 입문 교육"^^xsd:string ;
     curr:hasDomain "인공지능"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:JBNU_CE_01,
         curr:JBNU_CE_04,
         curr:JBNU_CE_05,
         curr:JBNU_CE_07,
         curr:JBNU_CE_13 ;
     curr:hasSemester "2-2"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "인공지능입문"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Algorithmic_Thinking,
@@ -130,10 +144,12 @@ curr:COSS_30 a curr:COSSSubject,
     rdfs:label "기초통계" ;
     curr:hasDescription "데이터의 특성을 요약하고 직관적으로 이해하기 위한 기초 통계 도구 학습"^^xsd:string ;
     curr:hasDomain "데이터사이언스"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:JBNU_CE_04,
         curr:JBNU_CE_05,
         curr:JBNU_CE_13 ;
     curr:hasSemester "Any"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "기초통계"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Basic_Probability,
@@ -147,26 +163,32 @@ curr:COSS_38 a curr:COSSSubject,
     rdfs:label "빅데이터윤리" ;
     curr:hasDescription "빅데이터와 AI 기술 활용 시 발생하는 윤리적 쟁점과 법적 규제 이해 (1학기 개설)"^^xsd:string ;
     curr:hasDomain "공통/데이터윤리"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_01,
         curr:JBNU_CE_01,
         curr:JBNU_CE_13,
         curr:JBNU_CE_14 ;
     curr:hasSemester "Any-1"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "빅데이터윤리"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Accountability,
         curr:Competency_Algorithmic_Fairness,
         curr:Competency_Data_Privacy,
         curr:Competency_Digital_Governance,
-        curr:Competency_Social_Impact_Analysis .
+        curr:Competency_Social_Impact_Analysis ;
+    curr:usesTechStack curr:Tech_Hadoop,
+        curr:Tech_Spark .
 
 curr:COSS_45 a curr:COSSSubject,
         curr:Subject ;
     rdfs:label "컴퓨터아키텍쳐" ;
     curr:hasDescription "고성능 컴퓨팅을 위한 최신 컴퓨터 시스템 구조와 최적화 기법 심화 학습"^^xsd:string ;
     curr:hasDomain "시스템SW"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_13 ;
     curr:hasSemester "2-1"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "컴퓨터아키텍쳐"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Cache_Coherence,
@@ -180,9 +202,11 @@ curr:COSS_52 a curr:COSSSubject,
     rdfs:label "바이오인포메틱스개론" ;
     curr:hasDescription "생명공학 데이터를 분석하기 위해 알고리즘과 통계 기법을 적용하는 융합 학문"^^xsd:string ;
     curr:hasDomain "데이터사이언스/바이오"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_02,
         curr:COSS_28 ;
     curr:hasSemester "4-1"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "바이오인포메틱스개론"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Biological_Sequence_Analysis,
@@ -196,9 +220,11 @@ curr:COSS_55 a curr:COSSSubject,
     rdfs:label "데이터마이닝개론" ;
     curr:hasDescription "데이터 마이닝의 전반적인 과정과 기초적인 분석 기법에 대한 입문 교육"^^xsd:string ;
     curr:hasDomain "데이터사이언스"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_01,
         curr:JBNU_CE_01 ;
     curr:hasSemester "4-1"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "데이터마이닝개론"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Basic_Classification,
@@ -212,10 +238,12 @@ curr:COSS_56 a curr:COSSSubject,
     rdfs:label "데이터패턴인식" ;
     curr:hasDescription "데이터의 특징을 추출하여 특정 범주로 분류하거나 식별하는 기계적인 원리 학습"^^xsd:string ;
     curr:hasDomain "인공지능"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_21,
         curr:COSS_33,
         curr:JBNU_CE_01 ;
     curr:hasSemester "3-1"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "데이터패턴인식"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Decision_Boundaries,
@@ -229,12 +257,14 @@ curr:COSS_57 a curr:COSSSubject,
     rdfs:label "다변량통계분석" ;
     curr:hasDescription "여러 변수 간의 복잡한 상호관계를 동시에 분석하는 고급 통계 기법"^^xsd:string ;
     curr:hasDomain "데이터사이언스/통계"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_29,
         curr:COSS_32,
         curr:JBNU_CE_04,
         curr:JBNU_CE_05,
         curr:JBNU_CE_13 ;
     curr:hasSemester "3-2"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "다변량통계분석"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Covariance_Structures,
@@ -248,9 +278,11 @@ curr:COSS_58 a curr:COSSSubject,
     rdfs:label "HCI개론(캡스톤디자인)" ;
     curr:hasDescription "사용자와 시스템 간의 효율적인 상호작용을 위한 인터페이스 설계 및 평가 실무"^^xsd:string ;
     curr:hasDomain "HCI/UI"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_59,
         curr:JBNU_CE_25 ;
     curr:hasSemester "4-1"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "HCI개론(캡스톤디자인)"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Accessibility_Engineering,
@@ -264,31 +296,37 @@ curr:COSS_62 a curr:COSSSubject,
     rdfs:label "딥러닝개론" ;
     curr:hasDescription "심층 신경망의 기초 설계법과 학습 최적화를 위한 수학적/기술적 방법론 입문"^^xsd:string ;
     curr:hasDomain "인공지능"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_21,
         curr:COSS_33,
         curr:JBNU_CE_04,
         curr:JBNU_CE_07,
         curr:JBNU_CE_16 ;
     curr:hasSemester "3-2"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "딥러닝개론"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Activation_Functions,
         curr:Competency_Gradient_Descent,
         curr:Competency_Layered_Architectures,
         curr:Competency_Optimization_Algorithms,
-        curr:Competency_Regularization_Techniques .
+        curr:Competency_Regularization_Techniques ;
+    curr:usesTechStack curr:Tech_PyTorch,
+        curr:Tech_TensorFlow .
 
 curr:COSS_63 a curr:COSSSubject,
         curr:Subject ;
     rdfs:label "통계계산" ;
     curr:hasDescription "수학적으로 풀기 어려운 통계 문제를 컴퓨터 알고리즘을 통해 수치적으로 해결하는 기법"^^xsd:string ;
     curr:hasDomain "데이터사이언스/통계"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_11,
         curr:COSS_31,
         curr:JBNU_CE_04,
         curr:JBNU_CE_05,
         curr:JBNU_CE_13 ;
     curr:hasSemester "3-1"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "통계계산"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Convergence_Analysis,
@@ -302,9 +340,11 @@ curr:COSS_64 a curr:COSSSubject,
     rdfs:label "회귀분석" ;
     curr:hasDescription "변수 간의 인과관계를 모델링하고 연속적인 수치를 예측하는 데이터 분석의 핵심 기법 (모든 학기)"^^xsd:string ;
     curr:hasDomain "데이터사이언스/통계"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_29,
         curr:COSS_65 ;
     curr:hasSemester "Any"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "회귀분석"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Least_Squares_Estimation,
@@ -318,6 +358,7 @@ curr:COSS_66 a curr:COSSSubject,
     rdfs:label "빅데이터처리" ;
     curr:hasDescription "단일 컴퓨터로 처리 불가능한 대용량 데이터를 여러 서버에서 분산 처리하는 시스템 설계"^^xsd:string ;
     curr:hasDomain "데이터엔지니어링"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_39,
         curr:COSS_43,
         curr:COSS_47,
@@ -325,21 +366,26 @@ curr:COSS_66 a curr:COSSSubject,
         curr:JBNU_CE_13,
         curr:JBNU_CE_14 ;
     curr:hasSemester "3-1"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "빅데이터처리"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Data_Pipeline_Engineering,
         curr:Competency_Distributed_Computing,
         curr:Competency_Fault_Tolerance,
         curr:Competency_MapReduce_Paradigm,
-        curr:Competency_System_Scalability .
+        curr:Competency_System_Scalability ;
+    curr:usesTechStack curr:Tech_Hadoop,
+        curr:Tech_Spark .
 
 curr:COSS_71 a curr:COSSSubject,
         curr:Subject ;
     rdfs:label "지능형언어처리" ;
     curr:hasDescription "단순 처리를 넘어 지능적으로 언어를 이해하고 지식 베이스와 연결하는 고도화된 기술"^^xsd:string ;
     curr:hasDomain "인공지능"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_51 ;
     curr:hasSemester "4-2"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "지능형언어처리"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Cognitive_Language_Modeling,
@@ -353,10 +399,12 @@ curr:COSS_72 a curr:COSSSubject,
     rdfs:label "자연어처리와언어모델" ;
     curr:hasDescription "거대 언어 모델(LLM)의 내부 구조와 이를 활용한 생성 및 이해 과업 수행 방법론"^^xsd:string ;
     curr:hasDomain "인공지능"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_51,
         curr:COSS_61,
         curr:JBNU_CE_16 ;
     curr:hasSemester "4-1"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "자연어처리와언어모델"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Attention_Mechanism,
@@ -370,8 +418,10 @@ curr:COSS_75 a curr:COSSSubject,
     rdfs:label "영상처리및응용" ;
     curr:hasDescription "컴퓨터 비전 기술을 의료, 보안 등 실제 산업 도메인에 적용하는 실무 응용 학습"^^xsd:string ;
     curr:hasDomain "인공지능/실무"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_74 ;
     curr:hasSemester "3-1"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "영상처리및응용"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Augmented_Reality_Basics,
@@ -385,11 +435,13 @@ curr:COSS_76 a curr:COSSSubject,
     rdfs:label "졸업프로젝트" ;
     curr:hasDescription "학부 전 과정을 통해 습득한 지식을 통합하여 완성도 높은 프로젝트 결과물을 도출"^^xsd:string ;
     curr:hasDomain "종합실습"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_15,
         curr:COSS_37,
         curr:COSS_67,
         curr:JBNU_CE_25 ;
     curr:hasSemester "4-Any"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "졸업프로젝트"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Final_Prototype_Development,
@@ -403,11 +455,13 @@ curr:COSS_77 a curr:COSSSubject,
     rdfs:label "시스템종합설계(캡스톤디자인)" ;
     curr:hasDescription "실제 서비스 가능한 수준의 시스템을 기획부터 배포까지 팀 단위로 수행하는 설계 프로젝트"^^xsd:string ;
     curr:hasDomain "종합실습/SW개발"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_18,
         curr:COSS_42,
         curr:JBNU_CE_15,
         curr:JBNU_CE_25 ;
     curr:hasSemester "4-Any"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "시스템종합설계(캡스톤디자인)"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Agile_Development,
@@ -421,10 +475,12 @@ curr:COSS_78 a curr:COSSSubject,
     rdfs:label "지능형시스템개발" ;
     curr:hasDescription "학습된 AI 모델을 실제 운영 환경에 안정적으로 탑재하고 운영하는 지능형 시스템 구축 실무"^^xsd:string ;
     curr:hasDomain "데이터엔지니어링/AI응용"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_68,
         curr:COSS_70,
         curr:JBNU_CE_15 ;
     curr:hasSemester "4-1"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "지능형시스템개발"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_AI_Model_Serving,
@@ -438,6 +494,7 @@ curr:COSS_79 a curr:COSSSubject,
     rdfs:label "통계분석설계(캡스톤디자인)" ;
     curr:hasDescription "통계 이론을 실데이터에 적용하여 가설을 검증하고 비즈니스 인사이트를 도출하는 분석 프로젝트"^^xsd:string ;
     curr:hasDomain "데이터사이언스/통계"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_40,
         curr:COSS_67,
         curr:JBNU_CE_04,
@@ -445,6 +502,7 @@ curr:COSS_79 a curr:COSSSubject,
         curr:JBNU_CE_13,
         curr:JBNU_CE_25 ;
     curr:hasSemester "3/4-1"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "통계분석설계(캡스톤디자인)"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Analytical_Reporting,
@@ -458,12 +516,14 @@ curr:COSS_80 a curr:COSSSubject,
     rdfs:label "통계분석실습" ;
     curr:hasDescription "통계 분석 도구를 활용하여 실제 데이터를 직접 처리하고 해석하는 실무 중심 실습 과정"^^xsd:string ;
     curr:hasDomain "데이터사이언스/통계"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_11,
         curr:COSS_29,
         curr:JBNU_CE_04,
         curr:JBNU_CE_05,
         curr:JBNU_CE_13 ;
     curr:hasSemester "3-2"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "통계분석실습"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Empirical_Analysis,
@@ -493,9 +553,11 @@ curr:JBNU_CE_18 a curr:JBNUSubject,
     rdfs:label "수치해석및최적화" ;
     curr:hasDescription "공학적 문제 해결을 위한 수학적 모델링과 프로그래밍 기법을 학습하며, 비선형 방정식 및 최적화 문제를 해결하는 능력을 배양함"^^xsd:string ;
     curr:hasDomain "AI 최적화/시뮬레이션"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
     curr:hasPrerequisite curr:JBNU_CE_02,
         curr:JBNU_CE_04 ;
     curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
     curr:hasTitle "수치해석및최적화"^^xsd:string ;
     curr:offeredInSource "JBNU"^^xsd:string ;
     curr:teaches curr:Competency_Error_Analysis,
@@ -510,9 +572,11 @@ curr:JBNU_CE_22 a curr:JBNUSubject,
     curr:equivalentTo curr:COSS_54 ;
     curr:hasDescription "대규모 데이터에서 정보를 분석하는 이론과 알고리즘(군집화, 추천 시스템 등)을 학습하고 Python을 활용해 실제 데이터를 분석함"^^xsd:string ;
     curr:hasDomain "데이터사이언스"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
     curr:hasPrerequisite curr:JBNU_CE_07,
         curr:JBNU_CE_14 ;
     curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
     curr:hasTitle "데이터마이닝"^^xsd:string ;
     curr:offeredInSource "JBNU"^^xsd:string ;
     curr:teaches curr:Competency_Association_Rule_Mining,
@@ -526,9 +590,11 @@ curr:JBNU_CE_23 a curr:JBNUSubject,
     rdfs:label "디지털시스템설계" ;
     curr:hasDescription "HDL(Hardware Description Language)의 기본 문법을 익히고 이를 활용하여 디지털 시스템을 설계하는 기법을 학습함"^^xsd:string ;
     curr:hasDomain "반도체/하드웨어 설계"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
     curr:hasPrerequisite curr:JBNU_CE_03,
         curr:JBNU_CE_08 ;
     curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
     curr:hasTitle "디지털시스템설계"^^xsd:string ;
     curr:offeredInSource "JBNU"^^xsd:string ;
     curr:teaches curr:Competency_Digital_Logic_Design,
@@ -543,23 +609,30 @@ curr:JBNU_CE_29 a curr:JBNUSubject,
     curr:equivalentTo curr:COSS_70 ;
     curr:hasDescription "AWS, Google Cloud 등 상용 클라우드 서비스를 활용해 실제 웹 서비스를 배포하고 Auto Scaling 등을 적용하는 실습을 진행함"^^xsd:string ;
     curr:hasDomain "클라우드 엔지니어링"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
     curr:hasPrerequisite curr:JBNU_CE_15,
         curr:JBNU_CE_20 ;
     curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
     curr:hasTitle "클라우드컴퓨팅"^^xsd:string ;
     curr:offeredInSource "JBNU"^^xsd:string ;
     curr:teaches curr:Competency_Auto_Scaling,
         curr:Competency_Cloud_Service_Models,
         curr:Competency_Containerization,
         curr:Competency_Deployment_Pipeline,
-        curr:Competency_Virtualization .
+        curr:Competency_Virtualization ;
+    curr:usesTechStack curr:Tech_AWS,
+        curr:Tech_Docker,
+        curr:Tech_Kubernetes .
 
 curr:JBNU_CE_30 a curr:JBNUSubject,
         curr:Subject ;
     rdfs:label "IT창업" ;
     curr:hasDescription "SW 기술 창업에 필요한 전반적인 내용과 IT 시장 흐름을 이해하고, 창업 아이템 구체화 및 기업 운영 지식을 학습함"^^xsd:string ;
     curr:hasDomain "창업/비즈니스"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
     curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
     curr:hasTitle "IT창업"^^xsd:string ;
     curr:offeredInSource "JBNU"^^xsd:string ;
     curr:teaches curr:Competency_Business_Model_Generation,
@@ -573,8 +646,10 @@ curr:JBNU_CE_33 a curr:JBNUSubject,
     rdfs:label "인간-컴퓨터상호작용" ;
     curr:hasDescription "인간의 인지적 특성을 이해하고 사용자 중심의 인터페이스(UI/UX)를 설계, 구현, 평가하는 방법론을 학습함"^^xsd:string ;
     curr:hasDomain "HCI/UI/UX"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
     curr:hasPrerequisite curr:JBNU_CE_27 ;
     curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
     curr:hasTitle "인간-컴퓨터상호작용"^^xsd:string ;
     curr:offeredInSource "JBNU"^^xsd:string ;
     curr:teaches curr:Competency_Cognitive_Psychology,
@@ -588,8 +663,10 @@ curr:JBNU_CE_34 a curr:JBNUSubject,
     rdfs:label "오픈소스소프트웨어개발" ;
     curr:hasDescription "오픈소스 생태계의 가치를 이해하고, 대규모 OSS 프로젝트 분석 및 기여(Contribution) 과정을 통해 협업 능력을 배양함"^^xsd:string ;
     curr:hasDomain "DevOps/오픈소스"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
     curr:hasPrerequisite curr:JBNU_CE_12 ;
     curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
     curr:hasTitle "오픈소스소프트웨어개발"^^xsd:string ;
     curr:offeredInSource "JBNU"^^xsd:string ;
     curr:teaches <http://example.org/curriculum/Competency_CI/CD_Pipelines>,
@@ -603,9 +680,11 @@ curr:JBNU_CE_35 a curr:JBNUSubject,
     rdfs:label "임베디드시스템" ;
     curr:hasDescription "내장형 시스템의 하드웨어 구성과 동작 원리를 이해하고, 센서 및 액추에이터를 제어하는 펌웨어 개발 실습을 진행함"^^xsd:string ;
     curr:hasDomain "IoT/임베디드"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
     curr:hasPrerequisite curr:JBNU_CE_08,
         curr:JBNU_CE_15 ;
     curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
     curr:hasTitle "임베디드시스템"^^xsd:string ;
     curr:offeredInSource "JBNU"^^xsd:string ;
     curr:teaches curr:Competency_Embedded_Architecture,
@@ -619,9 +698,11 @@ curr:JBNU_CE_37 a curr:JBNUSubject,
     rdfs:label "컴파일러" ;
     curr:hasDescription "프로그래밍 언어 번역기의 원리를 이해하고, 언어 인식 및 분석 과정을 통해 실제 컴파일러 또는 인터프리터를 구현하는 능력을 함양함"^^xsd:string ;
     curr:hasDomain "시스템 소프트웨어"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
     curr:hasPrerequisite curr:JBNU_CE_01,
         curr:JBNU_CE_19 ;
     curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
     curr:hasTitle "컴파일러"^^xsd:string ;
     curr:offeredInSource "JBNU"^^xsd:string ;
     curr:teaches curr:Competency_Code_Generation,
@@ -635,9 +716,11 @@ curr:JBNU_CE_38 a curr:JBNUSubject,
     rdfs:label "자연어처리" ;
     curr:hasDescription "딥러닝 기반의 자연어처리 핵심 기술(임베딩, 트랜스포머 등)을 학습하고 챗봇, 번역기 등 AI 응용 서비스를 구현함"^^xsd:string ;
     curr:hasDomain "인공지능/NLP"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
     curr:hasPrerequisite curr:JBNU_CE_16,
         curr:JBNU_CE_21 ;
     curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
     curr:hasTitle "자연어처리"^^xsd:string ;
     curr:offeredInSource "JBNU"^^xsd:string ;
     curr:teaches curr:Competency_Dialogue_Systems,
@@ -652,9 +735,11 @@ curr:JBNU_CE_39 a curr:JBNUSubject,
     curr:equivalentTo curr:COSS_74 ;
     curr:hasDescription "시각 정보를 획득, 처리, 분석하는 컴퓨터 비전의 기초와 최신 딥러닝 기법을 학습하여 영상 처리 및 객체 인식 시스템을 구현함"^^xsd:string ;
     curr:hasDomain "인공지능/비전"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
     curr:hasPrerequisite curr:JBNU_CE_04,
         curr:JBNU_CE_16 ;
     curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
     curr:hasTitle "컴퓨터비전"^^xsd:string ;
     curr:offeredInSource "JBNU"^^xsd:string ;
     curr:teaches curr:Competency_3D_Reconstruction,
@@ -668,8 +753,10 @@ curr:JBNU_CE_40 a curr:JBNUSubject,
     rdfs:label "게임및혼합현실" ;
     curr:hasDescription "게임 엔진의 동작 원리와 XR(VR/AR) 구현 기술을 학습하고, 혼합현실 응용 분야의 최신 이슈와 개발 방법을 다룸"^^xsd:string ;
     curr:hasDomain "메타버스/게임개발"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
     curr:hasPrerequisite curr:JBNU_CE_28 ;
     curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
     curr:hasTitle "게임및혼합현실"^^xsd:string ;
     curr:offeredInSource "JBNU"^^xsd:string ;
     curr:teaches curr:Competency_3D_Interaction,
@@ -683,8 +770,10 @@ curr:JBNU_CE_41 a curr:JBNUSubject,
     rdfs:label "산학실전캡스톤3" ;
     curr:hasDescription "창업 및 IT기업 인턴십과 연계하여 실무 전문가와의 협업을 통해 개발 능력을 고도화하고, 사회 진출을 위한 최종적인 문제 해결 역량을 완성함"^^xsd:string ;
     curr:hasDomain "현장 실무/취업 연계"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
     curr:hasPrerequisite curr:JBNU_CE_32 ;
     curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
     curr:hasTitle "산학실전캡스톤3"^^xsd:string ;
     curr:offeredInSource "JBNU"^^xsd:string ;
     curr:teaches curr:Competency_Advanced_Problem_Solving,
@@ -699,9 +788,11 @@ curr:JBNU_CE_42 a curr:JBNUSubject,
     curr:equivalentTo curr:COSS_49 ;
     curr:hasDescription "시스템 운영 및 서비스 개발 시 발생할 수 있는 보안 이슈(취약점)를 학습하고, 안전한 시스템 설정을 위한 보안 기술을 습득함"^^xsd:string ;
     curr:hasDomain "시스템 보안/해킹방어"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
     curr:hasPrerequisite curr:JBNU_CE_02,
         curr:JBNU_CE_15 ;
     curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
     curr:hasTitle "시스템보안"^^xsd:string ;
     curr:offeredInSource "JBNU"^^xsd:string ;
     curr:teaches curr:Competency_Access_Control_Models,
@@ -715,8 +806,10 @@ curr:JBNU_CE_43 a curr:JBNUSubject,
     rdfs:label "암호응용" ;
     curr:hasDescription "현대 암호 기술의 심화 이론과 최신 동향을 파악하고, 블록체인이나 인증 시스템 등 실제 산업 표준에 적용되는 암호 응용 기술을 학습함"^^xsd:string ;
     curr:hasDomain "블록체인/핀테크보안"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
     curr:hasPrerequisite curr:JBNU_CE_26 ;
     curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
     curr:hasTitle "암호응용"^^xsd:string ;
     curr:offeredInSource "JBNU"^^xsd:string ;
     curr:teaches curr:Competency_Authentication_Protocols,
@@ -730,9 +823,11 @@ curr:JBNU_CE_44 a curr:JBNUSubject,
     rdfs:label "정보검색" ;
     curr:hasDescription "인터넷 정보 검색의 핵심 이론인 색인, 랭킹, 문서 표현을 학습하고 검색 엔진의 구조와 성능 평가 방법을 다룸"^^xsd:string ;
     curr:hasDomain "검색엔진/데이터엔지니어링"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
     curr:hasPrerequisite curr:JBNU_CE_01,
         curr:JBNU_CE_07 ;
     curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
     curr:hasTitle "정보검색"^^xsd:string ;
     curr:offeredInSource "JBNU"^^xsd:string ;
     curr:teaches curr:Competency_Inverted_Index,
@@ -746,8 +841,10 @@ curr:JBNU_CE_45 a curr:JBNUSubject,
     rdfs:label "SW인턴십1" ;
     curr:hasDescription "학교에서 배운 이론을 산업 현장에서 직접 실습하며 기업 문화를 익히고, 취업 후 즉시 활용 가능한 실무 적응력과 설계 능력을 배양함"^^xsd:string ;
     curr:hasDomain "인턴십/커리어"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
     curr:hasPrerequisite curr:JBNU_CE_06 ;
     curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
     curr:hasTitle "SW인턴십1"^^xsd:string ;
     curr:offeredInSource "JBNU"^^xsd:string ;
     curr:teaches curr:Competency_Career_Development,
@@ -761,11 +858,13 @@ curr:COSS_03 a curr:COSSSubject,
     rdfs:label "데이터통계입문" ;
     curr:hasDescription "데이터 분석의 핵심이 되는 통계학적 개념과 수치 해석 기초 학습"^^xsd:string ;
     curr:hasDomain "데이터사이언스"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:JBNU_CE_01,
         curr:JBNU_CE_04,
         curr:JBNU_CE_05,
         curr:JBNU_CE_13 ;
     curr:hasSemester "1-1"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "데이터통계입문"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Descriptive_Statistics,
@@ -779,9 +878,11 @@ curr:COSS_14 a curr:COSSSubject,
     rdfs:label "프로그래밍방법론" ;
     curr:hasDescription "더 효율적이고 유지보수가 용이한 코드를 작성하기 위한 체계적인 방법론 학습"^^xsd:string ;
     curr:hasDomain "SW엔지니어링"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_13,
         curr:JBNU_CE_25 ;
     curr:hasSemester "1-2"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "프로그래밍방법론"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Abstraction_Levels,
@@ -795,6 +896,7 @@ curr:COSS_15 a curr:COSSSubject,
     rdfs:label "객체지향프로그래밍(캡스톤디자인)" ;
     curr:hasDescription "객체 지향 개념을 프로젝트에 적용하여 실제 작동하는 소프트웨어를 설계하고 구현"^^xsd:string ;
     curr:hasDomain "SW개발"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_07,
         curr:COSS_14,
         curr:JBNU_CE_02,
@@ -804,6 +906,7 @@ curr:COSS_15 a curr:COSSSubject,
         curr:JBNU_CE_19,
         curr:JBNU_CE_25 ;
     curr:hasSemester "2-1"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "객체지향프로그래밍(캡스톤디자인)"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Component-Based_Design,
@@ -817,6 +920,7 @@ curr:COSS_20 a curr:COSSSubject,
     rdfs:label "알고리즘입문" ;
     curr:hasDescription "알고리즘의 기초적인 패턴을 익히고 문제 해결을 위한 논리적 사고력 배양"^^xsd:string ;
     curr:hasDomain "CS코어"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_04,
         curr:JBNU_CE_01,
         curr:JBNU_CE_02,
@@ -825,6 +929,7 @@ curr:COSS_20 a curr:COSSSubject,
         curr:JBNU_CE_17,
         curr:JBNU_CE_19 ;
     curr:hasSemester "2-2"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "알고리즘입문"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Base_Algorithms,
@@ -838,6 +943,7 @@ curr:COSS_24 a curr:COSSSubject,
     rdfs:label "인공지능" ;
     curr:hasDescription "컴퓨터가 인간의 지능적 행동을 모방하게 하는 전통적 기법부터 최신 기법까지의 개론"^^xsd:string ;
     curr:hasDomain "인공지능"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_19,
         curr:JBNU_CE_01,
         curr:JBNU_CE_04,
@@ -845,6 +951,7 @@ curr:COSS_24 a curr:COSSSubject,
         curr:JBNU_CE_07,
         curr:JBNU_CE_13 ;
     curr:hasSemester "4-1"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "인공지능"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Automated_Reasoning,
@@ -858,10 +965,12 @@ curr:COSS_27 a curr:COSSSubject,
     rdfs:label "통계학입문" ;
     curr:hasDescription "불확실한 현상을 수치적으로 이해하고 해석하는 통계학의 기초 원리"^^xsd:string ;
     curr:hasDomain "데이터사이언스"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:JBNU_CE_04,
         curr:JBNU_CE_05,
         curr:JBNU_CE_13 ;
     curr:hasSemester "Any"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "통계학입문"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Data_Variation,
@@ -875,11 +984,13 @@ curr:COSS_32 a curr:COSSSubject,
     rdfs:label "통계수학Ⅱ" ;
     curr:hasDescription "다변수 함수와 최적화 기법을 통해 복잡한 통계 모델을 이해하는 심화 수학 (전공기초)"^^xsd:string ;
     curr:hasDomain "데이터사이언스/수학"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_31,
         curr:JBNU_CE_04,
         curr:JBNU_CE_05,
         curr:JBNU_CE_13 ;
     curr:hasSemester "Any-2"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "통계수학Ⅱ"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Linear_Transformation,
@@ -893,7 +1004,9 @@ curr:COSS_34 a curr:COSSSubject,
     rdfs:label "공학수학Ⅰ" ;
     curr:hasDescription "물리적 현상과 시스템의 동적인 변화를 수학적으로 모델링하는 기법 학습 (전공기초)"^^xsd:string ;
     curr:hasDomain "CS기초/수학"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasSemester "Any-2"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "공학수학Ⅰ"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Change_Measurement,
@@ -907,8 +1020,10 @@ curr:COSS_35 a curr:COSSSubject,
     rdfs:label "공학수학Ⅱ" ;
     curr:hasDescription "신호 처리 및 고급 시스템 설계를 위한 복소수와 주파수 영역 분석 학습"^^xsd:string ;
     curr:hasDomain "CS기초/수학"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_34 ;
     curr:hasSemester "2-1"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "공학수학Ⅱ"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Complex_Variables,
@@ -922,10 +1037,12 @@ curr:COSS_36 a curr:COSSSubject,
     rdfs:label "데이터분석및활용" ;
     curr:hasDescription "분석된 데이터를 실제 문제 해결이나 의사결정에 적용하는 응용 기술"^^xsd:string ;
     curr:hasDomain "데이터사이언스"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_02,
         curr:COSS_28,
         curr:JBNU_CE_01 ;
     curr:hasSemester "4-1"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "데이터분석및활용"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Actionable_Insights,
@@ -939,6 +1056,7 @@ curr:COSS_40 a curr:COSSSubject,
     rdfs:label "빅데이터통계분석" ;
     curr:hasDescription "대규모 데이터셋에서 유의미한 통계적 결론을 도출하기 위한 계산 알고리즘 학습"^^xsd:string ;
     curr:hasDomain "빅데이터/통계"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_11,
         curr:COSS_29,
         curr:JBNU_CE_01,
@@ -947,40 +1065,49 @@ curr:COSS_40 a curr:COSSSubject,
         curr:JBNU_CE_13,
         curr:JBNU_CE_14 ;
     curr:hasSemester "3-1"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "빅데이터통계분석"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Computational_Statistics,
         curr:Competency_High-dimensional_Data,
         curr:Competency_Large-scale_Inference,
         curr:Competency_Resampling_Methods,
-        curr:Competency_Statistical_Scalability .
+        curr:Competency_Statistical_Scalability ;
+    curr:usesTechStack curr:Tech_Hadoop,
+        curr:Tech_Spark .
 
 curr:COSS_42 a curr:COSSSubject,
         curr:Subject ;
     rdfs:label "데이터베이스프로그래밍" ;
     curr:hasDescription "응용 프로그램과 데이터베이스를 연동하여 데이터를 처리하는 프로그래밍 기법"^^xsd:string ;
     curr:hasDomain "데이터엔지니어링/SW개발"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_39,
         curr:COSS_41,
         curr:JBNU_CE_01 ;
     curr:hasSemester "4-1"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "데이터베이스프로그래밍"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Application_Interfacing,
         curr:Competency_Data_Persistence_Layer,
         curr:Competency_Embedded_SQL,
         curr:Competency_Object-Relational_Mapping,
-        curr:Competency_Stored_Procedures .
+        curr:Competency_Stored_Procedures ;
+    curr:usesTechStack curr:Tech_MongoDB,
+        curr:Tech_MySQL .
 
 curr:COSS_43 a curr:COSSSubject,
         curr:Subject ;
     rdfs:label "스토리지시스템" ;
     curr:hasDescription "대규모 데이터를 물리적으로 저장하고 관리하는 하드웨어 및 소프트웨어 아키텍처"^^xsd:string ;
     curr:hasDomain "데이터엔지니어링/인프라"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_41,
         curr:COSS_50,
         curr:JBNU_CE_15 ;
     curr:hasSemester "4-2"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "스토리지시스템"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Disk_Scheduling,
@@ -994,12 +1121,14 @@ curr:COSS_48 a curr:COSSSubject,
     rdfs:label "서버운영및보안" ;
     curr:hasDescription "네트워크 서비스를 제공하는 서버의 구축, 안정적 운영 및 보안 방어 기술"^^xsd:string ;
     curr:hasDomain "인프라/보안"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_47,
         curr:JBNU_CE_15,
         curr:JBNU_CE_20,
         curr:JBNU_CE_31,
         curr:JBNU_CE_36 ;
     curr:hasSemester "2-2"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "서버운영및보안"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Availability_Strategy,
@@ -1013,6 +1142,7 @@ curr:COSS_49 a curr:COSSSubject,
     rdfs:label "시스템보안" ;
     curr:hasDescription "컴퓨터 시스템과 데이터의 보호를 위해 공격 경로를 분석하고 방어 체계를 구축"^^xsd:string ;
     curr:hasDomain "보안"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_46,
         curr:COSS_48,
         curr:JBNU_CE_15,
@@ -1020,6 +1150,7 @@ curr:COSS_49 a curr:COSSSubject,
         curr:JBNU_CE_31,
         curr:JBNU_CE_36 ;
     curr:hasSemester "4-2"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "시스템보안"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Cryptographic_Protocols,
@@ -1033,9 +1164,11 @@ curr:COSS_54 a curr:COSSSubject,
     rdfs:label "데이터마이닝" ;
     curr:hasDescription "데이터로부터 지식을 추출하기 위한 통계적 및 알고리즘적 방법론의 심화 학습"^^xsd:string ;
     curr:hasDomain "데이터사이언스"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_53,
         curr:JBNU_CE_01 ;
     curr:hasSemester "3-2"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "데이터마이닝"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Anomaly_Detection,
@@ -1049,9 +1182,11 @@ curr:COSS_59 a curr:COSSSubject,
     rdfs:label "UI/UX" ;
     curr:hasDescription "사용자의 경험을 최적화하기 위한 시각 디자인 요소와 흐름 설계 방법론 학습"^^xsd:string ;
     curr:hasDomain "UI/UX"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_17,
         curr:COSS_18 ;
     curr:hasSemester "3-1"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "UI/UX"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Design_Systems,
@@ -1065,9 +1200,11 @@ curr:COSS_61 a curr:COSSSubject,
     rdfs:label "생성형AI의이해" ;
     curr:hasDescription "텍스트, 이미지 등 새로운 콘텐츠를 생성하는 AI의 원리와 최신 생성 모델 활용법 학습"^^xsd:string ;
     curr:hasDomain "인공지능/최신기술"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_21,
         curr:COSS_60 ;
     curr:hasSemester "3-1"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "생성형AI의이해"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Diffusion_Models,
@@ -1081,8 +1218,10 @@ curr:COSS_65 a curr:COSSSubject,
     rdfs:label "회귀분석입문" ;
     curr:hasDescription "회귀 분석의 기초 개념을 익히고 실데이터에 적용하여 변수 간 관계를 파악하는 입문 과정"^^xsd:string ;
     curr:hasDomain "데이터사이언스/통계"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_28 ;
     curr:hasSemester "2-1"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "회귀분석입문"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Basic_Prediction,
@@ -1096,6 +1235,7 @@ curr:COSS_68 a curr:COSSSubject,
     rdfs:label "인공지능산업체특강" ;
     curr:hasDescription "산업계 전문가들이 전하는 최신 AI 적용 사례와 기업 현장에서 필요한 기술 스택 파악"^^xsd:string ;
     curr:hasDomain "인공지능/경력개발"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_21,
         curr:JBNU_CE_01,
         curr:JBNU_CE_04,
@@ -1103,6 +1243,7 @@ curr:COSS_68 a curr:COSSSubject,
         curr:JBNU_CE_07,
         curr:JBNU_CE_13 ;
     curr:hasSemester "4-1"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "인공지능산업체특강"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_AI_Strategy,
@@ -1116,6 +1257,7 @@ curr:COSS_69 a curr:COSSSubject,
     rdfs:label "클라우드시스템" ;
     curr:hasDescription "클라우드 인프라를 구축하고 가상 자원을 효율적으로 관리하기 위한 하부 시스템 구조 학습"^^xsd:string ;
     curr:hasDomain "클라우드/인프라"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_47,
         curr:COSS_50,
         curr:JBNU_CE_15,
@@ -1123,21 +1265,27 @@ curr:COSS_69 a curr:COSSSubject,
         curr:JBNU_CE_31,
         curr:JBNU_CE_36 ;
     curr:hasSemester "4-2"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "클라우드시스템"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Cloud_Security_Architecture,
         curr:Competency_Container_Orchestration,
         curr:Competency_High_Availability,
         curr:Competency_Infrastructure_as_Code,
-        curr:Competency_Virtualization_Technology .
+        curr:Competency_Virtualization_Technology ;
+    curr:usesTechStack curr:Tech_AWS,
+        curr:Tech_Docker,
+        curr:Tech_Kubernetes .
 
 curr:COSS_73 a curr:COSSSubject,
         curr:Subject ;
     rdfs:label "영상정보처리" ;
     curr:hasDescription "영상 데이터를 수학적으로 조작하여 화질을 개선하고 유의미한 특징을 추출하는 기초 기술"^^xsd:string ;
     curr:hasDomain "인공지능/영상응용"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_35 ;
     curr:hasSemester "4-2"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "영상정보처리"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Color_Space_Transformation,
@@ -2795,7 +2943,9 @@ curr:JBNU_CE_06 a curr:JBNUSubject,
     rdfs:label "컴퓨터공학총론" ;
     curr:hasDescription "컴퓨터공학 전공생이 4년간 배울 내용을 주제별로 소개하고, 최신 동향 파악 및 학습 동기를 부여한다."^^xsd:string ;
     curr:hasDomain "IT 교양/진로탐색"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
     curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
     curr:hasTitle "컴퓨터공학총론"^^xsd:string ;
     curr:offeredInSource "JBNU"^^xsd:string ;
     curr:teaches curr:Competency_Computer_Science_Overview,
@@ -2809,10 +2959,12 @@ curr:JBNU_CE_21 a curr:JBNUSubject,
     rdfs:label "기계학습" ;
     curr:hasDescription "인공지능 전공 필수 과목으로, 인식 문제를 푸는 기초 이론과 신경망, SVM 등을 학습하고 오픈 소스를 활용한 실습을 통해 실무 능력을 배양함"^^xsd:string ;
     curr:hasDomain "머신러닝/딥러닝"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
     curr:hasPrerequisite curr:JBNU_CE_04,
         curr:JBNU_CE_13,
         curr:JBNU_CE_16 ;
     curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
     curr:hasTitle "기계학습"^^xsd:string ;
     curr:offeredInSource "JBNU"^^xsd:string ;
     curr:teaches curr:Competency_Deep_Learning_Basics,
@@ -2826,8 +2978,10 @@ curr:JBNU_CE_24 a curr:JBNUSubject,
     rdfs:label "산학실전캡스톤1" ;
     curr:hasDescription "산업체 수요 기반의 SW 프로젝트 주제를 선정하여, 학생 스스로 필요한 지식을 학습하고 구현, 결과 보고, 데모를 수행하는 종합 설계 과정"^^xsd:string ;
     curr:hasDomain "실무 프로젝트"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
     curr:hasPrerequisite curr:JBNU_CE_12 ;
     curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
     curr:hasTitle "산학실전캡스톤1"^^xsd:string ;
     curr:offeredInSource "JBNU"^^xsd:string ;
     curr:teaches curr:Competency_Presentation_Skills,
@@ -2841,25 +2995,31 @@ curr:JBNU_CE_27 a curr:JBNUSubject,
     rdfs:label "웹서비스설계" ;
     curr:hasDescription "웹 프로그래밍의 기본 개념과 멀티미디어 정보처리 기술을 학습하고, 이를 바탕으로 실제 웹 서비스를 구축하는 실습을 진행함"^^xsd:string ;
     curr:hasDomain "풀스택 웹 개발"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
     curr:hasPrerequisite curr:JBNU_CE_09,
         curr:JBNU_CE_14 ;
     curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
     curr:hasTitle "웹서비스설계"^^xsd:string ;
     curr:offeredInSource "JBNU"^^xsd:string ;
     curr:teaches <http://example.org/curriculum/Competency_Frontend/Backend_Integration>,
         curr:Competency_Multimedia_Processing,
         curr:Competency_REST_API_Design,
         curr:Competency_Web_Architecture,
-        curr:Competency_Web_Interface_Design .
+        curr:Competency_Web_Interface_Design ;
+    curr:usesTechStack curr:Tech_React,
+        curr:Tech_Spring .
 
 curr:JBNU_CE_28 a curr:JBNUSubject,
         curr:Subject ;
     rdfs:label "컴퓨터그래픽스" ;
     curr:hasDescription "컴퓨터 그래픽스의 이론 및 구현법을 이해하고, 현재 널리 사용되는 최신 기법을 학습하여 실용적인 그래픽스 구현 능력을 갖춤"^^xsd:string ;
     curr:hasDomain "게임/메타버스/VR"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
     curr:hasPrerequisite curr:JBNU_CE_02,
         curr:JBNU_CE_04 ;
     curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
     curr:hasTitle "컴퓨터그래픽스"^^xsd:string ;
     curr:offeredInSource "JBNU"^^xsd:string ;
     curr:teaches curr:Competency_3D_Rendering_Pipeline,
@@ -2873,8 +3033,10 @@ curr:JBNU_CE_32 a curr:JBNUSubject,
     rdfs:label "산학실전캡스톤2" ;
     curr:hasDescription "인공지능, IoT, 클라우드 등 신기술을 중심으로 한 산업체 수요 기반 프로젝트를 주도적으로 구현하고 문제 해결 역량을 강화함"^^xsd:string ;
     curr:hasDomain "실무 프로젝트 심화"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
     curr:hasPrerequisite curr:JBNU_CE_24 ;
     curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
     curr:hasTitle "산학실전캡스톤2"^^xsd:string ;
     curr:offeredInSource "JBNU"^^xsd:string ;
     curr:teaches <http://example.org/curriculum/Competency_AI/IoT_Integration>,
@@ -2883,11 +3045,21 @@ curr:JBNU_CE_32 a curr:JBNUSubject,
         curr:Competency_Team_Management,
         curr:Competency_Technical_Presentation .
 
+curr:Tech_Java a curr:TechStack ;
+    rdfs:label "Java" .
+
+curr:Tech_Python a curr:TechStack ;
+    rdfs:label "Python" .
+
+curr:Tech_ScikitLearn a curr:TechStack ;
+    rdfs:label "ScikitLearn" .
+
 curr:COSS_09 a curr:COSSSubject,
         curr:Subject ;
     rdfs:label "웹시스템설계" ;
     curr:hasDescription "웹 환경에서의 시스템 구성 원리와 데이터 흐름을 설계하는 기법"^^xsd:string ;
     curr:hasDomain "웹/인프라"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_07,
         curr:COSS_10,
         curr:JBNU_CE_02,
@@ -2902,20 +3074,25 @@ curr:COSS_09 a curr:COSSSubject,
         curr:JBNU_CE_31,
         curr:JBNU_CE_36 ;
     curr:hasSemester "2-1"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "웹시스템설계"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Client-Server_Architecture,
         curr:Competency_Interface_Standardization,
         curr:Competency_Network_Communication,
         curr:Competency_System_Modeling,
-        curr:Competency_Web_Protocols .
+        curr:Competency_Web_Protocols ;
+    curr:usesTechStack curr:Tech_React,
+        curr:Tech_Spring .
 
 curr:COSS_12 a curr:COSSSubject,
         curr:Subject ;
     rdfs:label "프로그래밍입문" ;
     curr:hasDescription "코딩을 처음 접하는 학습자를 위한 프로그래밍 사고방식과 기초 문법 습득"^^xsd:string ;
     curr:hasDomain "SW기초"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasSemester "1-1"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "프로그래밍입문"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Computational_Logic,
@@ -2929,12 +3106,14 @@ curr:COSS_16 a curr:COSSSubject,
     rdfs:label "C++프로그래밍" ;
     curr:hasDescription "시스템 하드웨어 제어와 고성능 애플리케이션 개발을 위한 C++ 언어 심화 학습"^^xsd:string ;
     curr:hasDomain "시스템SW"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_13,
         curr:JBNU_CE_09,
         curr:JBNU_CE_11,
         curr:JBNU_CE_17,
         curr:JBNU_CE_19 ;
     curr:hasSemester "2-2"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "C++프로그래밍"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Compile-time_Polymorphism,
@@ -2948,6 +3127,7 @@ curr:COSS_17 a curr:COSSSubject,
     rdfs:label "웹프로그래밍기초" ;
     curr:hasDescription "웹 브라우저에서 실행되는 사용자 인터페이스의 구성 요소와 동작 원리 학습"^^xsd:string ;
     curr:hasDomain "웹개발"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_10,
         curr:JBNU_CE_02,
         curr:JBNU_CE_09,
@@ -2959,19 +3139,23 @@ curr:COSS_17 a curr:COSSSubject,
         curr:JBNU_CE_31,
         curr:JBNU_CE_36 ;
     curr:hasSemester "2-1"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "웹프로그래밍기초"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Browser_Rendering,
         curr:Competency_Client-Side_Interaction,
         curr:Competency_Markup_Semantics,
         curr:Competency_Style_Architecture,
-        curr:Competency_Web_Accessibility .
+        curr:Competency_Web_Accessibility ;
+    curr:usesTechStack curr:Tech_React,
+        curr:Tech_Spring .
 
 curr:COSS_18 a curr:COSSSubject,
         curr:Subject ;
     rdfs:label "웹프로그래밍(캡스톤디자인)" ;
     curr:hasDescription "웹 기술을 총동원하여 실제 서비스 가능한 형태의 프로젝트를 기획 및 구현"^^xsd:string ;
     curr:hasDomain "웹개발"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_09,
         curr:COSS_17,
         curr:JBNU_CE_02,
@@ -2985,19 +3169,23 @@ curr:COSS_18 a curr:COSSSubject,
         curr:JBNU_CE_31,
         curr:JBNU_CE_36 ;
     curr:hasSemester "2-2"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "웹프로그래밍(캡스톤디자인)"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Backend_API_Interfacing,
         curr:Competency_Deployment_Strategy,
         curr:Competency_Dynamic_Content_Management,
         curr:Competency_Full-stack_Architecture,
-        curr:Competency_Web_Service_Integration .
+        curr:Competency_Web_Service_Integration ;
+    curr:usesTechStack curr:Tech_React,
+        curr:Tech_Spring .
 
 curr:COSS_19 a curr:COSSSubject,
         curr:Subject ;
     rdfs:label "알고리즘" ;
     curr:hasDescription "주어진 문제를 가장 효율적으로 해결하기 위한 수학적 모델링과 설계 기법 학습"^^xsd:string ;
     curr:hasDomain "CS코어"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_04,
         curr:COSS_20,
         curr:JBNU_CE_01,
@@ -3007,6 +3195,7 @@ curr:COSS_19 a curr:COSSSubject,
         curr:JBNU_CE_17,
         curr:JBNU_CE_19 ;
     curr:hasSemester "3-2"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "알고리즘"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Algorithmic_Strategy,
@@ -3020,12 +3209,14 @@ curr:COSS_37 a curr:COSSSubject,
     rdfs:label "데이터사이언스응용" ;
     curr:hasDescription "데이터 과학 기법을 특정 산업 분야의 데이터에 적용하여 솔루션을 구축하는 실습"^^xsd:string ;
     curr:hasDomain "데이터사이언스"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_21,
         curr:COSS_36,
         curr:JBNU_CE_01,
         curr:JBNU_CE_13,
         curr:JBNU_CE_14 ;
     curr:hasSemester "4-2"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "데이터사이언스응용"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Domain_Adaptation,
@@ -3039,10 +3230,12 @@ curr:COSS_46 a curr:COSSSubject,
     rdfs:label "시스템프로그래밍" ;
     curr:hasDescription "운영체제 기능을 직접 호출하여 시스템 자원을 제어하는 저수준 프로그래밍"^^xsd:string ;
     curr:hasDomain "시스템SW"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_16,
         curr:COSS_44,
         curr:JBNU_CE_15 ;
     curr:hasSemester "3-1"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "시스템프로그래밍"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Inter-Process_Communication,
@@ -3056,9 +3249,11 @@ curr:COSS_50 a curr:COSSSubject,
     rdfs:label "운영체제원리" ;
     curr:hasDescription "하드웨어 자원을 관리하고 소프트웨어 실행 환경을 제공하는 운영체제의 내부 메커니즘"^^xsd:string ;
     curr:hasDomain "시스템SW"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_44,
         curr:COSS_46 ;
     curr:hasSemester "3-2"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "운영체제원리"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_CPU_Scheduling,
@@ -3072,10 +3267,12 @@ curr:COSS_51 a curr:COSSSubject,
     rdfs:label "텍스트마이닝과자연어처리" ;
     curr:hasDescription "비정형 텍스트 데이터에서 유의미한 정보를 추출하고 언어를 컴퓨터가 이해하도록 모델링하는 기술"^^xsd:string ;
     curr:hasDomain "인공지능/데이터분석"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_02,
         curr:COSS_21,
         curr:JBNU_CE_16 ;
     curr:hasSemester "4-1"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "텍스트마이닝과자연어처리"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Language_Engineering,
@@ -3089,10 +3286,12 @@ curr:COSS_53 a curr:COSSSubject,
     rdfs:label "데이터마이닝및분석" ;
     curr:hasDescription "대규모 데이터셋 속에 숨겨진 유용한 상관관계와 패턴을 찾아내는 프로세스 학습"^^xsd:string ;
     curr:hasDomain "데이터사이언스"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_28,
         curr:COSS_39,
         curr:JBNU_CE_01 ;
     curr:hasSemester "2-2"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "데이터마이닝및분석"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Association_Rule_Mining,
@@ -3106,29 +3305,35 @@ curr:COSS_60 a curr:COSSSubject,
     rdfs:label "딥러닝원리와응용" ;
     curr:hasDescription "다층 신경망 구조를 통해 데이터의 추상적인 특징을 학습하는 현대 AI의 핵심 기술"^^xsd:string ;
     curr:hasDomain "인공지능"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_21,
         curr:COSS_33,
         curr:JBNU_CE_04,
         curr:JBNU_CE_07,
         curr:JBNU_CE_16 ;
     curr:hasSemester "3-2"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "딥러닝원리와응용"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Artificial_Neural_Networks,
         curr:Competency_Backpropagation_Optimization,
         curr:Competency_Deep_Architecture_Design,
         curr:Competency_Nonlinear_Transformations,
-        curr:Competency_Representation_Learning .
+        curr:Competency_Representation_Learning ;
+    curr:usesTechStack curr:Tech_PyTorch,
+        curr:Tech_TensorFlow .
 
 curr:COSS_67 a curr:COSSSubject,
         curr:Subject ;
     rdfs:label "데이터종합분석" ;
     curr:hasDescription "다양한 소스의 데이터를 통합하여 복합적인 비즈니스 문제를 해결하고 최적의 모델 제안"^^xsd:string ;
     curr:hasDomain "데이터사이언스"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_37,
         curr:COSS_53,
         curr:JBNU_CE_01 ;
     curr:hasSemester "Any"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "데이터종합분석"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Cross-domain_Correlation,
@@ -3142,6 +3347,7 @@ curr:COSS_70 a curr:COSSSubject,
     rdfs:label "클라우드컴퓨팅" ;
     curr:hasDescription "클라우드 환경에서 애플리케이션을 개발, 배포, 확장하는 서비스 지향 컴퓨팅 기술 습득"^^xsd:string ;
     curr:hasDomain "클라우드/인프라"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_09,
         curr:COSS_69,
         curr:JBNU_CE_15,
@@ -3149,23 +3355,29 @@ curr:COSS_70 a curr:COSSSubject,
         curr:JBNU_CE_31,
         curr:JBNU_CE_36 ;
     curr:hasSemester "4-1"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "클라우드컴퓨팅"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Cloud-native_Development,
         curr:Competency_Distributed_Cloud_Computing,
         curr:Competency_On-demand_Provisioning,
         curr:Competency_Scalable_Service_Architecture,
-        curr:Competency_Service_Level_Agreements .
+        curr:Competency_Service_Level_Agreements ;
+    curr:usesTechStack curr:Tech_AWS,
+        curr:Tech_Docker,
+        curr:Tech_Kubernetes .
 
 curr:COSS_74 a curr:COSSSubject,
         curr:Subject ;
     rdfs:label "컴퓨터비전" ;
     curr:hasDescription "이미지와 비디오로부터 정보를 추출하고 상황을 컴퓨터가 시각적으로 이해하게 하는 기술"^^xsd:string ;
     curr:hasDomain "인공지능"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_60,
         curr:COSS_73,
         curr:JBNU_CE_16 ;
     curr:hasSemester "4-2"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "컴퓨터비전"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Motion_Estimation,
@@ -3272,7 +3484,9 @@ curr:JBNU_CE_03 a curr:JBNUSubject,
     rdfs:label "논리설계" ;
     curr:hasDescription "디지털 시스템의 기본 개념과 동작 원리를 이해하고, 기본 소자 및 회로 설계 이론을 학습하여 디지털 시스템 설계에 대한 시각을 넓힌다."^^xsd:string ;
     curr:hasDomain "하드웨어/임베디드"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
     curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
     curr:hasTitle "논리설계"^^xsd:string ;
     curr:offeredInSource "JBNU"^^xsd:string ;
     curr:teaches curr:Competency_Boolean_Algebra,
@@ -3286,7 +3500,9 @@ curr:JBNU_CE_10 a curr:JBNUSubject,
     rdfs:label "데이터통신" ;
     curr:hasDescription "네트워크 통신을 위한 요소 기술과 인터네트워킹 기술, 근거리 네트워크 시스템 기술을 습득한다."^^xsd:string ;
     curr:hasDomain "네트워크/IoT"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
     curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
     curr:hasTitle "데이터통신"^^xsd:string ;
     curr:offeredInSource "JBNU"^^xsd:string ;
     curr:teaches curr:Competency_Error_Detection_%26_Correction,
@@ -3300,9 +3516,11 @@ curr:JBNU_CE_12 a curr:JBNUSubject,
     rdfs:label "초급프로젝트" ;
     curr:hasDescription "프로그래밍 언어를 이용하여 초급 단계의 시스템을 직접 설계하고 구현하며, 실제 소프트웨어 개발 생명주기를 경험함"^^xsd:string ;
     curr:hasDomain "소프트웨어 개발 실무"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
     curr:hasPrerequisite curr:JBNU_CE_01,
         curr:JBNU_CE_02 ;
     curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
     curr:hasTitle "초급프로젝트"^^xsd:string ;
     curr:offeredInSource "JBNU"^^xsd:string ;
     curr:teaches curr:Competency_Debugging_%26_Testing,
@@ -3316,9 +3534,11 @@ curr:JBNU_CE_26 a curr:JBNUSubject,
     rdfs:label "암호론" ;
     curr:hasDescription "현대 암호 기술의 주요 이론과 최신 동향을 이해하고, 국내외 표준 암호 기술 및 응용 지식을 습득함"^^xsd:string ;
     curr:hasDomain "정보보안/블록체인"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
     curr:hasPrerequisite curr:JBNU_CE_05,
         curr:JBNU_CE_13 ;
     curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
     curr:hasTitle "암호론"^^xsd:string ;
     curr:offeredInSource "JBNU"^^xsd:string ;
     curr:teaches curr:Competency_Cryptanalysis_Basics,
@@ -3327,15 +3547,23 @@ curr:JBNU_CE_26 a curr:JBNUSubject,
         curr:Competency_Public_Key_Cryptography,
         curr:Competency_Symmetric_Key_Cryptography .
 
+curr:Tech_PyTorch a curr:TechStack ;
+    rdfs:label "PyTorch" .
+
+curr:Tech_TensorFlow a curr:TechStack ;
+    rdfs:label "TensorFlow" .
+
 curr:COSS_01 a curr:COSSSubject,
         curr:Subject ;
     rdfs:label "데이터사이언스개론" ;
     curr:hasDescription "데이터 과학의 전체적인 개념과 워크플로우를 파악하는 입문 과정"^^xsd:string ;
     curr:hasDomain "데이터사이언스"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:JBNU_CE_01,
         curr:JBNU_CE_13,
         curr:JBNU_CE_14 ;
     curr:hasSemester "2-1"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "데이터사이언스개론"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Data_Ethics,
@@ -3349,6 +3577,7 @@ curr:COSS_07 a curr:COSSSubject,
     rdfs:label "자바프로그래밍" ;
     curr:hasDescription "객체지향 언어인 Java의 문법과 이를 활용한 소프트웨어 설계 학습"^^xsd:string ;
     curr:hasDomain "SW개발"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_10,
         curr:JBNU_CE_02,
         curr:JBNU_CE_09,
@@ -3356,23 +3585,28 @@ curr:COSS_07 a curr:COSSSubject,
         curr:JBNU_CE_17,
         curr:JBNU_CE_19 ;
     curr:hasSemester "2-2"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "자바프로그래밍"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Application_Development,
         curr:Competency_Exception_Handling,
         curr:Competency_Multithreading,
         curr:Competency_Object-Oriented_Paradigm,
-        curr:Competency_Platform_Independence .
+        curr:Competency_Platform_Independence ;
+    curr:usesTechStack curr:Tech_Java,
+        curr:Tech_Spring .
 
 curr:COSS_31 a curr:COSSSubject,
         curr:Subject ;
     rdfs:label "통계수학Ⅰ" ;
     curr:hasDescription "통계 모델링의 기초가 되는 미적분학과 선형대수학의 핵심 원리 습득 (전공기초)"^^xsd:string ;
     curr:hasDomain "데이터사이언스/수학"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:JBNU_CE_04,
         curr:JBNU_CE_05,
         curr:JBNU_CE_13 ;
     curr:hasSemester "Any"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "통계수학Ⅰ"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Calculus_for_Statistics,
@@ -3386,8 +3620,10 @@ curr:COSS_33 a curr:COSSSubject,
     rdfs:label "AI수학" ;
     curr:hasDescription "인공지능 알고리즘 구현과 신경망 학습에 직접적으로 사용되는 수학적 도구 학습"^^xsd:string ;
     curr:hasDomain "인공지능/수학"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_31 ;
     curr:hasSemester "2-2"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "AI수학"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Dimensionality_Reduction,
@@ -3401,41 +3637,51 @@ curr:COSS_39 a curr:COSSSubject,
     rdfs:label "데이터베이스설계와질의" ;
     curr:hasDescription "효율적인 데이터 저장 구조 설계와 표준 질의어(SQL)를 이용한 데이터 관리"^^xsd:string ;
     curr:hasDomain "데이터엔지니어링"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_04,
         curr:JBNU_CE_01,
         curr:JBNU_CE_25 ;
     curr:hasSemester "3-2"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "데이터베이스설계와질의"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Data_Normalization,
         curr:Competency_Information_Persistence,
         curr:Competency_Query_Optimization,
         curr:Competency_Relational_Algebra,
-        curr:Competency_Schema_Architecture .
+        curr:Competency_Schema_Architecture ;
+    curr:usesTechStack curr:Tech_MongoDB,
+        curr:Tech_MySQL .
 
 curr:COSS_41 a curr:COSSSubject,
         curr:Subject ;
     rdfs:label "데이터베이스" ;
     curr:hasDescription "데이터의 효율적인 저장, 검색 및 관리 보호를 위한 데이터베이스 시스템의 핵심 원리"^^xsd:string ;
     curr:hasDomain "데이터엔지니어링"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_04,
         curr:JBNU_CE_01 ;
     curr:hasSemester "2-2"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "데이터베이스"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Concurrency_Control,
         curr:Competency_Data_Integrity,
         curr:Competency_Persistent_Storage,
         curr:Competency_Relational_Model,
-        curr:Competency_Transaction_Management .
+        curr:Competency_Transaction_Management ;
+    curr:usesTechStack curr:Tech_MongoDB,
+        curr:Tech_MySQL .
 
 curr:COSS_44 a curr:COSSSubject,
         curr:Subject ;
     rdfs:label "컴퓨터구조" ;
     curr:hasDescription "컴퓨터 하드웨어의 구성 요소와 프로그램이 실행되는 물리적 하부 구조 이해"^^xsd:string ;
     curr:hasDomain "시스템SW"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_13 ;
     curr:hasSemester "3-1"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "컴퓨터구조"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_CPU_Pipeline,
@@ -3449,9 +3695,11 @@ curr:COSS_47 a curr:COSSSubject,
     rdfs:label "리눅스시스템" ;
     curr:hasDescription "개방형 운영체제인 리눅스의 구조를 이해하고 서버 및 개발 환경으로 활용"^^xsd:string ;
     curr:hasDomain "인프라/데이터엔지니어링"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_10,
         curr:JBNU_CE_15 ;
     curr:hasSemester "2-2"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "리눅스시스템"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Command-Line_Utilities,
@@ -3481,8 +3729,10 @@ curr:JBNU_CE_08 a curr:JBNUSubject,
     curr:equivalentTo curr:COSS_44 ;
     curr:hasDescription "컴퓨터 구조와 프로그래밍 환경을 이해하고, 프로젝트를 통해 하드웨어 설계 개념 습득 및 실습을 수행한다."^^xsd:string ;
     curr:hasDomain "시스템 소프트웨어/HPC"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
     curr:hasPrerequisite curr:JBNU_CE_03 ;
     curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
     curr:hasTitle "컴퓨터구조"^^xsd:string ;
     curr:offeredInSource "JBNU"^^xsd:string ;
     curr:teaches curr:Competency_CPU_Pipelining,
@@ -3491,17 +3741,34 @@ curr:JBNU_CE_08 a curr:JBNUSubject,
         curr:Competency_Instruction_Set_Architecture,
         curr:Competency_Memory_Hierarchy_%26_Cache .
 
+curr:Tech_AWS a curr:TechStack ;
+    rdfs:label "AWS" .
+
+curr:Tech_Docker a curr:TechStack ;
+    rdfs:label "Docker" .
+
+curr:Tech_Hadoop a curr:TechStack ;
+    rdfs:label "Hadoop" .
+
+curr:Tech_Kubernetes a curr:TechStack ;
+    rdfs:label "Kubernetes" .
+
+curr:Tech_Spark a curr:TechStack ;
+    rdfs:label "Spark" .
+
 curr:COSS_11 a curr:COSSSubject,
         curr:Subject ;
     rdfs:label "통계프로그래밍" ;
     curr:hasDescription "통계 라이브러리를 활용하여 복잡한 수치 계산과 데이터 시뮬레이션을 수행하는 기술"^^xsd:string ;
     curr:hasDomain "데이터사이언스"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_02,
         curr:COSS_03,
         curr:JBNU_CE_04,
         curr:JBNU_CE_05,
         curr:JBNU_CE_13 ;
     curr:hasSemester "1-2"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "통계프로그래밍"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Automated_Reporting,
@@ -3515,8 +3782,10 @@ curr:COSS_13 a curr:COSSSubject,
     rdfs:label "기초프로그래밍" ;
     curr:hasDescription "소프트웨어 구현의 기초가 되는 프로그래밍 언어의 필수 요소와 실행 원리 학습"^^xsd:string ;
     curr:hasDomain "SW기초"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_12 ;
     curr:hasSemester "1-2"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "기초프로그래밍"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Basic_Automation,
@@ -3530,11 +3799,13 @@ curr:COSS_29 a curr:COSSSubject,
     rdfs:label "기초통계학Ⅱ" ;
     curr:hasDescription "다양한 변수 간의 관계를 분석하고 복잡한 데이터를 모델링하는 심화 통계 기술"^^xsd:string ;
     curr:hasDomain "데이터사이언스"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_28,
         curr:JBNU_CE_04,
         curr:JBNU_CE_05,
         curr:JBNU_CE_13 ;
     curr:hasSemester "Any-2"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "기초통계학Ⅱ"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Correlation_%26_Causality,
@@ -3543,11 +3814,21 @@ curr:COSS_29 a curr:COSSSubject,
         curr:Competency_Quantitative_Evidence,
         curr:Competency_Variance_Analysis .
 
+curr:Tech_MongoDB a curr:TechStack ;
+    rdfs:label "MongoDB" .
+
+curr:Tech_MySQL a curr:TechStack ;
+    rdfs:label "MySQL" .
+
+curr:Tech_React a curr:TechStack ;
+    rdfs:label "React" .
+
 curr:COSS_02 a curr:COSSSubject,
         curr:Subject ;
     rdfs:label "파이썬데이터분석" ;
     curr:hasDescription "파이썬을 도구로 사용하여 정형 데이터를 처리하고 분석하는 기술 학습"^^xsd:string ;
     curr:hasDomain "빅데이터"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_01,
         curr:COSS_10,
         curr:JBNU_CE_01,
@@ -3557,6 +3838,7 @@ curr:COSS_02 a curr:COSSSubject,
         curr:JBNU_CE_17,
         curr:JBNU_CE_19 ;
     curr:hasSemester "1-2"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "파이썬데이터분석"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Data_Manipulation,
@@ -3570,6 +3852,7 @@ curr:COSS_04 a curr:COSSSubject,
     rdfs:label "자료구조" ;
     curr:hasDescription "컴퓨터 효율성을 결정짓는 데이터 저장 및 관리 기법의 원리 학습"^^xsd:string ;
     curr:hasDomain "CS기초"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_10,
         curr:JBNU_CE_02,
         curr:JBNU_CE_09,
@@ -3577,6 +3860,7 @@ curr:COSS_04 a curr:COSSSubject,
         curr:JBNU_CE_17,
         curr:JBNU_CE_19 ;
     curr:hasSemester "2-1"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "자료구조"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Computational_Complexity,
@@ -3585,12 +3869,17 @@ curr:COSS_04 a curr:COSSSubject,
         curr:Competency_Logical_Architecture,
         curr:Competency_Memory_Management .
 
+curr:Tech_Spring a curr:TechStack ;
+    rdfs:label "Spring" .
+
 curr:COSS_10 a curr:COSSSubject,
         curr:Subject ;
     rdfs:label "프로그래밍개론" ;
     curr:hasDescription "컴퓨터 명령 전달을 위한 프로그래밍 언어의 기본 원리와 논리 학습"^^xsd:string ;
     curr:hasDomain "SW기초"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasSemester "1-Any"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "프로그래밍개론"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Basic_Automation,
@@ -3604,11 +3893,13 @@ curr:COSS_28 a curr:COSSSubject,
     rdfs:label "기초통계학Ⅰ" ;
     curr:hasDescription "표본을 통해 모집단을 추론하는 통계적 방법론의 전반부 학습 (전공기초)"^^xsd:string ;
     curr:hasDomain "데이터사이언스"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_27,
         curr:JBNU_CE_04,
         curr:JBNU_CE_05,
         curr:JBNU_CE_13 ;
     curr:hasSemester "Any"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "기초통계학Ⅰ"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Central_Limit_Theorem,
@@ -3622,9 +3913,11 @@ curr:JBNU_CE_31 a curr:JBNUSubject,
     rdfs:label "네트워크보안" ;
     curr:hasDescription "컴퓨터 네트워크의 보안 위협 및 대응 방안을 익히고, 해킹 기법 분석 및 대응 시스템 구축 실습을 수행함"^^xsd:string ;
     curr:hasDomain "정보보안/사이버보안"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
     curr:hasPrerequisite curr:JBNU_CE_20,
         curr:JBNU_CE_26 ;
     curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
     curr:hasTitle "네트워크보안"^^xsd:string ;
     curr:offeredInSource "JBNU"^^xsd:string ;
     curr:teaches curr:Competency_Firewalls_%26_IDS,
@@ -3638,8 +3931,10 @@ curr:JBNU_CE_36 a curr:JBNUSubject,
     rdfs:label "센서네트워크" ;
     curr:hasDescription "다양한 센서들로 구성된 네트워크 구조와 프로토콜을 학습하고, 환경/헬스케어 모니터링 등 IoT 응용 프로그램을 개발함"^^xsd:string ;
     curr:hasDomain "IoT/네트워크"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
     curr:hasPrerequisite curr:JBNU_CE_10 ;
     curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
     curr:hasTitle "센서네트워크"^^xsd:string ;
     curr:offeredInSource "JBNU"^^xsd:string ;
     curr:teaches curr:Competency_Embedded_OS,
@@ -3653,6 +3948,7 @@ curr:COSS_21 a curr:COSSSubject,
     rdfs:label "머신러닝" ;
     curr:hasDescription "데이터로부터 스스로 학습하여 예측이나 판단을 내리는 알고리즘의 작동 원리 학습"^^xsd:string ;
     curr:hasDomain "인공지능"^^xsd:string ;
+    curr:hasFocus curr:Focus_Application ;
     curr:hasPrerequisite curr:COSS_02,
         curr:COSS_11,
         curr:COSS_28,
@@ -3661,13 +3957,16 @@ curr:COSS_21 a curr:COSSSubject,
         curr:JBNU_CE_13,
         curr:JBNU_CE_16 ;
     curr:hasSemester "3-1"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Project ;
     curr:hasTitle "머신러닝"^^xsd:string ;
     curr:offeredInSource "COSS"^^xsd:string ;
     curr:teaches curr:Competency_Feature_Engineering,
         curr:Competency_Generalization,
         curr:Competency_Mathematical_Optimization,
         curr:Competency_Pattern_Recognition,
-        curr:Competency_Predictive_Modeling .
+        curr:Competency_Predictive_Modeling ;
+    curr:usesTechStack curr:Tech_Python,
+        curr:Tech_ScikitLearn .
 
 curr:JBNU_CE_16 a curr:JBNUSubject,
         curr:Subject ;
@@ -3675,9 +3974,11 @@ curr:JBNU_CE_16 a curr:JBNUSubject,
     curr:equivalentTo curr:COSS_24 ;
     curr:hasDescription "인간의 지능 영역을 공학적으로 구현하기 위한 제반 기술을 학습하고, 머신러닝 및 지능형 프로그램 개발 능력을 함양함"^^xsd:string ;
     curr:hasDomain "인공지능 핵심"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
     curr:hasPrerequisite curr:JBNU_CE_01,
         curr:JBNU_CE_13 ;
     curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
     curr:hasTitle "인공지능"^^xsd:string ;
     curr:offeredInSource "JBNU"^^xsd:string ;
     curr:teaches curr:Competency_Intelligent_Agents,
@@ -3691,8 +3992,10 @@ curr:JBNU_CE_20 a curr:JBNUSubject,
     rdfs:label "컴퓨터네트워크" ;
     curr:hasDescription "컴퓨터 상호 간 통신을 위한 네트워크 전반을 소프트웨어적 관점에서 학습하며 인터넷 작동 원리와 프로토콜을 심층 이해함"^^xsd:string ;
     curr:hasDomain "네트워크/분산시스템"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
     curr:hasPrerequisite curr:JBNU_CE_10 ;
     curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
     curr:hasTitle "컴퓨터네트워크"^^xsd:string ;
     curr:offeredInSource "JBNU"^^xsd:string ;
     curr:teaches curr:Competency_Application_Layer_Protocols,
@@ -3706,8 +4009,10 @@ curr:JBNU_CE_25 a curr:JBNUSubject,
     rdfs:label "소프트웨어공학" ;
     curr:hasDescription "소프트웨어의 정의, 구조, 기능을 이해하고 요구분석, 명세, 구현, 검증 등 개발 전 과정을 학습하며 UML 도구를 활용해 실습함"^^xsd:string ;
     curr:hasDomain "PM/QA/SE"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
     curr:hasPrerequisite curr:JBNU_CE_09 ;
     curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
     curr:hasTitle "소프트웨어공학"^^xsd:string ;
     curr:offeredInSource "JBNU"^^xsd:string ;
     curr:teaches curr:Competency_Maintenance,
@@ -3722,9 +4027,11 @@ curr:JBNU_CE_07 a curr:JBNUSubject,
     curr:equivalentTo curr:COSS_19 ;
     curr:hasDescription "주어진 문제를 이해하고 효율적인 알고리즘을 설계 및 분석하는 능력을 배양하며, 컴퓨터 공학 응용 분야의 핵심 기초를 다진다."^^xsd:string ;
     curr:hasDomain "AI/데이터분석 최적화"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
     curr:hasPrerequisite curr:JBNU_CE_01,
         curr:JBNU_CE_05 ;
     curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
     curr:hasTitle "알고리즘"^^xsd:string ;
     curr:offeredInSource "JBNU"^^xsd:string ;
     curr:teaches curr:Competency_Divide_and_Conquer,
@@ -3739,23 +4046,29 @@ curr:JBNU_CE_14 a curr:JBNUSubject,
     curr:equivalentTo curr:COSS_41 ;
     curr:hasDescription "대량의 데이터로부터 효율적인 데이터베이스를 구축하고 검색하는 이론을 학습하며, SQL 및 데이터 모델링 기술을 습득함"^^xsd:string ;
     curr:hasDomain "데이터 엔지니어링"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
     curr:hasPrerequisite curr:JBNU_CE_01 ;
     curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
     curr:hasTitle "데이터베이스"^^xsd:string ;
     curr:offeredInSource "JBNU"^^xsd:string ;
     curr:teaches curr:Competency_Data_Indexing,
         curr:Competency_Normalization,
         curr:Competency_Relational_Database_Model,
         curr:Competency_SQL,
-        curr:Competency_Transaction_Management .
+        curr:Competency_Transaction_Management ;
+    curr:usesTechStack curr:Tech_MongoDB,
+        curr:Tech_MySQL .
 
 curr:JBNU_CE_17 a curr:JBNUSubject,
         curr:Subject ;
     rdfs:label "모바일프로그래밍" ;
     curr:hasDescription "스마트폰 환경에 적합한 프로그래밍 기초를 이해하고 모바일 소프트웨어 구조 분석 및 실제 앱 구축 능력을 기룸"^^xsd:string ;
     curr:hasDomain "모바일 애플리케이션"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
     curr:hasPrerequisite curr:JBNU_CE_09 ;
     curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
     curr:hasTitle "모바일프로그래밍"^^xsd:string ;
     curr:offeredInSource "JBNU"^^xsd:string ;
     curr:teaches curr:Competency_Activity_Lifecycle,
@@ -3769,8 +4082,10 @@ curr:JBNU_CE_11 a curr:JBNUSubject,
     rdfs:label "리눅스프로그래밍" ;
     curr:hasDescription "리눅스 시스템의 기본 개념과 커맨드를 익히고, 시스템 콜 및 프로세스 간 통신(IPC), 소켓 프로그래밍 실습을 통해 시스템 레벨의 프로그래밍 능력을 배양함"^^xsd:string ;
     curr:hasDomain "백엔드/클라우드인프라"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
     curr:hasPrerequisite curr:JBNU_CE_02 ;
     curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
     curr:hasTitle "리눅스프로그래밍"^^xsd:string ;
     curr:offeredInSource "JBNU"^^xsd:string ;
     curr:teaches curr:Competency_IPC,
@@ -3784,8 +4099,10 @@ curr:JBNU_CE_19 a curr:JBNUSubject,
     rdfs:label "프로그래밍언어론" ;
     curr:hasDescription "다양한 프로그래밍 언어의 정의, 역사, 기본 원리를 이해하고 구조적/논리적 측면에서 언어의 패러다임을 학습함"^^xsd:string ;
     curr:hasDomain "컴퓨터 과학 이론"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
     curr:hasPrerequisite curr:JBNU_CE_01 ;
     curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
     curr:hasTitle "프로그래밍언어론"^^xsd:string ;
     curr:offeredInSource "JBNU"^^xsd:string ;
     curr:teaches curr:Competency_Functional_Programming,
@@ -3799,8 +4116,10 @@ curr:JBNU_CE_09 a curr:JBNUSubject,
     rdfs:label "객체지향프로그래밍" ;
     curr:hasDescription "JAVA 언어를 통해 객체지향 프로그래밍의 기본 개념(캡슐화, 상속, 다형성)을 익히고 GUI 및 웹 프로그래밍 기초를 학습한다."^^xsd:string ;
     curr:hasDomain "백엔드/앱개발"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
     curr:hasPrerequisite curr:JBNU_CE_02 ;
     curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
     curr:hasTitle "객체지향프로그래밍"^^xsd:string ;
     curr:offeredInSource "JBNU"^^xsd:string ;
     curr:teaches curr:Competency_Encapsulation_%26_Inheritance,
@@ -3814,9 +4133,11 @@ curr:JBNU_CE_15 a curr:JBNUSubject,
     rdfs:label "운영체제" ;
     curr:hasDescription "운영체제의 핵심 원리인 프로세스, 메모리, 입출력 관리를 이해하고 시스템 자원을 효율적으로 활용하는 능력을 배양함"^^xsd:string ;
     curr:hasDomain "시스템 소프트웨어"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
     curr:hasPrerequisite curr:JBNU_CE_08,
         curr:JBNU_CE_11 ;
     curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
     curr:hasTitle "운영체제"^^xsd:string ;
     curr:offeredInSource "JBNU"^^xsd:string ;
     curr:teaches curr:Competency_CPU_Scheduling,
@@ -3831,7 +4152,9 @@ curr:JBNU_CE_02 a curr:JBNUSubject,
     curr:equivalentTo curr:COSS_16 ;
     curr:hasDescription "C언어 기초를 바탕으로 객체지향 언어인 C++를 이용해 문제 특성에 맞는 데이터형 설계 능력과 소프트웨어 개발 능력을 갖춘다."^^xsd:string ;
     curr:hasDomain "소프트웨어 개발"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
     curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
     curr:hasTitle "C++프로그래밍"^^xsd:string ;
     curr:offeredInSource "JBNU"^^xsd:string ;
     curr:teaches curr:Competency_Class_%26_Object,
@@ -3845,7 +4168,9 @@ curr:JBNU_CE_05 a curr:JBNUSubject,
     rdfs:label "이산수학" ;
     curr:hasDescription "이산 수학의 이론을 디지털 컴퓨터 기능에 맞게 재구성하고, 전산 분야 이론을 수학적 언어로 정리하는 방법론을 공부한다."^^xsd:string ;
     curr:hasDomain "알고리즘/AI기초"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
     curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
     curr:hasTitle "이산수학"^^xsd:string ;
     curr:offeredInSource "JBNU"^^xsd:string ;
     curr:teaches curr:Competency_Combinatorics,
@@ -3859,7 +4184,9 @@ curr:JBNU_CE_04 a curr:JBNUSubject,
     rdfs:label "선형대수학" ;
     curr:hasDescription "공학 및 경제학 등에 필요한 선형대수 이론과 응용 방법을 습득하여 수학적 사고력과 컴퓨터공학 응용 능력을 기른다."^^xsd:string ;
     curr:hasDomain "인공지능/딥러닝수학"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
     curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
     curr:hasTitle "선형대수학"^^xsd:string ;
     curr:offeredInSource "JBNU"^^xsd:string ;
     curr:teaches curr:Competency_Eigenvalues_%26_Eigenvectors,
@@ -3873,8 +4200,10 @@ curr:JBNU_CE_13 a curr:JBNUSubject,
     rdfs:label "확률및통계" ;
     curr:hasDescription "컴퓨터공학 및 자연현상 시뮬레이션에 필요한 확률적 분포와 통계적 처리 기법을 습득하여 데이터 분석 및 문제 해결 능력을 기름"^^xsd:string ;
     curr:hasDomain "인공지능/데이터사이언스"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
     curr:hasPrerequisite curr:JBNU_CE_04 ;
     curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
     curr:hasTitle "확률및통계"^^xsd:string ;
     curr:offeredInSource "JBNU"^^xsd:string ;
     curr:teaches curr:Competency_Bayesian_Inference,
@@ -3889,7 +4218,9 @@ curr:JBNU_CE_01 a curr:JBNUSubject,
     curr:equivalentTo curr:COSS_04 ;
     curr:hasDescription "메모리상에서 구축할 수 있는 다양한 자료구조를 배우고, 이를 활용한 프로그램 능력을 배양한다."^^xsd:string ;
     curr:hasDomain "빅데이터/AI기초"^^xsd:string ;
+    curr:hasFocus curr:Focus_Theory ;
     curr:hasSemester "Unknown"^^xsd:string ;
+    curr:hasTeachingMethod curr:Method_Lecture ;
     curr:hasTitle "자료구조"^^xsd:string ;
     curr:offeredInSource "JBNU"^^xsd:string ;
     curr:teaches curr:Competency_Data_Structure_Implementation,
@@ -3897,4 +4228,16 @@ curr:JBNU_CE_01 a curr:JBNUSubject,
         curr:Competency_Linked_List,
         curr:Competency_Stack_%26_Queue,
         curr:Competency_Tree_%26_Graph .
+
+curr:Focus_Theory a curr:CourseFocus ;
+    rdfs:label "Theory & Principles" .
+
+curr:Method_Lecture a curr:TeachingMethod ;
+    rdfs:label "Lecture" .
+
+curr:Focus_Application a curr:CourseFocus ;
+    rdfs:label "Practical Application" .
+
+curr:Method_Project a curr:TeachingMethod ;
+    rdfs:label "Project Based Learning" .
 

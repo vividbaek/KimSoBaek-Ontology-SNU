@@ -28,18 +28,33 @@ def generate_sparql(user_query: str) -> str:
     1. Use 'curr:' prefix.
     2. Return ONLY the SPARQL query string. No markdown block.
     3. Use 'FILTER(CONTAINS(LCASE(?title), "search_term"))' for robust text matching.
-    4. Important properties: curr:hasTitle, curr:hasPrerequisite, curr:hasSemester, curr:offeredInSource.
+    4. Important properties: 
+       - Basics: curr:hasTitle, curr:hasPrerequisite, curr:hasSemester, curr:offeredInSource
+       - Value Props: curr:usesTechStack, curr:hasTeachingMethod, curr:hasFocus
+    5. Always retrieve Value Props (TechStack, etc.) if possible, to help explain "Why" this course is good.
     
     Example:
     User: "선형대수학 다음엔 뭐 들어?" (What comes after Linear Algebra?)
     SPARQL:
-    SELECT ?nextSubjectTitle ?sem ?source WHERE {{
+    SELECT ?nextSubjectTitle ?sem ?source ?tech ?method ?focus WHERE {{
         ?s curr:hasTitle ?title .
         FILTER(CONTAINS(LCASE(?title), "선형대수"))
         ?next curr:hasPrerequisite ?s .
         ?next curr:hasTitle ?nextSubjectTitle .
         OPTIONAL {{ ?next curr:hasSemester ?sem }}
         OPTIONAL {{ ?next curr:offeredInSource ?source }}
+        OPTIONAL {{ 
+            ?next curr:usesTechStack ?t . 
+            ?t rdfs:label ?tech 
+        }}
+        OPTIONAL {{ 
+            ?next curr:hasTeachingMethod ?m . 
+            ?m rdfs:label ?method 
+        }}
+        OPTIONAL {{ 
+            ?next curr:hasFocus ?f . 
+            ?f rdfs:label ?focus 
+        }}
     }}
     
     Question: "{user_query}"
@@ -98,9 +113,12 @@ def generate_answer(user_query: str, sparql_query: str, results: list) -> str:
     
     Instructions:
     1. Answer the user's question based strictly on the Data Source.
-    2. Suggest courses with their Semester and Source (JBNU/COSS) if available.
-    3. Be friendly and helpful.
-    4. Mention "Reference: Knowledge Graph" at the end.
+    2. **Value Argumentation**: If a course is from 'COSS' or has 'TechStack'/'TeachingMethod', HIGHLIGHT it.
+       - Explain WHY this course is valuable.
+       - Example: "I recommend 'AI Project' because unlike theoretical courses, this offers [Project Based Learning] and [PyTorch] experience."
+    3. Suggest courses with their Semester and Source.
+    4. Be persuasive but honest. 
+    5. Mention "Reference: Knowledge Graph" at the end.
     
     Answer (in Korean):
     """
