@@ -1,243 +1,2216 @@
 [
   {
-    "id": "COSS_01",
-    "title": "Introduction to Programming",
-    "concepts": [
-      "Variables",
-      "Control Flow",
-      "Functions",
-      "Syntax",
-      "Debugging"
+    "ID": "COSS_01",
+    "Title": "데이터사이언스개론",
+    "Source": "COSS",
+    "Semester": "2-1",
+    "Concepts": [
+      "Data Lifecycle (데이터 생애주기)",
+      "Statistical Thinking (통계적 사고)",
+      "Data Ethics (데이터 윤리)",
+      "Information Visualization (정보 시각화)",
+      "Decision Making (의사결정 모델링)"
     ],
-    "prerequisites": [],
-    "coss_link": "Foundation",
-    "competency": "Basic Python Coding"
+    "Prerequisites": [],
+    "Description": "데이터 과학의 전체적인 개념과 워크플로우를 파악하는 입문 과정",
+    "COSS_Link": {
+      "Score": 10,
+      "Field": "데이터사이언스"
+    },
+    "Competency": [
+      "Data Literacy",
+      "Analytical Strategy"
+    ]
   },
   {
-    "id": "COSS_02",
-    "title": "Data Structures",
-    "concepts": [
-      "Arrays",
-      "Linked Lists",
-      "Stacks",
-      "Queues",
-      "Trees",
-      "Graphs"
+    "ID": "COSS_02",
+    "Title": "파이썬데이터분석",
+    "Source": "COSS",
+    "Semester": "1-2",
+    "Concepts": [
+      "Scientific Computing (과학적 연산)",
+      "Data Manipulation (데이터 조작)",
+      "Exploratory Data Analysis (탐색적 데이터 분석)",
+      "Programmatic Problem Solving (프로그램적 문제해결)",
+      "Open Source Ecosystem (오픈소스 생태계)"
     ],
-    "prerequisites": [
+    "Prerequisites": [
+      "COSS_10",
       "COSS_01"
     ],
-    "coss_link": "CS Core",
-    "competency": "Data Organization"
+    "Description": "파이썬을 도구로 사용하여 정형 데이터를 처리하고 분석하는 기술 학습",
+    "COSS_Link": {
+      "Score": 10,
+      "Field": "빅데이터"
+    },
+    "Competency": [
+      "Python",
+      "Pandas",
+      "NumPy"
+    ]
   },
   {
-    "id": "COSS_03",
-    "title": "Algorithms",
-    "concepts": [
-      "Sorting",
-      "Searching",
-      "Recursion",
-      "Dynamic Programming",
-      "Optimization",
-      "Complexity"
+    "ID": "COSS_03",
+    "Title": "데이터통계입문",
+    "Source": "COSS",
+    "Semester": "1-1",
+    "Concepts": [
+      "Probability Theory (확률론)",
+      "Statistical Inference (통계적 추론)",
+      "Sampling Distributions (표본 분포)",
+      "Descriptive Statistics (기술 통계)",
+      "Mathematical Foundations (수학적 기초)"
     ],
-    "prerequisites": [
-      "COSS_02"
-    ],
-    "coss_link": "CS Core",
-    "competency": "Problem Solving efficiency"
+    "Prerequisites": [],
+    "Description": "데이터 분석의 핵심이 되는 통계학적 개념과 수치 해석 기초 학습",
+    "COSS_Link": {
+      "Score": 9,
+      "Field": "데이터사이언스"
+    },
+    "Competency": [
+      "Statistical Analysis",
+      "R/Python"
+    ]
   },
   {
-    "id": "COSS_04",
-    "title": "Linear Algebra for AI",
-    "concepts": [
-      "Vectors",
-      "Matrices",
-      "Eigenvalues",
-      "Transformations",
-      "Dimensionality Reduction"
+    "ID": "COSS_04",
+    "Title": "자료구조",
+    "Source": "COSS",
+    "Semester": "2-1",
+    "Concepts": [
+      "Data Abstraction (데이터 추상화)",
+      "Memory Management (메모리 관리)",
+      "Computational Complexity (계산 복잡도)",
+      "Information Storage (정보 저장 구조)",
+      "Logical Architecture (논리적 구조 설계)"
     ],
-    "prerequisites": [],
-    "coss_link": "Foundation",
-    "competency": "Mathematical Foundations"
+    "Prerequisites": [
+      "COSS_10"
+    ],
+    "Description": "컴퓨터 효율성을 결정짓는 데이터 저장 및 관리 기법의 원리 학습",
+    "COSS_Link": {
+      "Score": 7,
+      "Field": "CS기초"
+    },
+    "Competency": [
+      "C/C++",
+      "Algorithm Optimization"
+    ]
   },
   {
-    "id": "COSS_05",
-    "title": "Probability and Statistics",
-    "concepts": [
-      "Distributions",
-      "Hypothesis Testing",
-      "Bayes Theorem",
-      "Regression"
+    "ID": "COSS_05",
+    "Title": "데이터구조",
+    "Source": "COSS",
+    "Semester": "2-1",
+    "Concepts": [
+      "Data Abstraction (데이터 추상화)",
+      "Hierarchical Structures (계층 구조)",
+      "Search Optimization (탐색 최적화)",
+      "Linear & Non-linear Mapping (선형/비선형 매핑)",
+      "Resource Efficiency (자원 효율성)"
     ],
-    "prerequisites": [],
-    "coss_link": "Foundation",
-    "competency": "Statistical Analysis"
+    "Prerequisites": [
+      "COSS_10"
+    ],
+    "Description": "데이터를 논리적으로 조직화하여 시스템 성능을 극대화하는 방법론 (자료구조와 유사)",
+    "COSS_Link": {
+      "Score": 7,
+      "Field": "CS기초"
+    },
+    "Competency": [
+      "Python/Java",
+      "System Logic"
+    ]
   },
   {
-    "id": "COSS_06",
-    "title": "Database Systems",
-    "concepts": [
-      "SQL",
-      "Relational Model",
-      "Normalization",
-      "Indexing",
-      "Transactions"
+    "ID": "COSS_06",
+    "Title": "소프트웨어의이해",
+    "Source": "COSS",
+    "Semester": "Any",
+    "Concepts": [
+      "Computational Thinking (컴퓨팅 사고력)",
+      "Software Life Cycle (소프트웨어 생명주기)",
+      "Algorithm Literacy (알고리즘 리터러시)",
+      "Digital Transformation (디지털 전환)",
+      "IT Convergence (IT 융합)"
     ],
-    "prerequisites": [
-      "COSS_02"
-    ],
-    "coss_link": "Data Engineering",
-    "competency": "SQL & Data Modeling"
+    "Prerequisites": [],
+    "Description": "현대 사회에서의 소프트웨어 역할과 컴퓨팅 사고의 기초 이해",
+    "COSS_Link": {
+      "Score": 5,
+      "Field": "SW기초"
+    },
+    "Competency": [
+      "Digital Literacy",
+      "General IT Knowledge"
+    ]
   },
   {
-    "id": "COSS_07",
-    "title": "Machine Learning Basics",
-    "concepts": [
-      "Supervised Learning",
-      "Unsupervised Learning",
-      "Numpy",
-      "Scikit-Learn",
-      "Model Evaluation"
+    "ID": "COSS_07",
+    "Title": "자바프로그래밍",
+    "Source": "COSS",
+    "Semester": "2-2",
+    "Concepts": [
+      "Object-Oriented Paradigm (객체지향 패러다임)",
+      "Platform Independence (플랫폼 독립성)",
+      "Application Development (애플리케이션 개발)",
+      "Exception Handling (예외 처리)",
+      "Multithreading (멀티스레딩)"
     ],
-    "prerequisites": [
-      "COSS_01",
-      "COSS_04",
-      "COSS_05"
+    "Prerequisites": [
+      "COSS_10"
     ],
-    "coss_link": "AI Core",
-    "competency": "ML Model Building"
+    "Description": "객체지향 언어인 Java의 문법과 이를 활용한 소프트웨어 설계 학습",
+    "COSS_Link": {
+      "Score": 6,
+      "Field": "SW개발"
+    },
+    "Competency": [
+      "Java",
+      "JVM",
+      "Backend Foundation"
+    ]
   },
   {
-    "id": "COSS_08",
-    "title": "Deep Learning",
-    "concepts": [
-      "Neural Networks",
-      "Backpropagation",
-      "CNN",
-      "RNN",
-      "PyTorch",
-      "TensorFlow"
+    "ID": "COSS_08",
+    "Title": "윈도우프로그래밍",
+    "Source": "COSS",
+    "Semester": "2-1",
+    "Concepts": [
+      "Event-Driven Programming (이벤트 기반 프로그래밍)",
+      "GUI Design (그래픽 사용자 인터페이스 설계)",
+      "Desktop Application (데스크탑 애플리케이션)",
+      "API Interaction (API 상호작용)",
+      "System Interface (시스템 인터페이스)"
     ],
-    "prerequisites": [
+    "Prerequisites": [
+      "COSS_07"
+    ],
+    "Description": "윈도우 운영체제 환경에서 동작하는 사용자 중심 애플리케이션 개발",
+    "COSS_Link": {
+      "Score": 4,
+      "Field": "SW개발"
+    },
+    "Competency": [
+      "C#/.NET",
+      "GUI Development"
+    ]
+  },
+  {
+    "ID": "COSS_09",
+    "Title": "웹시스템설계",
+    "Source": "COSS",
+    "Semester": "2-1",
+    "Concepts": [
+      "Client-Server Architecture (클라이언트-서버 구조)",
+      "Web Protocols (웹 프로토콜)",
+      "Network Communication (네트워크 통신)",
+      "System Modeling (시스템 모델링)",
+      "Interface Standardization (인터페이스 표준화)"
+    ],
+    "Prerequisites": [
       "COSS_07",
+      "COSS_10"
+    ],
+    "Description": "웹 환경에서의 시스템 구성 원리와 데이터 흐름을 설계하는 기법",
+    "COSS_Link": {
+      "Score": 8,
+      "Field": "웹/인프라"
+    },
+    "Competency": [
+      "HTTP",
+      "REST API",
+      "System Architecture"
+    ]
+  },
+  {
+    "ID": "COSS_10",
+    "Title": "프로그래밍개론",
+    "Source": "COSS",
+    "Semester": "1-Any",
+    "Concepts": [
+      "Syntax & Semantics (문법과 의미론)",
+      "Logic Development (로직 개발)",
+      "Problem Decomposition (문제 분해)",
+      "Sequence Control (순차 제어)",
+      "Basic Automation (기초 자동화)"
+    ],
+    "Prerequisites": [],
+    "Description": "컴퓨터 명령 전달을 위한 프로그래밍 언어의 기본 원리와 논리 학습",
+    "COSS_Link": {
+      "Score": 5,
+      "Field": "SW기초"
+    },
+    "Competency": [
+      "Python/C",
+      "Coding Logic"
+    ]
+  },
+  {
+    "ID": "COSS_11",
+    "Title": "통계프로그래밍",
+    "Source": "COSS",
+    "Semester": "1-2",
+    "Concepts": [
+      "Statistical Computation (통계적 연산)",
+      "Data Simulation (데이터 시뮬레이션)",
+      "Quantitative Analysis (계량 분석)",
+      "Automated Reporting (자동화된 리포팅)",
+      "Reproducible Research (재현 가능한 연구)"
+    ],
+    "Prerequisites": [
+      "COSS_02",
       "COSS_03"
     ],
-    "coss_link": "AI Advanced",
-    "competency": "Deep Learning implementation"
+    "Description": "통계 라이브러리를 활용하여 복잡한 수치 계산과 데이터 시뮬레이션을 수행하는 기술",
+    "COSS_Link": {
+      "Score": 9,
+      "Field": "데이터사이언스"
+    },
+    "Competency": [
+      "R",
+      "Python",
+      "Statistical Modeling"
+    ]
   },
   {
-    "id": "COSS_09",
-    "title": "Big Data Processing",
-    "concepts": [
-      "Hadoop",
-      "Spark",
-      "Distributed Computing",
-      "MapReduce",
-      "NoSQL"
+    "ID": "COSS_12",
+    "Title": "프로그래밍입문",
+    "Source": "COSS",
+    "Semester": "1-1",
+    "Concepts": [
+      "Computational Logic (컴퓨팅 논리)",
+      "Syntax Analysis (문법 분석)",
+      "Control Flow (제어 흐름)",
+      "Problem Decomposition (문제 분해)",
+      "Debugging Strategy (디버깅 전략)"
     ],
-    "prerequisites": [
-      "COSS_06",
-      "COSS_03"
-    ],
-    "coss_link": "Data Engineering",
-    "competency": "Large Scale Data Processing"
+    "Prerequisites": [],
+    "Description": "코딩을 처음 접하는 학습자를 위한 프로그래밍 사고방식과 기초 문법 습득",
+    "COSS_Link": {
+      "Score": 4,
+      "Field": "SW기초"
+    },
+    "Competency": [
+      "Python",
+      "Logic"
+    ]
   },
   {
-    "id": "COSS_10",
-    "title": "Natural Language Processing",
-    "concepts": [
-      "Tokenization",
-      "Embeddings",
-      "Transformers",
-      "LLM",
-      "Sentiment Analysis"
+    "ID": "COSS_13",
+    "Title": "기초프로그래밍",
+    "Source": "COSS",
+    "Semester": "1-2",
+    "Concepts": [
+      "Sequence Control (순차 제어)",
+      "Data Type Constraints (자료형 제약)",
+      "Standard Library (표준 라이브러리)",
+      "Input/Output Interfacing (입출력 인터페이스)",
+      "Basic Automation (기초 자동화)"
     ],
-    "prerequisites": [
-      "COSS_08"
+    "Prerequisites": [
+      "COSS_12"
     ],
-    "coss_link": "AI Advanced",
-    "competency": "NLP Applications"
+    "Description": "소프트웨어 구현의 기초가 되는 프로그래밍 언어의 필수 요소와 실행 원리 학습",
+    "COSS_Link": {
+      "Score": 4,
+      "Field": "SW기초"
+    },
+    "Competency": [
+      "C/C++",
+      "Basic Coding"
+    ]
   },
   {
-    "id": "COSS_11",
-    "title": "Computer Vision",
-    "concepts": [
-      "Image Processing",
-      "Object Detection",
-      "Segmentation",
-      "OpenCV"
+    "ID": "COSS_14",
+    "Title": "프로그래밍방법론",
+    "Source": "COSS",
+    "Semester": "1-2",
+    "Concepts": [
+      "Development Paradigm (개발 패러다임)",
+      "Software Design Principles (SW 설계 원칙)",
+      "Abstraction Levels (추상화 수준)",
+      "Refactoring (리팩토링)",
+      "Collaborative Workflow (협업 워크플로우)"
     ],
-    "prerequisites": [
-      "COSS_08"
+    "Prerequisites": [
+      "COSS_13"
     ],
-    "coss_link": "AI Advanced",
-    "competency": "Vision Systems"
+    "Description": "더 효율적이고 유지보수가 용이한 코드를 작성하기 위한 체계적인 방법론 학습",
+    "COSS_Link": {
+      "Score": 6,
+      "Field": "SW엔지니어링"
+    },
+    "Competency": [
+      "Git",
+      "Code Review",
+      "UML"
+    ]
   },
   {
-    "id": "COSS_12",
-    "title": "Cloud Computing",
-    "concepts": [
-      "Virtualization",
-      "AWS",
-      "Docker",
-      "Kubernetes",
-      "Microservices"
+    "ID": "COSS_15",
+    "Title": "객체지향프로그래밍(캡스톤디자인)",
+    "Source": "COSS",
+    "Semester": "2-1",
+    "Concepts": [
+      "Encapsulation (캡슐화)",
+      "Inheritance & Polymorphism (상속과 다형성)",
+      "System Modularity (시스템 모듈화)",
+      "Design Patterns (디자인 패턴)",
+      "Component-Based Design (컴포넌트 기반 설계)"
     ],
-    "prerequisites": [
-      "COSS_06"
+    "Prerequisites": [
+      "COSS_07",
+      "COSS_14"
     ],
-    "coss_link": "Data Engineering",
-    "competency": "Cloud Architecture"
+    "Description": "객체 지향 개념을 프로젝트에 적용하여 실제 작동하는 소프트웨어를 설계하고 구현",
+    "COSS_Link": {
+      "Score": 7,
+      "Field": "SW개발"
+    },
+    "Competency": [
+      "Java",
+      "OOP",
+      "System Architecture"
+    ]
   },
   {
-    "id": "COSS_13",
-    "title": "Data Visualization",
-    "concepts": [
-      "Visual Encoding",
-      "Charts",
-      "Dashboards",
-      "Tableau",
-      "Plotly"
+    "ID": "COSS_16",
+    "Title": "C++프로그래밍",
+    "Source": "COSS",
+    "Semester": "2-2",
+    "Concepts": [
+      "Memory Address Management (메모리 주소 관리)",
+      "Low-level Optimization (저수준 최적화)",
+      "Resource Allocation (자원 할당)",
+      "Compile-time Polymorphism (컴파일 타임 다형성)",
+      "Performance Tuning (성능 튜닝)"
     ],
-    "prerequisites": [
-      "COSS_01",
-      "COSS_05"
+    "Prerequisites": [
+      "COSS_13"
     ],
-    "coss_link": "Data Science",
-    "competency": "Data Storytelling"
+    "Description": "시스템 하드웨어 제어와 고성능 애플리케이션 개발을 위한 C++ 언어 심화 학습",
+    "COSS_Link": {
+      "Score": 6,
+      "Field": "시스템SW"
+    },
+    "Competency": [
+      "C++",
+      "Memory Management"
+    ]
   },
   {
-    "id": "COSS_14",
-    "title": "Reinforcement Learning",
-    "concepts": [
-      "Agents",
-      "Rewards",
-      "Q-Learning",
-      "Policy Gradients",
-      "Markov Decision Process"
+    "ID": "COSS_17",
+    "Title": "웹프로그래밍기초",
+    "Source": "COSS",
+    "Semester": "2-1",
+    "Concepts": [
+      "Client-Side Interaction (클라이언트 측 상호작용)",
+      "Markup Semantics (마크업 의미론)",
+      "Style Architecture (스타일 아키텍처)",
+      "Browser Rendering (브라우저 렌더링 원리)",
+      "Web Accessibility (웹 접근성)"
     ],
-    "prerequisites": [
-      "COSS_08"
+    "Prerequisites": [
+      "COSS_10"
     ],
-    "coss_link": "AI Advanced",
-    "competency": "RL Systems"
+    "Description": "웹 브라우저에서 실행되는 사용자 인터페이스의 구성 요소와 동작 원리 학습",
+    "COSS_Link": {
+      "Score": 6,
+      "Field": "웹개발"
+    },
+    "Competency": [
+      "HTML5/CSS3",
+      "JavaScript"
+    ]
   },
   {
-    "id": "COSS_15",
-    "title": "AI Capstone Project",
-    "concepts": [
-      "Project Management",
-      "System Integration",
-      "Deployment",
-      "End-to-End ML"
+    "ID": "COSS_18",
+    "Title": "웹프로그래밍(캡스톤디자인)",
+    "Source": "COSS",
+    "Semester": "2-2",
+    "Concepts": [
+      "Web Service Integration (웹 서비스 통합)",
+      "Dynamic Content Management (동적 콘텐츠 관리)",
+      "Full-stack Architecture (풀스택 아키텍처)",
+      "Backend API Interfacing (백엔드 API 연동)",
+      "Deployment Strategy (배포 전략)"
     ],
-    "prerequisites": [
-      "COSS_09",
-      "COSS_10",
+    "Prerequisites": [
+      "COSS_17",
+      "COSS_09"
+    ],
+    "Description": "웹 기술을 총동원하여 실제 서비스 가능한 형태의 프로젝트를 기획 및 구현",
+    "COSS_Link": {
+      "Score": 8,
+      "Field": "웹개발"
+    },
+    "Competency": [
+      "React/Node.js",
+      "Full-stack",
+      "Cloud Hosting"
+    ]
+  },
+  {
+    "ID": "COSS_19",
+    "Title": "알고리즘",
+    "Source": "COSS",
+    "Semester": "3-2",
+    "Concepts": [
+      "Computational Complexity (계산 복잡도)",
+      "Optimization Theory (최적화 이론)",
+      "Graph Connectivity (그래프 연결성)",
+      "Algorithmic Strategy (알고리즘 전략)",
+      "Search Efficiency (탐색 효율성)"
+    ],
+    "Prerequisites": [
+      "COSS_20",
+      "COSS_04"
+    ],
+    "Description": "주어진 문제를 가장 효율적으로 해결하기 위한 수학적 모델링과 설계 기법 학습",
+    "COSS_Link": {
+      "Score": 8,
+      "Field": "CS코어"
+    },
+    "Competency": [
+      "Python/C++",
+      "Algorithm Design"
+    ]
+  },
+  {
+    "ID": "COSS_20",
+    "Title": "알고리즘입문",
+    "Source": "COSS",
+    "Semester": "2-2",
+    "Concepts": [
+      "Step-wise Problem Solving (단계적 문제 해결)",
+      "Sorting Logic (정렬 논리)",
+      "Base Algorithms (기초 알고리즘)",
+      "Pattern Matching (패턴 매칭)",
+      "Time-Space Tradeoff (시간-공간 트레이드오프)"
+    ],
+    "Prerequisites": [
+      "COSS_04"
+    ],
+    "Description": "알고리즘의 기초적인 패턴을 익히고 문제 해결을 위한 논리적 사고력 배양",
+    "COSS_Link": {
+      "Score": 8,
+      "Field": "CS코어"
+    },
+    "Competency": [
+      "Python",
+      "Logical Thinking"
+    ]
+  },
+  {
+    "ID": "COSS_21",
+    "Title": "머신러닝",
+    "Source": "COSS",
+    "Semester": "3-1",
+    "Concepts": [
+      "Predictive Modeling (예측 모델링)",
+      "Mathematical Optimization (수학적 최적화)",
+      "Pattern Recognition (패턴 인식)",
+      "Feature Engineering (특징 공학)",
+      "Generalization (일반화 원리)"
+    ],
+    "Prerequisites": [
+      "COSS_02",
+      "COSS_11",
+      "COSS_28"
+    ],
+    "Description": "데이터로부터 스스로 학습하여 예측이나 판단을 내리는 알고리즘의 작동 원리 학습",
+    "COSS_Link": {
+      "Score": 10,
+      "Field": "인공지능"
+    },
+    "Competency": [
+      "Scikit-learn",
+      "Model Evaluation"
+    ]
+  },
+  {
+    "ID": "COSS_22",
+    "Title": "통계적기계학습",
+    "Source": "COSS",
+    "Semester": "3-1",
+    "Concepts": [
+      "Probabilistic Reasoning (확률적 추론)",
+      "Statistical Learning Theory (통계적 학습 이론)",
+      "Uncertainty Quantification (불확실성 정량화)",
+      "Bayesian Inference (베이즈 추론)",
+      "Information Theory (정보 이론)"
+    ],
+    "Prerequisites": [
+      "COSS_21",
+      "COSS_28"
+    ],
+    "Description": "통계적 관점에서 기계학습 알고리즘의 수학적 근거와 확률적 모델링 탐구",
+    "COSS_Link": {
+      "Score": 10,
+      "Field": "인공지능/통계"
+    },
+    "Competency": [
+      "Statistical Modeling",
+      "R/Python"
+    ]
+  },
+  {
+    "ID": "COSS_23",
+    "Title": "인공지능과기계학습",
+    "Source": "COSS",
+    "Semester": "3-1",
+    "Concepts": [
+      "Knowledge Representation (지식 표현)",
+      "Autonomous Systems (자율 시스템)",
+      "Algorithmic Decision Making (알고리즘적 의사결정)",
+      "Human-AI Interaction (인간-AI 상호작용)",
+      "Intelligent Agents (지능형 에이전트)"
+    ],
+    "Prerequisites": [
+      "COSS_21"
+    ],
+    "Description": "기계학습 기술을 포함하여 인공지능 시스템이 문제를 해결하는 포괄적 방법론 학습",
+    "COSS_Link": {
+      "Score": 10,
+      "Field": "인공지능"
+    },
+    "Competency": [
+      "AI System Design",
+      "Heuristic Search"
+    ]
+  },
+  {
+    "ID": "COSS_24",
+    "Title": "인공지능",
+    "Source": "COSS",
+    "Semester": "4-1",
+    "Concepts": [
+      "Heuristic Search (휴리스틱 탐색)",
+      "Problem Space Analysis (문제 공간 분석)",
+      "Logical Deduction (논리적 연역)",
+      "Automated Reasoning (자동화된 추론)",
+      "Cognitive Modeling (인지 모델링)"
+    ],
+    "Prerequisites": [
+      "COSS_19"
+    ],
+    "Description": "컴퓨터가 인간의 지능적 행동을 모방하게 하는 전통적 기법부터 최신 기법까지의 개론",
+    "COSS_Link": {
+      "Score": 10,
+      "Field": "인공지능"
+    },
+    "Competency": [
+      "Search Algorithms",
+      "Logic Programming"
+    ]
+  },
+  {
+    "ID": "COSS_25",
+    "Title": "인공지능기초",
+    "Source": "COSS",
+    "Semester": "2-1",
+    "Concepts": [
+      "Foundational Mathematics (기초 수학적 기반)",
+      "Data-Driven Reasoning (데이터 기반 추론)",
+      "Computational Intelligence (계산 지능)",
+      "Information Representation (정보 표현)",
+      "System Automation (시스템 자동화)"
+    ],
+    "Prerequisites": [
+      "COSS_12"
+    ],
+    "Description": "인공지능 연구의 역사를 이해하고 기본이 되는 수학 및 논리적 기초 습득",
+    "COSS_Link": {
+      "Score": 9,
+      "Field": "인공지능"
+    },
+    "Competency": [
+      "AI Literacy",
+      "Basic Modeling"
+    ]
+  },
+  {
+    "ID": "COSS_26",
+    "Title": "인공지능입문",
+    "Source": "COSS",
+    "Semester": "2-2",
+    "Concepts": [
+      "Algorithmic Thinking (알고리즘적 사고)",
+      "Digital Intelligence (디지털 지능)",
+      "Future Technology Trends (미래 기술 트렌드)",
+      "Basic Logic (기초 논리)",
+      "Data Utilization (데이터 활용 능력)"
+    ],
+    "Prerequisites": [],
+    "Description": "인공지능이 사회와 산업에 미치는 영향과 기술적 개념에 대한 입문 교육",
+    "COSS_Link": {
+      "Score": 9,
+      "Field": "인공지능"
+    },
+    "Competency": [
+      "Tech Literacy",
+      "Conceptual Understanding"
+    ]
+  },
+  {
+    "ID": "COSS_27",
+    "Title": "통계학입문",
+    "Source": "COSS",
+    "Semester": "Any",
+    "Concepts": [
+      "Data Variation (데이터 변동성 분석)",
+      "Statistical Literacy (통계 리터러시)",
+      "Numerical Description (수치적 묘사)",
+      "Sampling Theory (표본 이론)",
+      "Experimental Design (실험 설계 기초)"
+    ],
+    "Prerequisites": [],
+    "Description": "불확실한 현상을 수치적으로 이해하고 해석하는 통계학의 기초 원리",
+    "COSS_Link": {
+      "Score": 8,
+      "Field": "데이터사이언스"
+    },
+    "Competency": [
+      "Descriptive Statistics",
+      "Basic R"
+    ]
+  },
+  {
+    "ID": "COSS_28",
+    "Title": "기초통계학Ⅰ",
+    "Source": "COSS",
+    "Semester": "Any",
+    "Concepts": [
+      "Probability Distribution (확률 분포)",
+      "Hypothesis Validation (가설 검정)",
+      "Inferential Statistics (추론 통계)",
+      "Central Limit Theorem (중심한계정리)",
+      "Uncertainty Quantification (불확실성 정량화)"
+    ],
+    "Prerequisites": [
+      "COSS_27"
+    ],
+    "Description": "표본을 통해 모집단을 추론하는 통계적 방법론의 전반부 학습 (전공기초)",
+    "COSS_Link": {
+      "Score": 9,
+      "Field": "데이터사이언스"
+    },
+    "Competency": [
+      "Statistical Inference",
+      "Hypothesis Testing"
+    ]
+  },
+  {
+    "ID": "COSS_29",
+    "Title": "기초통계학Ⅱ",
+    "Source": "COSS",
+    "Semester": "Any-2",
+    "Concepts": [
+      "Multivariate Analysis (다변량 분석)",
+      "Correlation & Causality (상관관계와 인과관계)",
+      "Linear Regression Models (선형 회귀 모델)",
+      "Variance Analysis (분산 분석)",
+      "Quantitative Evidence (계량적 증거 도출)"
+    ],
+    "Prerequisites": [
+      "COSS_28"
+    ],
+    "Description": "다양한 변수 간의 관계를 분석하고 복잡한 데이터를 모델링하는 심화 통계 기술",
+    "COSS_Link": {
+      "Score": 9,
+      "Field": "데이터사이언스"
+    },
+    "Competency": [
+      "Regression Analysis",
+      "ANOVA"
+    ]
+  },
+  {
+    "ID": "COSS_30",
+    "Title": "기초통계",
+    "Source": "COSS",
+    "Semester": "Any",
+    "Concepts": [
+      "Data Summary (데이터 요약)",
+      "Frequency Analysis (빈도 분석)",
+      "Basic Probability (기초 확률)",
+      "Measurement Scales (측정 척도)",
+      "Graphic Representation (그래프 표현 기법)"
+    ],
+    "Prerequisites": [],
+    "Description": "데이터의 특성을 요약하고 직관적으로 이해하기 위한 기초 통계 도구 학습",
+    "COSS_Link": {
+      "Score": 8,
+      "Field": "데이터사이언스"
+    },
+    "Competency": [
+      "Data Summarization",
+      "Excel/R"
+    ]
+  },
+  {
+    "ID": "COSS_31",
+    "Title": "통계수학Ⅰ",
+    "Source": "COSS",
+    "Semester": "Any",
+    "Concepts": [
+      "Mathematical Analysis (수학적 분석)",
+      "Functional Mapping (함수 매핑)",
+      "Matrix Foundations (행렬 기초)",
+      "Calculus for Statistics (통계용 미적분)",
+      "Numerical Sequences (수치 수열)"
+    ],
+    "Prerequisites": [],
+    "Description": "통계 모델링의 기초가 되는 미적분학과 선형대수학의 핵심 원리 습득 (전공기초)",
+    "COSS_Link": {
+      "Score": 9,
+      "Field": "데이터사이언스/수학"
+    },
+    "Competency": [
+      "Mathematical Modeling",
+      "Calculus"
+    ]
+  },
+  {
+    "ID": "COSS_32",
+    "Title": "통계수학Ⅱ",
+    "Source": "COSS",
+    "Semester": "Any-2",
+    "Concepts": [
+      "Multivariate Analysis (다변량 분석 기초)",
+      "Mathematical Optimization (수학적 최적화)",
+      "Vector Space (벡터 공간)",
+      "Partial Differentiation (편미분)",
+      "Linear Transformation (선형 변환)"
+    ],
+    "Prerequisites": [
+      "COSS_31"
+    ],
+    "Description": "다변수 함수와 최적화 기법을 통해 복잡한 통계 모델을 이해하는 심화 수학 (전공기초)",
+    "COSS_Link": {
+      "Score": 9,
+      "Field": "데이터사이언스/수학"
+    },
+    "Competency": [
+      "Linear Algebra",
+      "Optimization"
+    ]
+  },
+  {
+    "ID": "COSS_33",
+    "Title": "AI수학",
+    "Source": "COSS",
+    "Semester": "2-2",
+    "Concepts": [
+      "Linear Transformation (선형 변환)",
+      "Gradient-based Optimization (경사 기반 최적화)",
+      "Dimensionality Reduction (차원 축소 원리)",
+      "Probability Manifolds (확률 다양체)",
+      "Tensor Operations (텐서 연산)"
+    ],
+    "Prerequisites": [
+      "COSS_31"
+    ],
+    "Description": "인공지능 알고리즘 구현과 신경망 학습에 직접적으로 사용되는 수학적 도구 학습",
+    "COSS_Link": {
+      "Score": 10,
+      "Field": "인공지능/수학"
+    },
+    "Competency": [
+      "NumPy",
+      "Linear Algebra",
+      "Vector Calculus"
+    ]
+  },
+  {
+    "ID": "COSS_34",
+    "Title": "공학수학Ⅰ",
+    "Source": "COSS",
+    "Semester": "Any-2",
+    "Concepts": [
+      "Differential Equations (미분 방정식)",
+      "Systems Modeling (시스템 모델링)",
+      "Laplace Transform (라플라스 변환)",
+      "Linear Systems (선형 시스템 분석)",
+      "Change Measurement (변화량 측정)"
+    ],
+    "Prerequisites": [],
+    "Description": "물리적 현상과 시스템의 동적인 변화를 수학적으로 모델링하는 기법 학습 (전공기초)",
+    "COSS_Link": {
+      "Score": 7,
+      "Field": "CS기초/수학"
+    },
+    "Competency": [
+      "Differential Modeling",
+      "System Analysis"
+    ]
+  },
+  {
+    "ID": "COSS_35",
+    "Title": "공학수학Ⅱ",
+    "Source": "COSS",
+    "Semester": "2-1",
+    "Concepts": [
+      "Fourier Analysis (푸리에 분석)",
+      "Partial Differential Equations (편미분 방정식)",
+      "Complex Variables (복소변수론)",
+      "Vector Field Theory (벡터장 이론)",
+      "Signal Representation (신호 표현)"
+    ],
+    "Prerequisites": [
+      "COSS_34"
+    ],
+    "Description": "신호 처리 및 고급 시스템 설계를 위한 복소수와 주파수 영역 분석 학습",
+    "COSS_Link": {
+      "Score": 7,
+      "Field": "CS기초/수학"
+    },
+    "Competency": [
+      "Frequency Analysis",
+      "Signal Processing"
+    ]
+  },
+  {
+    "ID": "COSS_36",
+    "Title": "데이터분석및활용",
+    "Source": "COSS",
+    "Semester": "4-1",
+    "Concepts": [
+      "Actionable Insights (실행 가능한 인사이트)",
+      "Data Storytelling (데이터 스토리텔링)",
+      "Business Intelligence (비즈니스 인텔리전스)",
+      "Case-based Reasoning (사례 기반 추론)",
+      "Information Synthesis (정보 합성)"
+    ],
+    "Prerequisites": [
+      "COSS_02",
+      "COSS_28"
+    ],
+    "Description": "분석된 데이터를 실제 문제 해결이나 의사결정에 적용하는 응용 기술",
+    "COSS_Link": {
+      "Score": 10,
+      "Field": "데이터사이언스"
+    },
+    "Competency": [
+      "Tableau/PowerBI",
+      "Data Strategy"
+    ]
+  },
+  {
+    "ID": "COSS_37",
+    "Title": "데이터사이언스응용",
+    "Source": "COSS",
+    "Semester": "4-2",
+    "Concepts": [
+      "End-to-End Pipeline (엔드투엔드 파이프라인)",
+      "Domain Adaptation (도메인 적응)",
+      "Predictive Analytics (예측 분석)",
+      "System Integration (시스템 통합)",
+      "Model Deployment (모델 배포 기초)"
+    ],
+    "Prerequisites": [
+      "COSS_21",
+      "COSS_36"
+    ],
+    "Description": "데이터 과학 기법을 특정 산업 분야의 데이터에 적용하여 솔루션을 구축하는 실습",
+    "COSS_Link": {
+      "Score": 10,
+      "Field": "데이터사이언스"
+    },
+    "Competency": [
+      "Python",
+      "MLOps Foundation"
+    ]
+  },
+  {
+    "ID": "COSS_38",
+    "Title": "빅데이터윤리",
+    "Source": "COSS",
+    "Semester": "Any-1",
+    "Concepts": [
+      "Algorithmic Fairness (알고리즘 공정성)",
+      "Data Privacy (데이터 프라이버시)",
+      "Accountability (책임성)",
+      "Digital Governance (디지털 거버넌스)",
+      "Social Impact Analysis (사회적 영향 분석)"
+    ],
+    "Prerequisites": [
+      "COSS_01"
+    ],
+    "Description": "빅데이터와 AI 기술 활용 시 발생하는 윤리적 쟁점과 법적 규제 이해 (1학기 개설)",
+    "COSS_Link": {
+      "Score": 8,
+      "Field": "공통/데이터윤리"
+    },
+    "Competency": [
+      "Ethics Compliance",
+      "Policy Awareness"
+    ]
+  },
+  {
+    "ID": "COSS_39",
+    "Title": "데이터베이스설계와질의",
+    "Source": "COSS",
+    "Semester": "3-2",
+    "Concepts": [
+      "Relational Algebra (관계 대수)",
+      "Data Normalization (데이터 정규화)",
+      "Schema Architecture (스키마 아키텍처)",
+      "Query Optimization (질의 최적화)",
+      "Information Persistence (정보 지속성)"
+    ],
+    "Prerequisites": [
+      "COSS_04"
+    ],
+    "Description": "효율적인 데이터 저장 구조 설계와 표준 질의어(SQL)를 이용한 데이터 관리",
+    "COSS_Link": {
+      "Score": 10,
+      "Field": "데이터엔지니어링"
+    },
+    "Competency": [
+      "SQL",
+      "PostgreSQL",
+      "ERD Modeling"
+    ]
+  },
+  {
+    "ID": "COSS_40",
+    "Title": "빅데이터통계분석",
+    "Source": "COSS",
+    "Semester": "3-1",
+    "Concepts": [
+      "Statistical Scalability (통계적 확장성)",
+      "High-dimensional Data (고차원 데이터)",
+      "Resampling Methods (재표본 추출법)",
+      "Large-scale Inference (대규모 추론)",
+      "Computational Statistics (계산 통계학)"
+    ],
+    "Prerequisites": [
+      "COSS_29",
       "COSS_11"
     ],
-    "coss_link": "Project",
-    "competency": "Full Stack AI Development"
+    "Description": "대규모 데이터셋에서 유의미한 통계적 결론을 도출하기 위한 계산 알고리즘 학습",
+    "COSS_Link": {
+      "Score": 10,
+      "Field": "빅데이터/통계"
+    },
+    "Competency": [
+      "PySpark Stats",
+      "R",
+      "Advanced Modeling"
+    ]
+  },
+  {
+    "ID": "COSS_41",
+    "Title": "데이터베이스",
+    "Source": "COSS",
+    "Semester": "2-2",
+    "Concepts": [
+      "Data Integrity (데이터 무결성)",
+      "Relational Model (관계 모델)",
+      "Concurrency Control (동시성 제어)",
+      "Transaction Management (트랜잭션 관리)",
+      "Persistent Storage (지속성 저장소)"
+    ],
+    "Prerequisites": [
+      "COSS_04"
+    ],
+    "Description": "데이터의 효율적인 저장, 검색 및 관리 보호를 위한 데이터베이스 시스템의 핵심 원리",
+    "COSS_Link": {
+      "Score": 10,
+      "Field": "데이터엔지니어링"
+    },
+    "Competency": [
+      "SQL",
+      "Schema Design",
+      "DBMS Architecture"
+    ]
+  },
+  {
+    "ID": "COSS_42",
+    "Title": "데이터베이스프로그래밍",
+    "Source": "COSS",
+    "Semester": "4-1",
+    "Concepts": [
+      "Application Interfacing (애플리케이션 인터페이싱)",
+      "Stored Procedures (저장 프로시저)",
+      "Object-Relational Mapping (객체-관계 매핑)",
+      "Embedded SQL (내장형 SQL)",
+      "Data Persistence Layer (데이터 지속성 계층)"
+    ],
+    "Prerequisites": [
+      "COSS_39",
+      "COSS_41"
+    ],
+    "Description": "응용 프로그램과 데이터베이스를 연동하여 데이터를 처리하는 프로그래밍 기법",
+    "COSS_Link": {
+      "Score": 9,
+      "Field": "데이터엔지니어링/SW개발"
+    },
+    "Competency": [
+      "JDBC/TypeORM",
+      "Advanced SQL",
+      "API Integration"
+    ]
+  },
+  {
+    "ID": "COSS_43",
+    "Title": "스토리지시스템",
+    "Source": "COSS",
+    "Semester": "4-2",
+    "Concepts": [
+      "File Systems (파일 시스템)",
+      "I/O Performance (입출력 성능)",
+      "Distributed Storage (분산 스토리지)",
+      "Memory Hierarchy (메모리 계층 구조)",
+      "Disk Scheduling (디스크 스케줄링)"
+    ],
+    "Prerequisites": [
+      "COSS_41",
+      "COSS_50"
+    ],
+    "Description": "대규모 데이터를 물리적으로 저장하고 관리하는 하드웨어 및 소프트웨어 아키텍처",
+    "COSS_Link": {
+      "Score": 9,
+      "Field": "데이터엔지니어링/인프라"
+    },
+    "Competency": [
+      "RAID Configuration",
+      "Distributed File Systems"
+    ]
+  },
+  {
+    "ID": "COSS_44",
+    "Title": "컴퓨터구조",
+    "Source": "COSS",
+    "Semester": "3-1",
+    "Concepts": [
+      "Instruction Set Architecture (명령어 집합 구조)",
+      "CPU Pipeline (CPU 파이프라인)",
+      "Digital Logic (디지털 논리)",
+      "Datapath Design (데이터패스 설계)",
+      "Microarchitecture (마이크로아키텍처)"
+    ],
+    "Prerequisites": [
+      "COSS_13"
+    ],
+    "Description": "컴퓨터 하드웨어의 구성 요소와 프로그램이 실행되는 물리적 하부 구조 이해",
+    "COSS_Link": {
+      "Score": 6,
+      "Field": "시스템SW"
+    },
+    "Competency": [
+      "Assembly",
+      "Hardware Logic Design"
+    ]
+  },
+  {
+    "ID": "COSS_45",
+    "Title": "컴퓨터아키텍쳐",
+    "Source": "COSS",
+    "Semester": "2-1",
+    "Concepts": [
+      "Parallel Processing (병렬 처리)",
+      "Cache Coherence (캐시 일관성)",
+      "Multi-core Systems (멀티코어 시스템)",
+      "Instruction Level Parallelism (명령어 수준 병렬성)",
+      "Performance Evaluation (성능 평가 방법론)"
+    ],
+    "Prerequisites": [
+      "COSS_13"
+    ],
+    "Description": "고성능 컴퓨팅을 위한 최신 컴퓨터 시스템 구조와 최적화 기법 심화 학습",
+    "COSS_Link": {
+      "Score": 7,
+      "Field": "시스템SW"
+    },
+    "Competency": [
+      "Parallel Programming Foundation",
+      "System Simulation"
+    ]
+  },
+  {
+    "ID": "COSS_46",
+    "Title": "시스템프로그래밍",
+    "Source": "COSS",
+    "Semester": "3-1",
+    "Concepts": [
+      "Operating System Calls (운영체제 호출)",
+      "Process & Thread API (프로세스 및 스레드 API)",
+      "Inter-Process Communication (프로세스 간 통신)",
+      "Memory Mapping (메모리 매핑)",
+      "System Resource Allocation (시스템 자원 할당)"
+    ],
+    "Prerequisites": [
+      "COSS_16",
+      "COSS_44"
+    ],
+    "Description": "운영체제 기능을 직접 호출하여 시스템 자원을 제어하는 저수준 프로그래밍",
+    "COSS_Link": {
+      "Score": 8,
+      "Field": "시스템SW"
+    },
+    "Competency": [
+      "C/POSIX API",
+      "System-level Debugging"
+    ]
+  },
+  {
+    "ID": "COSS_47",
+    "Title": "리눅스시스템",
+    "Source": "COSS",
+    "Semester": "2-2",
+    "Concepts": [
+      "Shell Environment (셸 환경)",
+      "Permission & Access Control (권한 및 액세스 제어)",
+      "Kernel Interface (커널 인터페이스)",
+      "Command-Line Utilities (명령줄 유틸리티)",
+      "System Scripting (시스템 스크립팅)"
+    ],
+    "Prerequisites": [
+      "COSS_10"
+    ],
+    "Description": "개방형 운영체제인 리눅스의 구조를 이해하고 서버 및 개발 환경으로 활용",
+    "COSS_Link": {
+      "Score": 9,
+      "Field": "인프라/데이터엔지니어링"
+    },
+    "Competency": [
+      "Bash Scripting",
+      "Linux Administration"
+    ]
+  },
+  {
+    "ID": "COSS_48",
+    "Title": "서버운영및보안",
+    "Source": "COSS",
+    "Semester": "2-2",
+    "Concepts": [
+      "Service Configuration (서비스 구성)",
+      "Infrastructure Management (인프라 관리)",
+      "Network Services (네트워크 서비스)",
+      "System Hardening (시스템 보안 강화)",
+      "Availability Strategy (가용성 전략)"
+    ],
+    "Prerequisites": [
+      "COSS_47"
+    ],
+    "Description": "네트워크 서비스를 제공하는 서버의 구축, 안정적 운영 및 보안 방어 기술",
+    "COSS_Link": {
+      "Score": 8,
+      "Field": "인프라/보안"
+    },
+    "Competency": [
+      "Nginx/Apache",
+      "Server Security",
+      "SSH"
+    ]
+  },
+  {
+    "ID": "COSS_49",
+    "Title": "시스템보안",
+    "Source": "COSS",
+    "Semester": "4-2",
+    "Concepts": [
+      "Threat Modeling (위협 모델링)",
+      "Vulnerability Analysis (취약점 분석)",
+      "Cryptographic Protocols (암호화 프로토콜)",
+      "Privilege Escalation (권한 상승 방지)",
+      "Integrity Protection (무결성 보호)"
+    ],
+    "Prerequisites": [
+      "COSS_48",
+      "COSS_46"
+    ],
+    "Description": "컴퓨터 시스템과 데이터의 보호를 위해 공격 경로를 분석하고 방어 체계를 구축",
+    "COSS_Link": {
+      "Score": 8,
+      "Field": "보안"
+    },
+    "Competency": [
+      "Security Auditing",
+      "Malware Analysis Foundation"
+    ]
+  },
+  {
+    "ID": "COSS_50",
+    "Title": "운영체제원리",
+    "Source": "COSS",
+    "Semester": "3-2",
+    "Concepts": [
+      "Kernel Architecture (커널 아키텍처)",
+      "Context Switching (문맥 교환)",
+      "Deadlock Resolution (교착 상태 해결)",
+      "Virtual Memory Management (가상 메모리 관리)",
+      "CPU Scheduling (CPU 스케줄링)"
+    ],
+    "Prerequisites": [
+      "COSS_44",
+      "COSS_46"
+    ],
+    "Description": "하드웨어 자원을 관리하고 소프트웨어 실행 환경을 제공하는 운영체제의 내부 메커니즘",
+    "COSS_Link": {
+      "Score": 8,
+      "Field": "시스템SW"
+    },
+    "Competency": [
+      "OS Logic",
+      "Concurrency Primitives"
+    ]
+  },
+  {
+    "ID": "COSS_51",
+    "Title": "텍스트마이닝과자연어처리",
+    "Source": "COSS",
+    "Semester": "4-1",
+    "Concepts": [
+      "Natural Language Understanding (자연어 이해)",
+      "Semantic Representation (의미론적 표현)",
+      "Sequence Modeling (시퀀스 모델링)",
+      "Text Information Retrieval (텍스트 정보 검색)",
+      "Language Engineering (언어 공학)"
+    ],
+    "Prerequisites": [
+      "COSS_21",
+      "COSS_02"
+    ],
+    "Description": "비정형 텍스트 데이터에서 유의미한 정보를 추출하고 언어를 컴퓨터가 이해하도록 모델링하는 기술",
+    "COSS_Link": {
+      "Score": 10,
+      "Field": "인공지능/데이터분석"
+    },
+    "Competency": [
+      "NLTK/SpaCy",
+      "Transformer",
+      "Word2Vec"
+    ]
+  },
+  {
+    "ID": "COSS_52",
+    "Title": "바이오인포메틱스개론",
+    "Source": "COSS",
+    "Semester": "4-1",
+    "Concepts": [
+      "Biological Sequence Analysis (생물학적 서열 분석)",
+      "Genomic Data Informatics (유전체 정보학)",
+      "Computational Biology (계산 생물학)",
+      "Pattern Matching (패턴 매칭)",
+      "Healthcare Data Science (헬스케어 데이터 과학)"
+    ],
+    "Prerequisites": [
+      "COSS_02",
+      "COSS_28"
+    ],
+    "Description": "생명공학 데이터를 분석하기 위해 알고리즘과 통계 기법을 적용하는 융합 학문",
+    "COSS_Link": {
+      "Score": 8,
+      "Field": "데이터사이언스/바이오"
+    },
+    "Competency": [
+      "BioPython",
+      "Sequence Alignment Tools"
+    ]
+  },
+  {
+    "ID": "COSS_53",
+    "Title": "데이터마이닝및분석",
+    "Source": "COSS",
+    "Semester": "2-2",
+    "Concepts": [
+      "Knowledge Discovery (지식 발견)",
+      "Pattern Extraction (패턴 추출)",
+      "Data Clustering (데이터 군집화)",
+      "Association Rule Mining (연관 규칙 마이닝)",
+      "Predictive Analytics (예측 분석)"
+    ],
+    "Prerequisites": [
+      "COSS_39",
+      "COSS_28"
+    ],
+    "Description": "대규모 데이터셋 속에 숨겨진 유용한 상관관계와 패턴을 찾아내는 프로세스 학습",
+    "COSS_Link": {
+      "Score": 10,
+      "Field": "데이터사이언스"
+    },
+    "Competency": [
+      "RapidMiner",
+      "Python",
+      "Clustering Algorithms"
+    ]
+  },
+  {
+    "ID": "COSS_54",
+    "Title": "데이터마이닝",
+    "Source": "COSS",
+    "Semester": "3-2",
+    "Concepts": [
+      "Knowledge Discovery (지식 발견)",
+      "Anomaly Detection (이상 탐지)",
+      "Feature Selection (특징 선택)",
+      "Data Transformation (데이터 변환)",
+      "Inference Engines (추론 엔진)"
+    ],
+    "Prerequisites": [
+      "COSS_53"
+    ],
+    "Description": "데이터로부터 지식을 추출하기 위한 통계적 및 알고리즘적 방법론의 심화 학습",
+    "COSS_Link": {
+      "Score": 10,
+      "Field": "데이터사이언스"
+    },
+    "Competency": [
+      "WEKA",
+      "Data Mining Pipelines"
+    ]
+  },
+  {
+    "ID": "COSS_55",
+    "Title": "데이터마이닝개론",
+    "Source": "COSS",
+    "Semester": "4-1",
+    "Concepts": [
+      "Knowledge Discovery (지식 발견)",
+      "Data Preprocessing (데이터 전처리)",
+      "Basic Classification (기초 분류 모델)",
+      "Data Mining Workflow (데이터 마이닝 워크플로우)",
+      "Insight Generation (인사이트 도출)"
+    ],
+    "Prerequisites": [
+      "COSS_01"
+    ],
+    "Description": "데이터 마이닝의 전반적인 과정과 기초적인 분석 기법에 대한 입문 교육",
+    "COSS_Link": {
+      "Score": 9,
+      "Field": "데이터사이언스"
+    },
+    "Competency": [
+      "Analytical Thinking",
+      "Data Mining Tools"
+    ]
+  },
+  {
+    "ID": "COSS_56",
+    "Title": "데이터패턴인식",
+    "Source": "COSS",
+    "Semester": "3-1",
+    "Concepts": [
+      "Statistical Classification (통계적 분류)",
+      "Feature Space Analysis (특징 공간 분석)",
+      "Dimensionality Reduction (차원 축소)",
+      "Decision Boundaries (결정 경계 설계)",
+      "Structural Pattern Analysis (구조적 패턴 분석)"
+    ],
+    "Prerequisites": [
+      "COSS_33",
+      "COSS_21"
+    ],
+    "Description": "데이터의 특징을 추출하여 특정 범주로 분류하거나 식별하는 기계적인 원리 학습",
+    "COSS_Link": {
+      "Score": 10,
+      "Field": "인공지능"
+    },
+    "Competency": [
+      "PCA",
+      "SVM",
+      "Pattern Classification"
+    ]
+  },
+  {
+    "ID": "COSS_57",
+    "Title": "다변량통계분석",
+    "Source": "COSS",
+    "Semester": "3-2",
+    "Concepts": [
+      "Multivariate Probability (다변량 확률 분포)",
+      "Factor Analysis (요인 분석)",
+      "Principal Component Analysis (주성분 분석)",
+      "Covariance Structures (공분산 구조)",
+      "Latent Variable Modeling (잠재 변수 모델링)"
+    ],
+    "Prerequisites": [
+      "COSS_29",
+      "COSS_32"
+    ],
+    "Description": "여러 변수 간의 복잡한 상호관계를 동시에 분석하는 고급 통계 기법",
+    "COSS_Link": {
+      "Score": 9,
+      "Field": "데이터사이언스/통계"
+    },
+    "Competency": [
+      "SAS/SPSS",
+      "R",
+      "Multivariate Statistics"
+    ]
+  },
+  {
+    "ID": "COSS_58",
+    "Title": "HCI개론(캡스톤디자인)",
+    "Source": "COSS",
+    "Semester": "4-1",
+    "Concepts": [
+      "Human-Computer Interaction (인간-컴퓨터 상호작용)",
+      "User-Centered Design (사용자 중심 설계)",
+      "Interface Psychology (인터페이스 심리학)",
+      "Interaction Paradigms (상호작용 패러다임)",
+      "Accessibility Engineering (접근성 공학)"
+    ],
+    "Prerequisites": [
+      "COSS_59"
+    ],
+    "Description": "사용자와 시스템 간의 효율적인 상호작용을 위한 인터페이스 설계 및 평가 실무",
+    "COSS_Link": {
+      "Score": 6,
+      "Field": "HCI/UI"
+    },
+    "Competency": [
+      "User Research",
+      "Interaction Prototyping"
+    ]
+  },
+  {
+    "ID": "COSS_59",
+    "Title": "UI/UX",
+    "Source": "COSS",
+    "Semester": "3-1",
+    "Concepts": [
+      "Visual Hierarchy (시각적 위계)",
+      "User Experience Mapping (사용자 경험 맵핑)",
+      "Wireframing & Prototyping (와이어프레임 및 프로토타이핑)",
+      "Usability Engineering (사용성 공학)",
+      "Design Systems (디자인 시스템)"
+    ],
+    "Prerequisites": [
+      "COSS_17",
+      "COSS_18"
+    ],
+    "Description": "사용자의 경험을 최적화하기 위한 시각 디자인 요소와 흐름 설계 방법론 학습",
+    "COSS_Link": {
+      "Score": 6,
+      "Field": "UI/UX"
+    },
+    "Competency": [
+      "Figma/Adobe XD",
+      "UX Strategy"
+    ]
+  },
+  {
+    "ID": "COSS_60",
+    "Title": "딥러닝원리와응용",
+    "Source": "COSS",
+    "Semester": "3-2",
+    "Concepts": [
+      "Artificial Neural Networks (인공 신경망)",
+      "Backpropagation Optimization (역전파 최적화)",
+      "Representation Learning (표현 학습)",
+      "Deep Architecture Design (심층 아키텍처 설계)",
+      "Nonlinear Transformations (비선형 변환)"
+    ],
+    "Prerequisites": [
+      "COSS_21",
+      "COSS_33"
+    ],
+    "Description": "다층 신경망 구조를 통해 데이터의 추상적인 특징을 학습하는 현대 AI의 핵심 기술",
+    "COSS_Link": {
+      "Score": 10,
+      "Field": "인공지능"
+    },
+    "Competency": [
+      "PyTorch",
+      "TensorFlow",
+      "CNN/RNN"
+    ]
+  },
+  {
+    "ID": "COSS_61",
+    "Title": "생성형AI의이해",
+    "Source": "COSS",
+    "Semester": "3-1",
+    "Concepts": [
+      "Generative Modeling (생성 모델링)",
+      "Latent Space Representation (잠재 공간 표현)",
+      "Prompt Engineering (프롬프트 공학)",
+      "Diffusion Models (확산 모델)",
+      "Large Language Models (거대 언어 모델)"
+    ],
+    "Prerequisites": [
+      "COSS_60",
+      "COSS_21"
+    ],
+    "Description": "텍스트, 이미지 등 새로운 콘텐츠를 생성하는 AI의 원리와 최신 생성 모델 활용법 학습",
+    "COSS_Link": {
+      "Score": 10,
+      "Field": "인공지능/최신기술"
+    },
+    "Competency": [
+      "LLM Fine-tuning",
+      "LangChain",
+      "Generative AI Application"
+    ]
+  },
+  {
+    "ID": "COSS_62",
+    "Title": "딥러닝개론",
+    "Source": "COSS",
+    "Semester": "3-2",
+    "Concepts": [
+      "Gradient Descent (경사 하강법)",
+      "Activation Functions (활성화 함수)",
+      "Layered Architectures (계층적 아키텍처)",
+      "Regularization Techniques (규제화 기법)",
+      "Optimization Algorithms (최적화 알고리즘)"
+    ],
+    "Prerequisites": [
+      "COSS_21",
+      "COSS_33"
+    ],
+    "Description": "심층 신경망의 기초 설계법과 학습 최적화를 위한 수학적/기술적 방법론 입문",
+    "COSS_Link": {
+      "Score": 10,
+      "Field": "인공지능"
+    },
+    "Competency": [
+      "PyTorch/TensorFlow",
+      "Neural Network Design"
+    ]
+  },
+  {
+    "ID": "COSS_63",
+    "Title": "통계계산",
+    "Source": "COSS",
+    "Semester": "3-1",
+    "Concepts": [
+      "Monte Carlo Methods (몬테카를로 방법)",
+      "Numerical Integration (수치 적분)",
+      "Optimization Algorithms (최적화 알고리즘)",
+      "Resampling & Bootstrapping (재표본 및 부트스트래핑)",
+      "Convergence Analysis (수렴성 분석)"
+    ],
+    "Prerequisites": [
+      "COSS_11",
+      "COSS_31"
+    ],
+    "Description": "수학적으로 풀기 어려운 통계 문제를 컴퓨터 알고리즘을 통해 수치적으로 해결하는 기법",
+    "COSS_Link": {
+      "Score": 9,
+      "Field": "데이터사이언스/통계"
+    },
+    "Competency": [
+      "R/Python",
+      "Numerical Analysis",
+      "Simulation"
+    ]
+  },
+  {
+    "ID": "COSS_64",
+    "Title": "회귀분석",
+    "Source": "COSS",
+    "Semester": "Any",
+    "Concepts": [
+      "Linear Regression Models (선형 회귀 모델)",
+      "Least Squares Estimation (최소제곱추정)",
+      "Residual Analysis (잔차 분석)",
+      "Multicollinearity (다중공선성)",
+      "Predictive Power Evaluation (예측력 평가)"
+    ],
+    "Prerequisites": [
+      "COSS_29",
+      "COSS_65"
+    ],
+    "Description": "변수 간의 인과관계를 모델링하고 연속적인 수치를 예측하는 데이터 분석의 핵심 기법 (모든 학기)",
+    "COSS_Link": {
+      "Score": 10,
+      "Field": "데이터사이언스/통계"
+    },
+    "Competency": [
+      "Regression Modeling",
+      "R",
+      "Diagnostic Analytics"
+    ]
+  },
+  {
+    "ID": "COSS_65",
+    "Title": "회귀분석입문",
+    "Source": "COSS",
+    "Semester": "2-1",
+    "Concepts": [
+      "Correlation Analysis (상관 분석)",
+      "Simple Linear Regression (단순 선형 회귀)",
+      "Scatter Plot Interpretation (산점도 해석)",
+      "Significance Testing (유의성 검정)",
+      "Basic Prediction (기초 예측 모델링)"
+    ],
+    "Prerequisites": [
+      "COSS_28"
+    ],
+    "Description": "회귀 분석의 기초 개념을 익히고 실데이터에 적용하여 변수 간 관계를 파악하는 입문 과정",
+    "COSS_Link": {
+      "Score": 9,
+      "Field": "데이터사이언스/통계"
+    },
+    "Competency": [
+      "Correlation Interpretation",
+      "Basic Statistics"
+    ]
+  },
+  {
+    "ID": "COSS_66",
+    "Title": "빅데이터처리",
+    "Source": "COSS",
+    "Semester": "3-1",
+    "Concepts": [
+      "Distributed Computing (분산 컴퓨팅)",
+      "MapReduce Paradigm (맵리듀스 패러다임)",
+      "Data Pipeline Engineering (데이터 파이프라인 공학)",
+      "System Scalability (시스템 확장성)",
+      "Fault Tolerance (결함 허용성)"
+    ],
+    "Prerequisites": [
+      "COSS_43",
+      "COSS_39",
+      "COSS_47"
+    ],
+    "Description": "단일 컴퓨터로 처리 불가능한 대용량 데이터를 여러 서버에서 분산 처리하는 시스템 설계",
+    "COSS_Link": {
+      "Score": 10,
+      "Field": "데이터엔지니어링"
+    },
+    "Competency": [
+      "Apache Spark",
+      "Hadoop",
+      "ETL Process Design"
+    ]
+  },
+  {
+    "ID": "COSS_67",
+    "Title": "데이터종합분석",
+    "Source": "COSS",
+    "Semester": "Any",
+    "Concepts": [
+      "Integrated Analytics (통합 분석)",
+      "Cross-domain Correlation (교차 도메인 상관관계)",
+      "Data Synthesis (데이터 합성)",
+      "Model Fusion (모델 결합)",
+      "Holistic Insight (전역적 인사이트 도출)"
+    ],
+    "Prerequisites": [
+      "COSS_37",
+      "COSS_53"
+    ],
+    "Description": "다양한 소스의 데이터를 통합하여 복합적인 비즈니스 문제를 해결하고 최적의 모델 제안",
+    "COSS_Link": {
+      "Score": 10,
+      "Field": "데이터사이언스"
+    },
+    "Competency": [
+      "Data Synthesis",
+      "Advanced Modeling",
+      "Consulting"
+    ]
+  },
+  {
+    "ID": "COSS_68",
+    "Title": "인공지능산업체특강",
+    "Source": "COSS",
+    "Semester": "4-1",
+    "Concepts": [
+      "Industrial AI Applications (산업 AI 응용)",
+      "MLOps (기계학습 운영)",
+      "Tech Trends Analysis (기술 트렌드 분석)",
+      "Real-world Case Studies (실무 사례 연구)",
+      "AI Strategy (AI 전략 수립)"
+    ],
+    "Prerequisites": [
+      "COSS_21"
+    ],
+    "Description": "산업계 전문가들이 전하는 최신 AI 적용 사례와 기업 현장에서 필요한 기술 스택 파악",
+    "COSS_Link": {
+      "Score": 8,
+      "Field": "인공지능/경력개발"
+    },
+    "Competency": [
+      "Industry Awareness",
+      "Tech Strategy"
+    ]
+  },
+  {
+    "ID": "COSS_69",
+    "Title": "클라우드시스템",
+    "Source": "COSS",
+    "Semester": "4-2",
+    "Concepts": [
+      "Virtualization Technology (가상화 기술)",
+      "Infrastructure as Code (코드형 인프라)",
+      "Container Orchestration (컨테이너 오케스트레이션)",
+      "Cloud Security Architecture (클라우드 보안 아키텍처)",
+      "High Availability (고가용성 설계)"
+    ],
+    "Prerequisites": [
+      "COSS_47",
+      "COSS_50"
+    ],
+    "Description": "클라우드 인프라를 구축하고 가상 자원을 효율적으로 관리하기 위한 하부 시스템 구조 학습",
+    "COSS_Link": {
+      "Score": 9,
+      "Field": "클라우드/인프라"
+    },
+    "Competency": [
+      "Docker",
+      "Kubernetes",
+      "Terraform"
+    ]
+  },
+  {
+    "ID": "COSS_70",
+    "Title": "클라우드컴퓨팅",
+    "Source": "COSS",
+    "Semester": "4-1",
+    "Concepts": [
+      "On-demand Provisioning (온디맨드 자원 할당)",
+      "Scalable Service Architecture (확장 가능한 서비스 구조)",
+      "Distributed Cloud Computing (분산 클라우드 컴퓨팅)",
+      "Service Level Agreements (서비스 수준 협약)",
+      "Cloud-native Development (클라우드 네이티브 개발)"
+    ],
+    "Prerequisites": [
+      "COSS_69",
+      "COSS_09"
+    ],
+    "Description": "클라우드 환경에서 애플리케이션을 개발, 배포, 확장하는 서비스 지향 컴퓨팅 기술 습득",
+    "COSS_Link": {
+      "Score": 10,
+      "Field": "클라우드/인프라"
+    },
+    "Competency": [
+      "AWS/GCP",
+      "Serverless Architecture",
+      "Cloud Deployment"
+    ]
+  },
+  {
+    "ID": "COSS_71",
+    "Title": "지능형언어처리",
+    "Source": "COSS",
+    "Semester": "4-2",
+    "Concepts": [
+      "Semantic Reasoning (의미론적 추론)",
+      "Dialogue Management (대화 관리)",
+      "Knowledge Graph Integration (지식 그래프 통합)",
+      "Contextual Understanding (맥락 이해)",
+      "Cognitive Language Modeling (인지 언어 모델링)"
+    ],
+    "Prerequisites": [
+      "COSS_51"
+    ],
+    "Description": "단순 처리를 넘어 지능적으로 언어를 이해하고 지식 베이스와 연결하는 고도화된 기술",
+    "COSS_Link": {
+      "Score": 10,
+      "Field": "인공지능"
+    },
+    "Competency": [
+      "NLP Pipelines",
+      "Ontology Engineering",
+      "Knowledge Graph"
+    ]
+  },
+  {
+    "ID": "COSS_72",
+    "Title": "자연어처리와언어모델",
+    "Source": "COSS",
+    "Semester": "4-1",
+    "Concepts": [
+      "Attention Mechanism (어텐션 메커니즘)",
+      "Transformer Architectures (트랜스포머 아키텍처)",
+      "Pre-trained Representations (사전 학습된 표현)",
+      "Few-shot Learning (퓨샷 학습)",
+      "Language Generation (언어 생성)"
+    ],
+    "Prerequisites": [
+      "COSS_61",
+      "COSS_51"
+    ],
+    "Description": "거대 언어 모델(LLM)의 내부 구조와 이를 활용한 생성 및 이해 과업 수행 방법론",
+    "COSS_Link": {
+      "Score": 10,
+      "Field": "인공지능"
+    },
+    "Competency": [
+      "HuggingFace",
+      "BERT/GPT",
+      "Model Fine-tuning"
+    ]
+  },
+  {
+    "ID": "COSS_73",
+    "Title": "영상정보처리",
+    "Source": "COSS",
+    "Semester": "4-2",
+    "Concepts": [
+      "Digital Signal Processing (디지털 신호 처리)",
+      "Spatial Filtering (공간 필터링)",
+      "Image Enhancement (영상 향상)",
+      "Frequency Domain Analysis (주파수 영역 분석)",
+      "Color Space Transformation (색 공간 변환)"
+    ],
+    "Prerequisites": [
+      "COSS_35"
+    ],
+    "Description": "영상 데이터를 수학적으로 조작하여 화질을 개선하고 유의미한 특징을 추출하는 기초 기술",
+    "COSS_Link": {
+      "Score": 9,
+      "Field": "인공지능/영상응용"
+    },
+    "Competency": [
+      "OpenCV",
+      "Signal Analysis",
+      "Python"
+    ]
+  },
+  {
+    "ID": "COSS_74",
+    "Title": "컴퓨터비전",
+    "Source": "COSS",
+    "Semester": "4-2",
+    "Concepts": [
+      "Object Detection (객체 탐지)",
+      "Visual Feature Extraction (시각적 특징 추출)",
+      "Scene Segmentation (장면 분할)",
+      "Spatial Geometry (공간 기하학)",
+      "Motion Estimation (모션 추정)"
+    ],
+    "Prerequisites": [
+      "COSS_60",
+      "COSS_73"
+    ],
+    "Description": "이미지와 비디오로부터 정보를 추출하고 상황을 컴퓨터가 시각적으로 이해하게 하는 기술",
+    "COSS_Link": {
+      "Score": 10,
+      "Field": "인공지능"
+    },
+    "Competency": [
+      "YOLO",
+      "PyTorch Vision",
+      "OpenCV"
+    ]
+  },
+  {
+    "ID": "COSS_75",
+    "Title": "영상처리및응용",
+    "Source": "COSS",
+    "Semester": "3-1",
+    "Concepts": [
+      "Real-time Vision Systems (실시간 비전 시스템)",
+      "Biometric Identification (생체 인식)",
+      "Augmented Reality Basics (증강 현실 기초)",
+      "Medical Image Analysis (의료 영상 분석)",
+      "Visual Surveillance (시각 보안 감시)"
+    ],
+    "Prerequisites": [
+      "COSS_74"
+    ],
+    "Description": "컴퓨터 비전 기술을 의료, 보안 등 실제 산업 도메인에 적용하는 실무 응용 학습",
+    "COSS_Link": {
+      "Score": 10,
+      "Field": "인공지능/실무"
+    },
+    "Competency": [
+      "Application Prototyping",
+      "Edge AI"
+    ]
+  },
+  {
+    "ID": "COSS_76",
+    "Title": "졸업프로젝트",
+    "Source": "COSS",
+    "Semester": "4-Any",
+    "Concepts": [
+      "System Integration (시스템 통합)",
+      "Software Lifecycle Management (SW 생명주기 관리)",
+      "Final Prototype Development (최종 시제품 개발)",
+      "Technical Documentation (기술 문서화)",
+      "Peer Collaboration (동료 협업)"
+    ],
+    "Prerequisites": [
+      "COSS_15",
+      "COSS_37",
+      "COSS_67"
+    ],
+    "Description": "학부 전 과정을 통해 습득한 지식을 통합하여 완성도 높은 프로젝트 결과물을 도출",
+    "COSS_Link": {
+      "Score": 7,
+      "Field": "종합실습"
+    },
+    "Competency": [
+      "Project Management",
+      "Technical Writing",
+      "Presentation"
+    ]
+  },
+  {
+    "ID": "COSS_71",
+    "Title": "지능형언어처리",
+    "Source": "COSS",
+    "Semester": "4-2",
+    "Concepts": [
+      "Semantic Reasoning (의미론적 추론)",
+      "Dialogue Management (대화 관리)",
+      "Knowledge Graph Integration (지식 그래프 통합)",
+      "Contextual Understanding (맥락 이해)",
+      "Cognitive Language Modeling (인지 언어 모델링)"
+    ],
+    "Prerequisites": [
+      "COSS_51"
+    ],
+    "Description": "단순 처리를 넘어 지능적으로 언어를 이해하고 지식 베이스와 연결하는 고도화된 기술",
+    "COSS_Link": {
+      "Score": 10,
+      "Field": "인공지능"
+    },
+    "Competency": [
+      "NLP Pipelines",
+      "Ontology Engineering",
+      "Knowledge Graph"
+    ]
+  },
+  {
+    "ID": "COSS_72",
+    "Title": "자연어처리와언어모델",
+    "Source": "COSS",
+    "Semester": "4-1",
+    "Concepts": [
+      "Attention Mechanism (어텐션 메커니즘)",
+      "Transformer Architectures (트랜스포머 아키텍처)",
+      "Pre-trained Representations (사전 학습된 표현)",
+      "Few-shot Learning (퓨샷 학습)",
+      "Language Generation (언어 생성)"
+    ],
+    "Prerequisites": [
+      "COSS_61",
+      "COSS_51"
+    ],
+    "Description": "거대 언어 모델(LLM)의 내부 구조와 이를 활용한 생성 및 이해 과업 수행 방법론",
+    "COSS_Link": {
+      "Score": 10,
+      "Field": "인공지능"
+    },
+    "Competency": [
+      "HuggingFace",
+      "BERT/GPT",
+      "Model Fine-tuning"
+    ]
+  },
+  {
+    "ID": "COSS_73",
+    "Title": "영상정보처리",
+    "Source": "COSS",
+    "Semester": "4-2",
+    "Concepts": [
+      "Digital Signal Processing (디지털 신호 처리)",
+      "Spatial Filtering (공간 필터링)",
+      "Image Enhancement (영상 향상)",
+      "Frequency Domain Analysis (주파수 영역 분석)",
+      "Color Space Transformation (색 공간 변환)"
+    ],
+    "Prerequisites": [
+      "COSS_35"
+    ],
+    "Description": "영상 데이터를 수학적으로 조작하여 화질을 개선하고 유의미한 특징을 추출하는 기초 기술",
+    "COSS_Link": {
+      "Score": 9,
+      "Field": "인공지능/영상응용"
+    },
+    "Competency": [
+      "OpenCV",
+      "Signal Analysis",
+      "Python"
+    ]
+  },
+  {
+    "ID": "COSS_74",
+    "Title": "컴퓨터비전",
+    "Source": "COSS",
+    "Semester": "4-2",
+    "Concepts": [
+      "Object Detection (객체 탐지)",
+      "Visual Feature Extraction (시각적 특징 추출)",
+      "Scene Segmentation (장면 분할)",
+      "Spatial Geometry (공간 기하학)",
+      "Motion Estimation (모션 추정)"
+    ],
+    "Prerequisites": [
+      "COSS_60",
+      "COSS_73"
+    ],
+    "Description": "이미지와 비디오로부터 정보를 추출하고 상황을 컴퓨터가 시각적으로 이해하게 하는 기술",
+    "COSS_Link": {
+      "Score": 10,
+      "Field": "인공지능"
+    },
+    "Competency": [
+      "YOLO",
+      "PyTorch Vision",
+      "OpenCV"
+    ]
+  },
+  {
+    "ID": "COSS_75",
+    "Title": "영상처리및응용",
+    "Source": "COSS",
+    "Semester": "3-1",
+    "Concepts": [
+      "Real-time Vision Systems (실시간 비전 시스템)",
+      "Biometric Identification (생체 인식)",
+      "Augmented Reality Basics (증강 현실 기초)",
+      "Medical Image Analysis (의료 영상 분석)",
+      "Visual Surveillance (시각 보안 감시)"
+    ],
+    "Prerequisites": [
+      "COSS_74"
+    ],
+    "Description": "컴퓨터 비전 기술을 의료, 보안 등 실제 산업 도메인에 적용하는 실무 응용 학습",
+    "COSS_Link": {
+      "Score": 10,
+      "Field": "인공지능/실무"
+    },
+    "Competency": [
+      "Application Prototyping",
+      "Edge AI"
+    ]
+  },
+  {
+    "ID": "COSS_76",
+    "Title": "졸업프로젝트",
+    "Source": "COSS",
+    "Semester": "4-Any",
+    "Concepts": [
+      "System Integration (시스템 통합)",
+      "Software Lifecycle Management (SW 생명주기 관리)",
+      "Final Prototype Development (최종 시제품 개발)",
+      "Technical Documentation (기술 문서화)",
+      "Peer Collaboration (동료 협업)"
+    ],
+    "Prerequisites": [
+      "COSS_15",
+      "COSS_37",
+      "COSS_67"
+    ],
+    "Description": "학부 전 과정을 통해 습득한 지식을 통합하여 완성도 높은 프로젝트 결과물을 도출",
+    "COSS_Link": {
+      "Score": 7,
+      "Field": "종합실습"
+    },
+    "Competency": [
+      "Project Management",
+      "Technical Writing",
+      "Presentation"
+    ]
+  },
+  {
+    "ID": "COSS_77",
+    "Title": "시스템종합설계(캡스톤디자인)",
+    "Source": "COSS",
+    "Semester": "4-Any",
+    "Concepts": [
+      "Agile Development (애자일 개발 방법론)",
+      "Full-stack Integration (풀스택 통합)",
+      "Quality Assurance (품질 보증)",
+      "DevOps Flow (데브옵스 흐름)",
+      "System Optimization (시스템 최적화)"
+    ],
+    "Prerequisites": [
+      "COSS_18",
+      "COSS_42"
+    ],
+    "Description": "실제 서비스 가능한 수준의 시스템을 기획부터 배포까지 팀 단위로 수행하는 설계 프로젝트",
+    "COSS_Link": {
+      "Score": 8,
+      "Field": "종합실습/SW개발"
+    },
+    "Competency": [
+      "Git Flow",
+      "Docker",
+      "System Architecture"
+    ]
+  },
+  {
+    "ID": "COSS_78",
+    "Title": "지능형시스템개발",
+    "Source": "COSS",
+    "Semester": "4-1",
+    "Concepts": [
+      "AI Model Serving (AI 모델 서빙)",
+      "Inference Optimization (추론 최적화)",
+      "Edge Computing Deployment (에지 컴퓨팅 배포)",
+      "Continuous Training (지속적 학습 파이프라인)",
+      "Monitoring & Analytics (모니터링 및 분석)"
+    ],
+    "Prerequisites": [
+      "COSS_68",
+      "COSS_70"
+    ],
+    "Description": "학습된 AI 모델을 실제 운영 환경에 안정적으로 탑재하고 운영하는 지능형 시스템 구축 실무",
+    "COSS_Link": {
+      "Score": 10,
+      "Field": "데이터엔지니어링/AI응용"
+    },
+    "Competency": [
+      "Kubeflow",
+      "MLOps",
+      "API Serving"
+    ]
+  },
+  {
+    "ID": "COSS_79",
+    "Title": "통계분석설계(캡스톤디자인)",
+    "Source": "COSS",
+    "Semester": "3/4-1",
+    "Concepts": [
+      "Experimental Methodology (실험 방법론 설계)",
+      "Statistical Validation (통계적 검증)",
+      "Data-driven Storytelling (데이터 기반 스토리텔링)",
+      "Analytical Reporting (분석 리포팅)",
+      "Evidence-based Decision (증거 기반 의사결정)"
+    ],
+    "Prerequisites": [
+      "COSS_67",
+      "COSS_40"
+    ],
+    "Description": "통계 이론을 실데이터에 적용하여 가설을 검증하고 비즈니스 인사이트를 도출하는 분석 프로젝트",
+    "COSS_Link": {
+      "Score": 9,
+      "Field": "데이터사이언스/통계"
+    },
+    "Competency": [
+      "Statistical Modeling",
+      "R/Python",
+      "Consulting"
+    ]
+  },
+  {
+    "ID": "COSS_80",
+    "Title": "통계분석실습",
+    "Source": "COSS",
+    "Semester": "3-2",
+    "Concepts": [
+      "Statistical Software Proficiency (통계 소프트웨어 숙련)",
+      "Real-world Data Cleansing (실무 데이터 정제)",
+      "Exploratory Visualization (탐색적 시각화 실습)",
+      "Predictive Diagnostics (예측 진단)",
+      "Empirical Analysis (실증 분석)"
+    ],
+    "Prerequisites": [
+      "COSS_29",
+      "COSS_11"
+    ],
+    "Description": "통계 분석 도구를 활용하여 실제 데이터를 직접 처리하고 해석하는 실무 중심 실습 과정",
+    "COSS_Link": {
+      "Score": 9,
+      "Field": "데이터사이언스/통계"
+    },
+    "Competency": [
+      "SAS/SPSS",
+      "Python/Pandas",
+      "Statistical Reports"
+    ]
   }
 ]
