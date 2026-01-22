@@ -1,140 +1,130 @@
 import os
 import google.generativeai as genai
-import rdflib
 from dotenv import load_dotenv
+from app.graph_loader import graph_loader
 
-# Load environment variables
+# Load Env
 load_dotenv()
+api_key = os.getenv("GOOGLE_API_KEY")
+if api_key:
+    genai.configure(api_key=api_key)
 
-# Configure Gemini API
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
-if not GOOGLE_API_KEY:
-    raise ValueError("GOOGLE_API_KEY not found in environment variables. Please check .env file.")
+# Use user-specified model
+model = genai.GenerativeModel('gemini-2.0-flash-exp')
 
-genai.configure(api_key=GOOGLE_API_KEY)
-model = genai.GenerativeModel('gemini-3-pro-preview')
-
-def generate_sparql(question: str, schema_info: str) -> str:
+def generate_sparql(user_query: str) -> str:
     """
-    Generates a SPARQL query from a natural language question using Gemini.
+    Uses Gemini to translate natural language to SPARQL.
+    """
+    schema_info = graph_loader.get_schema_info()
     
-    Args:
-        question (str): The user's question.
-        schema_info (str): The schema information string.
-        
-    Returns:
-        str: The generated SPARQL query string.
-    """
     prompt = f"""
-You are an expert in SPARQL and Ontology Graph Databases.
-Your goal is to convert the User's Question into a precise SPARQL query based *strictly* on the provided Schema Information.
-
-[Schema Information]
-{schema_info}
-
-[Prefixes]
-PREFIX : <http://snu.ac.kr/dining/>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX owl: <http://www.w3.org/2002/07/owl#>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-
-[Rules]
-1. Use the prefixes defined above.
-2. The specific namespace for this ontology is <http://snu.ac.kr/dining/>, represented by the prefix `:`.
-3. Do NOT invent new classes or properties. Use ONLY what is provided in Schema Information.
-4. If the user asks about fuzzy concepts (e.g., "Engineering Zone"), infer them based on string matching in `placeName` or `building` if no specific class exists (e.g., FILTER regex(?venueName, "공대|301동", "i")).
-5. For prices, ensure you handle datatype correctly (xsd:integer).
-6. Return ONLY the SPARQL query code block (markdown ```sparql ... ```). Do not add explanations outside the code block.
-
-[User Question]
-{question}
-"""
+    You are an expert in SPARQL and RDF.
+    Ontology Schema:
+    {schema_info}
+    
+    Task: Convert the following user question into a SPARQL query.
+    Rules:
+    1. Use 'curr:' prefix.
+    2. Return ONLY the SPARQL query string. No markdown block.
+    3. Use 'FILTER(CONTAINS(LCASE(?title), "search_term"))' for robust text matching.
+    4. Important properties: curr:hasTitle, curr:hasPrerequisite, curr:hasSemester, curr:offeredInSource.
+    
+    Example:
+    User: "선형대수학 다음엔 뭐 들어?" (What comes after Linear Algebra?)
+    SPARQL:
+    SELECT ?nextSubjectTitle ?sem ?source WHERE {{
+        ?s curr:hasTitle ?title .
+        FILTER(CONTAINS(LCASE(?title), "선형대수"))
+        ?next curr:hasPrerequisite ?s .
+        ?next curr:hasTitle ?nextSubjectTitle .
+        OPTIONAL {{ ?next curr:hasSemester ?sem }}
+        OPTIONAL {{ ?next curr:offeredInSource ?source }}
+    }}
+    
+    Question: "{user_query}"
+    
+    SPARQL Query:
+    """
     
     try:
         response = model.generate_content(prompt)
-        text = response.text
-        # Extract code block if present
-        if "```sparql" in text:
-            query = text.split("```sparql")[1].split("```")[0].strip()
-        elif "```" in text:
-            query = text.split("```")[1].split("```")[0].strip()
-        else:
-            query = text.strip()
+        if not response.parts:
+             print("LLM Error: Empty Response")
+             return ""
+        query = response.text.replace("```sparql", "").replace("```", "").strip()
+        print(f"Generated SPARQL: {query}")
         return query
     except Exception as e:
-        print(f"Error generating SPARQL: {e}")
+        print(f"LLM Error (Generate SPARQL): {e}")
+        # Fallback for debugging
         return ""
 
-def execute_sparql(query: str, graph: rdflib.Graph):
-    """
-    Executes a SPARQL query against the provided graph.
-    
-    Args:
-        query (str): The SPARQL query string.
-        graph (rdflib.Graph): The loaded graph.
-        
-    Returns:
-        list[dict] | None: A list of result rows (as dictionaries) or None if error.
-    """
-    print(f"Executing SPARQL Query:\n{query}")
+def execute_sparql(query: str):
+    g = graph_loader.get_graph()
     try:
-        results = graph.query(query)
-        
-        # Convert results to a clean list of dictionaries for easier consumption
-        parsed_results = []
+        results = g.query(query)
+        # Convert to list of dicts for LLM consumption
+        data = []
         for row in results:
             item = {}
-            if hasattr(results, 'vars'): # Select query
-                for var in results.vars:
-                    val = row[var]
-                    # Convert rdflib literals/uris to simple strings/ints
-                    if isinstance(val, rdflib.Literal):
-                        item[str(var)] = val.value
-                    else:
-                        item[str(var)] = str(val)
-            parsed_results.append(item)
-            
-        return parsed_results
+            for var in results.vars:
+                val = row[var]
+                if val:
+                    item[str(var)] = str(val)
+            data.append(item)
+        return data
     except Exception as e:
-        print(f"Error executing SPARQL: {e}")
-        return None
+        print(f"SPARQL Execution Error: {e}")
+        return []
 
-def generate_answer(question: str, raw_data: list, sparql_query: str) -> str:
+def generate_answer(user_query: str, sparql_query: str, results: list) -> str:
     """
-    Generates a natural language answer based on the raw data retrieved.
-    
-    Args:
-        question (str): User's original question.
-        raw_data (list): The list of result dictionaries from the SPARQL query.
-        sparql_query (str): The query used (for context).
+    Uses Gemini to generate natural language answer from SPARQL results.
+    """
+    if not results:
+        return "죄송해요, 지식그래프에서 관련 정보를 찾지 못했습니다. (SPARQL 쿼리 결과 없음)"
         
-    Returns:
-        str: Final answer in Korean.
+    prompt = f"""
+    You are a helpful AI Curriculum Tutor.
+    
+    User Question: "{user_query}"
+    
+    Data Source (SPARQL Results):
+    {results}
+    
+    SPARQL Query Used:
+    {sparql_query}
+    
+    Instructions:
+    1. Answer the user's question based strictly on the Data Source.
+    2. Suggest courses with their Semester and Source (JBNU/COSS) if available.
+    3. Be friendly and helpful.
+    4. Mention "Reference: Knowledge Graph" at the end.
+    
+    Answer (in Korean):
     """
     
-    prompt = f"""
-You are an intelligent knowledge assistant.
-Your task is to answer the User's Question based on the provided [Raw Data] retrieved from a Knowledge Graph.
-
-[User Question]
-{question}
-
-[Raw Data]
-{raw_data}
-
-[Context (SPARQL used)]
-{sparql_query}
-
-[Instructions]
-1. Answer in natural, friendly Korean (polite tone, honorifics).
-2. Summarize the findings clearly.
-3. If the [Raw Data] is empty, politely inform the user that no matching information was found in the database.
-4. Do not mention "DB" or "SPARQL" or "JSON" in the final answer unless necessary for debugging. Just present the facts.
-5. If there are prices, format them with commas (e.g., 5,000원).
-"""
     try:
         response = model.generate_content(prompt)
         return response.text
     except Exception as e:
         return f"답변 생성 중 오류가 발생했습니다: {e}"
+
+def process_query_pipeline(user_query: str):
+    # 1. Gen SPARQL
+    sparql_query = generate_sparql(user_query)
+    if not sparql_query:
+        return {"answer": "질문을 이해하지 못했거나 SPARQL 생성에 실패했습니다.", "query": "", "data": []}
+        
+    # 2. Execute
+    results = execute_sparql(sparql_query)
+    
+    # 3. Gen Answer
+    answer = generate_answer(user_query, sparql_query, results)
+    
+    return {
+        "answer": answer,
+        "query": sparql_query,
+        "data": results
+    }

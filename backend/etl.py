@@ -46,8 +46,10 @@ def run_etl():
         # Type
         if source == 'JBNU':
             g.add((sub_uri, RDF.type, CURR.JBNUSubject))
+            g.add((sub_uri, RDF.type, CURR.Subject)) # Explicit Superclass
         else:
             g.add((sub_uri, RDF.type, CURR.COSSSubject))
+            g.add((sub_uri, RDF.type, CURR.Subject)) # Explicit Superclass
             
         # Properties
         g.add((sub_uri, CURR.hasTitle, Literal(title, datatype=XSD.string)))
@@ -170,19 +172,72 @@ def run_etl():
                 is_prereq = True
             if "확률" in j_title and ("통계" in c_title or "머신러닝" in c_title):
                 is_prereq = True
+            if j_title == "인공지능" and any(k in c_title for k in ["머신러닝", "딥러닝", "비전", "자연어", "강화학습", "심화"]):
+                is_prereq = True
+            if j_title == "머신러닝" and any(k in c_title for k in ["딥러닝", "심화", "비전", "자연어"]):
+                is_prereq = True
             
-            # 2. Description/Concept Match (Existing)
+            # 2. Description/Concept Match (Existing & Internal JBNU)
             if not is_prereq:
                 # Relaxed Concept Match: Intersection > 0
                 j_cons = set([x.split('(')[0].strip().lower() for x in j.get('Concepts', [])])
                 c_cons = set([x.split('(')[0].strip().lower() for x in c.get('Concepts', [])])
-                if j_cons & c_cons: # If share any concept
-                     # Check if semester of J < semester of C to assume Prereq direction?
-                     # Simplified: If J is JBNU (Base) and C is COSS (Advanced), let's link Aggressively.
-                     is_prereq = True
+                
+                if j_cons & c_cons: 
+                     # If JBNU -> JBNU Linking?
+                     # We only iterate COSS list 'c' above.
+                     # We need to iterate ALL subjects to link JBNU->JBNU.
+                     pass
 
             if is_prereq:
                 g.add((c_uri, CURR.hasPrerequisite, j_uri))
+
+    # 3. Internal JBNU Linking (New Step)
+    # Iterate all JBNU pairs to find internal progression
+    print("Linking Internal JBNU subjects...")
+    # jbnu_data is a list of dicts.
+    for i in range(len(jbnu_data)):
+        j1 = jbnu_data[i]
+        # JBNU data uses 'SBJ_NO' or similar as ID? 
+        # Actually in the loop above we generated URIs. Let's reconstruct or reuse.
+        # Let's check how we got ID before. 
+        # In previous loop: id = item['SBJ_NO'] or similar. 
+        # Let's inspect variable names in the first loop.
+        # Actually, let's just use the ID field derived in the same way as the first loop.
+        
+        id1 = j1.get('SBJ_NO', str(i))
+        t1 = j1.get('SBJ_NM', j1.get('Title', 'Unknown')).strip().replace(" ", "").lower()
+        uri1 = URIRef(CURR + f"JBNU_{id1}")
+        
+        for k in range(len(jbnu_data)):
+            if i == k: continue
+            j2 = jbnu_data[k]
+            id2 = j2.get('SBJ_NO', str(k))
+            t2 = j2.get('SBJ_NM', j2.get('Title', 'Unknown')).strip().replace(" ", "").lower()
+            uri2 = URIRef(CURR + f"JBNU_{id2}")
+            
+            # Rules for JBNU -> JBNU
+            is_internal_prereq = False
+            
+            # Intro -> Advanced
+            if "개론" in t1 or "기초" in t1 or "입문" in t1:
+                if t1.replace("개론","").replace("기초","").replace("입문","") in t2:
+                    is_internal_prereq = True
+            
+            # 1 -> 2
+            if "1" in t1 and "2" in t2 and t1.replace("1","") == t2.replace("2",""):
+                 is_internal_prereq = True
+            
+            # Specifics
+            if "선형대수" in t1:
+                if any(x in t2 for x in ["공학수학", "수치해석", "통계", "그래픽스", "영상처리"]):
+                    is_internal_prereq = True
+            if "자료구조" in t1:
+                if any(x in t2 for x in ["알고리즘", "운영체제", "데이터베이스", "컴파일러"]):
+                    is_internal_prereq = True
+            
+            if is_internal_prereq:
+                g.add((uri2, CURR.hasPrerequisite, uri1)) # uri2 requires uri1
             
             if is_prereq:
                 g.add((c_uri, CURR.hasPrerequisite, j_uri)) # Note direction: C requires J

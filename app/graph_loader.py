@@ -1,84 +1,67 @@
-import rdflib
 import os
+import rdflib
+from rdflib import Graph, Namespace, Literal
 
-def load_graph(file_path: str) -> rdflib.Graph:
-    """
-    Load the RDF graph from the specified TTL file.
+# Namespaces
+CURR = Namespace("http://example.org/curriculum/")
+RDFS = rdflib.RDFS
+RDF = rdflib.RDF
+
+class GraphLoader:
+    _instance = None
     
-    Args:
-        file_path (str): The absolute path to the .ttl file.
+    def __new__(cls):
+        if cls._instance is None:
+            cls._instance = super(GraphLoader, cls).__new__(cls)
+            cls._instance.g = Graph()
+            cls._instance.loaded = False
+        return cls._instance
+
+    def load_graph(self):
+        if self.loaded:
+            return self.g
+            
+        print("Loading RDF Data...")
+        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        ttl_path = os.path.join(base_dir, 'data/ontology/knowledge_graph.ttl')
+        schema_path = os.path.join(base_dir, 'data/ontology/schema.ttl')
         
-    Returns:
-        rdflib.Graph: The loaded graph.
-    """
-    print(f"Loading graph from {file_path}...")
-    g = rdflib.Graph()
-    try:
-        g.parse(file_path, format="turtle")
-        print(f"Graph loaded successfully! Total triples: {len(g)}")
-        return g
-    except Exception as e:
-        print(f"Error loading graph: {e}")
-        raise e
+        try:
+            self.g.parse(ttl_path, format="turtle")
+            print(f"Loaded {len(self.g)} triples from {ttl_path}")
+            
+            # Load Schema for context if needed (optional for query execution, but good for LLM context)
+            self.g.parse(schema_path, format="turtle")
+            self.g.bind("curr", CURR)
+            self.loaded = True
+        except Exception as e:
+            print(f"Error loading graph: {e}")
+            raise e
+            
+        return self.g
 
-def get_schema_info(graph: rdflib.Graph) -> str:
-    """
-    Extracts schema information (Classes, Properties, Relations) from the graph
-    to provide context for the LLM.
-    
-    Args:
-        graph (rdflib.Graph): The loaded graph.
-        
-    Returns:
-        str: A formatted string describing the schema.
-    """
-    
-    # 1. Extract Classes
-    classes_query = """
-    SELECT DISTINCT ?class
-    WHERE {
-        ?s a ?class .
-    }
-    ORDER BY ?class
-    """
-    classes = []
-    for row in graph.query(classes_query):
-        classes.append(str(row['class']))
-        
-    # 2. Extract Properties (Predicates)
-    props_query = """
-    SELECT DISTINCT ?p
-    WHERE {
-        ?s ?p ?o .
-    }
-    ORDER BY ?p
-    """
-    properties = []
-    for row in graph.query(props_query):
-        properties.append(str(row['p']))
+    def get_graph(self):
+        if not self.loaded:
+            return self.load_graph()
+        return self.g
 
-    # 3. Extract Example Relations (Triples)
-    # Get a few diverse examples to show structure
-    examples_query = """
-    SELECT ?s ?p ?o
-    WHERE {
-        ?s ?p ?o .
-    }
-    LIMIT 10
-    """
-    examples = []
-    for row in graph.query(examples_query):
-        examples.append(f"{row['s']} {row['p']} {row['o']}")
+    def get_schema_info(self):
+        """
+        Returns schema information (classes, properties) to help LLM generate SPARQL.
+        """
+        # Hardcoded High-level summary for Prompt Context
+        return """
+        Prefix: curr: <http://example.org/curriculum/>
+        Classes: curr:Subject, curr:JBNUSubject, curr:COSSSubject, curr:Track, curr:Competency
+        Properties:
+          - curr:hasTitle (string)
+          - curr:hasSemester (string)
+          - curr:hasPrerequisite (Subject -> Subject)
+          - curr:teaches (Subject -> Competency)
+          - curr:requiredBy (Competency -> Track)
+          - curr:offeredInSource (string: 'JBNU' or 'COSS')
+          - curr:hasDomain (string: '인공지능', '데이터사이언스' etc)
+        """
 
-    schema_text = f"""
-[Classes]
-{chr(10).join(classes)}
-
-[Properties]
-{chr(10).join(properties)}
-
-[Example Triples]
-{chr(10).join(examples)}
-    """
-    
-    return schema_text.strip()
+# Singleton Accessor
+graph_loader = GraphLoader()

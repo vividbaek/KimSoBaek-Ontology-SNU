@@ -92,34 +92,71 @@ class Reasoner:
         result.sort(key=lambda x: self._semester_sort_key(x['Semester']))
         return result
 
-    def recommend_forward(self, subject_title: str) -> list:
+    def recommend_forward(self, subject_title: str) -> tuple:
         """
         Forward Chaining: Subject -> Next Subjects (Successors)
+        Returns (List[Dict], str_query)
         """
-        query = """
-        SELECT ?next ?sem ?title
+        # 1. Find Subject URI
+        q_subj = """
+        SELECT ?s
         WHERE {
-            ?subject curr:hasTitle ?targetTitle .
-            ?next curr:hasPrerequisite+ ?subject . 
-            ?next curr:hasTitle ?title .
-            ?next curr:hasSemester ?sem .
+            ?s curr:hasTitle ?title .
+            FILTER(STR(?title) = ?targetTitle)
         }
         """
-        # Note: ?next hasPrerequisite ?subject means ?subject is a prerequisite of ?next.
-        # So ?next is the successor.
+        # Use STR() comparison to avoid datatype issues
+        res_s = self.g.query(q_subj, initBindings={'targetTitle': Literal(subject_title)})
         
-        res = self.g.query(query, initBindings={'targetTitle': Literal(subject_title)})
+        subject_uri = None
+        for row in res_s:
+            subject_uri = row.s
+            break
+            
+        if not subject_uri:
+            print(f"DEBUG: Subject URI not found for {subject_title}")
+            return []
+
+        # 2. Find Direct Dependents
+        # Updated to fetch Source property and return the query itself for explainability.
+        q_next = """
+        SELECT ?next ?sem ?title ?p ?source
+        WHERE {
+            ?next ?p ?target . 
+            FILTER(?p IN (curr:hasPrerequisite))
+            ?next curr:hasTitle ?title .
+            ?next curr:hasSemester ?sem .
+            OPTIONAL { ?next curr:offeredInSource ?source . }
+        }
+        """
+        
+        res = self.g.query(q_next, initBindings={'target': subject_uri})
         
         result = []
+        seen = set()
         for row in res:
+            if str(row.next) in seen: continue
+            seen.add(str(row.next))
+            
+            # Formulate Reason
+            reason = "Direct Prerequisite"
+            if "hasPrerequisite" in str(row.p):
+                reason = "선수과목(Prerequisite) 연결"
+            
+            # Source
+            src = str(row.source) if row.source else "Unknown"
+            
             result.append({
                 "ID": str(row.next).split('/')[-1],
                 "Title": str(row.title),
-                "Semester": str(row.sem)
+                "Semester": str(row.sem),
+                "Reason": reason,
+                "Source": src
             })
             
         result.sort(key=lambda x: self._semester_sort_key(x['Semester']))
-        return result
+        
+        return result, q_next # Return Data and Query String
 
     def _get_skills_for_track(self, track: str):
         # Hardcoded Mapping for MVP (Should be in Ontology later)
@@ -155,11 +192,11 @@ class Reasoner:
         matches = []
         for row in self.g.query(q):
             title = str(row.title)
-            # Remove spaces for robust matching
+            # Remove spaces for robust matching (e.g. "선형 대수학" -> "선형대수학")
             clean_title = title.replace(" ", "")
             clean_text = text.replace(" ", "")
             
-            if clean_title in clean_text or title in text:
+            if clean_title in clean_text:
                 matches.append(title)
         
         if not matches:

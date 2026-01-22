@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +9,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.28.1/cytoscape.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/cytoscape-cose-bilkent@4.1.0/cytoscape-cose-bilkent.min.js"></script>
     <style>
-        * { box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Tahoma, auto; margin: 0; padding: 0; display: flex; height: 100vh; overflow: hidden; }
-        
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, auto;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
         /* Left: Chat Pane (35%) */
         #chat-pane {
             width: 35%;
@@ -19,18 +30,22 @@
             display: flex;
             flex-direction: column;
             z-index: 2;
-            box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
         }
+
         #chat-header {
             padding: 20px;
             background: #fff;
             border-bottom: 1px solid #eee;
             font-size: 1.2em;
             font-weight: bold;
-            display: flex; /* Flex alignment */
-            align-items: center; /* Center Vertically */
+            display: flex;
+            /* Flex alignment */
+            align-items: center;
+            /* Center Vertically */
             gap: 10px;
         }
+
         #chat-history {
             flex: 1;
             padding: 20px;
@@ -39,6 +54,7 @@
             flex-direction: column;
             gap: 15px;
         }
+
         .msg {
             max-width: 85%;
             padding: 12px 16px;
@@ -47,28 +63,33 @@
             font-size: 0.95em;
             word-wrap: break-word;
         }
-        .bot { 
-            background: white; 
-            border: 1px solid #eee; 
-            align-self: flex-start; 
+
+        .bot {
+            background: white;
+            border: 1px solid #eee;
+            align-self: flex-start;
             border-bottom-left-radius: 2px;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
         }
-        .user { 
-            background: #007bff; 
-            color: white; 
-            align-self: flex-end; 
+
+        .user {
+            background: #007bff;
+            color: white;
+            align-self: flex-end;
             border-bottom-right-radius: 2px;
         }
+
         #chat-input-area {
             padding: 20px;
             background: #fff;
             border-top: 1px solid #eee;
         }
+
         #input-box {
             display: flex;
             gap: 10px;
         }
+
         input {
             flex: 1;
             padding: 12px;
@@ -77,7 +98,11 @@
             outline: none;
             font-size: 1em;
         }
-        input:focus { border-color: #007bff; }
+
+        input:focus {
+            border-color: #007bff;
+        }
+
         button {
             padding: 0 20px;
             background: #007bff;
@@ -94,11 +119,12 @@
             position: relative;
             background: #fff;
         }
+
         #cy {
             width: 100%;
             height: 100%;
         }
-        
+
         /* Overlays on Graph */
         #graph-controls {
             position: absolute;
@@ -107,6 +133,7 @@
             display: flex;
             gap: 10px;
         }
+
         .graph-btn {
             background: white;
             border: 1px solid #ddd;
@@ -114,31 +141,39 @@
             border-radius: 6px;
             cursor: pointer;
             font-size: 0.9em;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
         }
-        
+
         #legend {
             position: absolute;
             bottom: 20px;
             right: 20px;
-            background: rgba(255,255,255,0.9);
+            background: rgba(255, 255, 255, 0.9);
             padding: 10px 15px;
             border-radius: 8px;
             border: 1px solid #eee;
             font-size: 0.85em;
         }
-        
+
         /* Loading Overlay */
         #loading {
-            position: fixed; top:0; left:0; width:100%; height:100%;
-            background: rgba(255,255,255,0.8);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.8);
             z-index: 9999;
-            display: flex; justify-content: center; align-items: center;
-            font-size: 1.5em; color: #555;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+            color: #555;
             display: none;
         }
     </style>
 </head>
+
 <body>
 
     <div id="loading">Data Loading...</div>
@@ -204,12 +239,12 @@
             // 1. Identify Domains
             const domains = new Set();
             data.nodes.forEach(n => {
-                if(n.domain && n.domain !== "Unknown") domains.add(n.domain);
+                if (n.domain && n.domain !== "Unknown") domains.add(n.domain);
             });
 
             // 2. Create Elements (Nodes + Compound Parents)
             const elements = [];
-            
+
             // Add Parent Nodes (Groups)
             domains.forEach(d => {
                 elements.push({
@@ -221,10 +256,14 @@
             // Add Child Nodes
             data.nodes.forEach(n => {
                 const parent = (n.domain && n.domain !== "Unknown") ? `group_${n.domain}` : null;
+                // Add Source Prefix to Label for clarity
+                const prefix = (n.type === 'JBNU') ? '[JBNU]' : '[COSS]';
+                const label = `${prefix}\n${n.label}`;
+
                 elements.push({
                     data: {
                         id: n.id,
-                        label: n.label,
+                        label: label,
                         type: n.type,
                         semester: n.semester,
                         parent: parent
@@ -247,13 +286,17 @@
                         selector: 'node[type!="group"]',
                         style: {
                             'label': 'data(label)',
+                            'text-wrap': 'wrap',
                             'text-valign': 'center', 'text-halign': 'center',
                             'color': '#fff',
-                            'text-outline-width': 1, 'text-outline-color': '#555',
+                            'text-outline-width': 2, 'text-outline-color': '#333',
                             'background-color': ele => colorMap[ele.data('type')] || '#666',
-                            'width': 'label', 'height': 'label', 'padding': '10px',
+                            'width': 'label', 'height': 'label',
+                            'padding': '12px',
                             'shape': 'round-rectangle',
-                            'font-size': '12px'
+                            'font-size': '18px', /* Larger */
+                            'font-weight': 'bold',
+                            'min-zoomed-font-size': 8 /* Show text even when zoomed out */
                         }
                     },
                     {
@@ -262,69 +305,73 @@
                             'label': 'data(label)',
                             'text-valign': 'top', 'text-halign': 'center',
                             'background-color': '#f8f9fa',
-                            'border-width': 2, 'border-color': '#ccc',
+                            'border-width': 2, 'border-color': '#c3e6cb',
                             'shape': 'round-rectangle',
-                            'color': '#007bff', 'font-weight': 'bold', 'font-size': '16px',
-                            'padding': '10px'
+                            'color': '#28a745', 'font-weight': 'bold', 'font-size': '24px',
+                            'padding': '15px'
                         }
                     },
                     {
                         selector: 'edge',
                         style: {
-                            'width': 1.5,
-                            'line-color': '#d1d1d1',
-                            'target-arrow-color': '#d1d1d1',
+                            'width': 2,
+                            'line-color': '#ced4da',
+                            'target-arrow-color': '#ced4da',
                             'target-arrow-shape': 'triangle',
                             'curve-style': 'bezier',
-                            'opacity': 0.6
+                            'opacity': 0.8,
+                            'arrow-scale': 1.2
                         }
                     },
                     {
                         selector: '.highlighted',
                         style: {
-                            'background-color': '#d63384',
-                            'line-color': '#d63384',
-                            'target-arrow-color': '#d63384',
-                            'border-color': '#e91e63',
-                            'width': 3,
-                            'opacity': 1,
-                            'z-index': 9999,
-                            'transition-property': 'background-color, line-color',
-                            'transition-duration': '0.3s'
+                            'background-color': '#ffc107', /* Yellow for highlight */
+                            'line-color': '#ffc107',
+                            'target-arrow-color': '#ffc107',
+                            'border-color': '#fff',
+                            'border-width': 4,
+                            'color': '#000',
+                            'text-outline-color': '#fff',
+                            'z-index': 9999
                         }
                     },
                     {
                         selector: '.faded',
                         style: {
-                            'opacity': 0.1
+                            'opacity': 0.15
                         }
                     }
                 ],
                 layout: {
-                    name: 'cose', 
-                    animate: false,
-                    nodeRepulsion: 4500,
-                    idealEdgeLength: 80,
-                    componentSpacing: 80,
-                    padding: 30
+                    name: 'cose',
+                    animate: true,
+                    animationDuration: 800,
+                    // Balanced again - previous was too tight
+                    nodeRepulsion: 10000,
+                    idealEdgeLength: 150,
+                    componentSpacing: 100,
+                    padding: 50,
+                    randomize: true, /* Randomize initial positions to help untangle */
+                    gravity: 0.1
                 }
             });
-            
+
             // Interaction: Tap on node types in Chat?
             cy.on('tap', 'node', evt => {
                 const node = evt.target;
-                if(node.isParent()) return; // Ignore tapping on group box
+                if (node.isParent()) return; // Ignore tapping on group box
                 sendSystemMessage(`👆 **${node.data('label')}** 과목을 선택하셨습니다. 관련 정보를 보여드릴까요?`);
             });
         }
 
         // --- Chat Logic ---
-        function handleEnter(e) { if(e.key === 'Enter') sendMessage(); }
+        function handleEnter(e) { if (e.key === 'Enter') sendMessage(); }
 
         async function sendMessage() {
             const input = document.getElementById('chat-input');
             const msg = input.value.trim();
-            if(!msg) return;
+            if (!msg) return;
 
             addMsg(msg, 'user');
             input.value = '';
@@ -333,11 +380,11 @@
                 // Call Chat API
                 const response = await fetch(`http://localhost:8000/chat?query=${encodeURIComponent(msg)}`);
                 const data = await response.json();
-                
+
                 addMsg(data.answer, 'bot');
 
                 // Logic to Update Graph
-                if(data.roadmap && data.roadmap.length > 0) {
+                if (data.roadmap && data.roadmap.length > 0) {
                     highlightGraph(data.roadmap);
                 } else {
                     // If simple conversation, maybe reset graph?
@@ -358,39 +405,39 @@
             hist.appendChild(div);
             hist.scrollTop = hist.scrollHeight;
         }
-        
+
         function sendSystemMessage(text) {
-             addMsg(text, 'bot');
+            addMsg(text, 'bot');
         }
 
         function highlightGraph(subjects) {
             cy.elements().removeClass('highlighted faded');
-            
+
             // Fade all first
             cy.elements().addClass('faded');
-            
+
             const ids = new Set(subjects.map(s => s.ID));
-            
+
             cy.batch(() => {
                 // Highlight Nodes
                 subjects.forEach(s => {
                     const el = cy.$id(s.ID);
                     el.removeClass('faded').addClass('highlighted');
                     // Also un-fade parent
-                    if(el.parent().length > 0) el.parent().removeClass('faded');
+                    if (el.parent().length > 0) el.parent().removeClass('faded');
                 });
-                
+
                 // Highlight Edges
                 cy.edges().forEach(e => {
-                    if(ids.has(e.source().id()) && ids.has(e.target().id())) {
+                    if (ids.has(e.source().id()) && ids.has(e.target().id())) {
                         e.removeClass('faded').addClass('highlighted');
                     }
                 });
-                
+
                 // Unfade Parents of highlighted nodes
                 cy.nodes('.highlighted').parent().removeClass('faded');
             });
-            
+
             // Zoom to fit highlighted
             cy.fit(cy.elements('.highlighted'), 50);
         }
@@ -403,4 +450,5 @@
         init();
     </script>
 </body>
+
 </html>

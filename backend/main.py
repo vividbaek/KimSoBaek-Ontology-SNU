@@ -91,12 +91,28 @@ def chat(query: str):
                      break
              
              if found_subj:
-                 roadmap = reasoner.recommend_forward(found_subj)
+                 roadmap, spark_query = reasoner.recommend_forward(found_subj)
                  if roadmap:
-                     names = ", ".join([s['Title'] for s in roadmap[:3]])
-                     answer = f"🔍 **{found_subj}**을(를) 재밌게 들으셨다면, 다음 단계로 **{names}** 등을 추천합니다.<br>관련된 과목들을 그래프에 표시해 드렸어요!"
+                     # Create bullet list with reasons and source
+                     lines = []
+                     for s in roadmap[:5]:
+                         src_badge = "🔵JBNU" if s['Source'] == 'JBNU' else "🟠COSS"
+                         lines.append(f"- {src_badge} **{s['Title']}** ({s['Semester']}) : _{s['Reason']}_")
+                     
+                     list_str = "<br>".join(lines)
+                     
+                     # Explanation Block
+                     explanation = f"""
+                     <details style='margin-top:10px; border:1px solid #ddd; padding:10px; border-radius:5px;'>
+                        <summary style='cursor:pointer; font-weight:bold; color:#555;'>🛠️ SPARQL Reasoning Logic (Click)</summary>
+                        <pre style='background:#f4f4f4; padding:5px; font-size:0.8em; overflow-x:auto;'>{spark_query.strip().replace('<', '&lt;')}</pre>
+                        <p style='font-size:0.8em; color:#666;'>Reasoning Strategy: Forward Chaining (Transitive Closure on Prerequisites)</p>
+                     </details>
+                     """
+                     
+                     answer = f"🔍 **{found_subj}**을(를) 들으셨군요.<br>지식그래프 추론 결과, 다음 과목들을 추천합니다:<br><br>{list_str}<br>{explanation}<br>관련된 과목들을 그래프에 표시해 드렸어요!"
                  else:
-                     answer = f"🤔 **{found_subj}** 과목의 다음 단계 정보가 충분하지 않네요."
+                     answer = f"🤔 **{found_subj}** 과목과 직접 연결된 후수 과목(Successor) 정보가 지식그래프에 없습니다.<br>하지만 같은 트랙의 다른 과목을 찾아보시는 건 어떨까요?"
              else:
                  answer = "어떤 과목을 들으셨나요? (예: 선형대수학 듣고 뭐 들을까?)"
                  

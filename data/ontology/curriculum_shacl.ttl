@@ -1,0 +1,35 @@
+@prefix : <http://example.org/curriculum/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:SubjectShape a sh:NodeShape ;
+    sh:targetClass :Subject ;
+    sh:property [
+        sh:path :hasTitle ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:detail "Every subject must have a title." ;
+    ] ;
+    sh:property [
+        sh:path :offeredInSource ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path :hasPrerequisite ;
+        sh:class :Subject ;
+        sh:detail "Prerequisite must be a Subject instance." ;
+    ] ;
+    sh:property [
+        sh:path :teaches ;
+        sh:class :Competency ;
+        sh:detail "Must teach a valid Competency." ;
+    ] .
+
+:TrackShape a sh:NodeShape ;
+    sh:targetClass :Track ;
+    sh:property [
+        sh:path :requiresCompetency ;
+        sh:minCount 1 ;
+        sh:class :Competency ;
+    ] .

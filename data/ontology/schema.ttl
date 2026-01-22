@@ -4,39 +4,68 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-# Classes
+<http://example.org/curriculum/> rdf:type owl:Ontology ;
+                                  rdfs:comment "Ontology for Curriculum, Subjects, and Competencies"@en .
+
+#################################################################
+#    Classes
+#################################################################
+
 :Subject a owl:Class ;
-    rdfs:label "Subject" .
+    rdfs:label "Subject" ;
+    rdfs:comment "An educational course or subject." .
 
 :JBNUSubject a owl:Class ;
     rdfs:subClassOf :Subject ;
-    rdfs:label "JBNU Subject" .
+    rdfs:label "JBNU Subject" ;
+    rdfs:comment "Subject offered by JBNU." .
 
 :COSSSubject a owl:Class ;
     rdfs:subClassOf :Subject ;
-    rdfs:label "COSS Subject" .
+    rdfs:label "COSS Subject" ;
+    rdfs:comment "Subject offered by COSS." .
 
 :Competency a owl:Class ;
-    rdfs:label "Competency/Skill" .
+    rdfs:label "Competency/Skill" ;
+    rdfs:comment "A skill or competency acquired through a subject." .
+
+:TechnicalCompetency a owl:Class ;
+    rdfs:subClassOf :Competency ;
+    rdfs:label "Technical Competency" .
+
+:SoftSkill a owl:Class ;
+    rdfs:subClassOf :Competency ;
+    rdfs:label "Soft Skill" .
 
 :Track a owl:Class ;
-    rdfs:label "Career Track" .
+    rdfs:label "Career Track" ;
+    rdfs:comment "A career path or specialization track." .
 
-# Object Properties
+:CurriculumDomain a owl:Class ;
+    rdfs:label "Curriculum Domain" ;
+    rdfs:comment "Broad domain of the subject (e.g., AI, SW)." .
+
+#################################################################
+#    Object Properties
+#################################################################
+
 :hasPrerequisite a owl:ObjectProperty, owl:TransitiveProperty ;
     rdfs:domain :Subject ;
     rdfs:range :Subject ;
-    rdfs:label "has prerequisite" .
+    rdfs:label "has prerequisite" ;
+    rdfs:comment "Indicates that a subject is a prerequisite for another." .
 
 :teaches a owl:ObjectProperty ;
     rdfs:domain :Subject ;
     rdfs:range :Competency ;
-    rdfs:label "teaches competency" .
+    rdfs:label "teaches competency" ;
+    rdfs:comment "Links a subject to the competencies it teaches." .
 
 :requiresCompetency a owl:ObjectProperty ;
     rdfs:domain :Track ;
     rdfs:range :Competency ;
-    rdfs:label "requires competency" .
+    rdfs:label "requires competency" ;
+    rdfs:comment "Competencies required for a specific track." .
 
 :relatedTo a owl:ObjectProperty, owl:SymmetricProperty ;
     rdfs:domain :Subject ;
@@ -47,16 +76,27 @@
     rdfs:subPropertyOf owl:sameAs ;
     rdfs:domain :Subject ;
     rdfs:range :Subject ;
-    rdfs:label "is equivalent to" .
+    rdfs:label "is equivalent to" ;
+    rdfs:comment "Indicates that two subjects are considered equivalent." .
 
-# Datatype Properties
+:belongsToDomain a owl:ObjectProperty ;
+    rdfs:domain :Subject ;
+    rdfs:range :CurriculumDomain ;
+    rdfs:label "belongs to domain" .
+
+#################################################################
+#    Data Properties
+#################################################################
+
 :hasTitle a owl:DatatypeProperty ;
     rdfs:domain :Subject ;
-    rdfs:range xsd:string .
+    rdfs:range xsd:string ;
+    rdfs:label "title" .
 
 :hasSemester a owl:DatatypeProperty ;
     rdfs:domain :Subject ;
-    rdfs:range xsd:string .
+    rdfs:range xsd:string ;
+    rdfs:comment "e.g., '1-1', '2-2', 'Any'" .
 
 :hasDescription a owl:DatatypeProperty ;
     rdfs:domain :Subject ;
@@ -64,9 +104,27 @@
 
 :offeredInSource a owl:DatatypeProperty ;
     rdfs:domain :Subject ;
-    rdfs:range xsd:string .
+    rdfs:range xsd:string ;
+    rdfs:comment "e.g., 'COSS', 'JBNU'" .
 
-# Pre-defined Tracks
+:hasDomain a owl:DatatypeProperty ;
+    rdfs:domain :Subject ;
+    rdfs:range xsd:string ;
+    rdfs:comment "String representation of domain (legacy support)." .
+
+:difficultyLevel a owl:DatatypeProperty ;
+    rdfs:domain :Subject ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Difficulty level (e.g., Beginner, Intermediate)." .
+
+:creditHours a owl:DatatypeProperty ;
+    rdfs:domain :Subject ;
+    rdfs:range xsd:integer .
+
+#################################################################
+#    Pre-defined Instances (Tracks)
+#################################################################
+
 :AIModeler a :Track ;
     rdfs:label "AI 모델러" ;
     :requiresCompetency :Competency_MachineLearning, :Competency_DeepLearning, :Competency_Python .
