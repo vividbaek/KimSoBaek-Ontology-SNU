@@ -1,0 +1,722 @@
+[
+  {
+    "ID": "JBNU_CE_01",
+    "Title": "자료구조",
+    "Source": "JBNU",
+    "Concepts": [
+      "Data Structure Implementation (자료구조 구현)",
+      "Stack & Queue (스택과 큐)",
+      "Linked List (연결 리스트)",
+      "Tree & Graph (트리와 그래프)",
+      "Hashing & Search (해싱과 탐색)"
+    ],
+    "Prerequisites": [],
+    "Description": "메모리상에서 구축할 수 있는 다양한 자료구조를 배우고, 이를 활용한 프로그램 능력을 배양한다.",
+    "COSS_Link": { "Score": 8, "Field": "빅데이터/AI기초" },
+    "Competency": ["C/C++", "Memory Management", "Pointer Manipulation"]
+  },
+  {
+    "ID": "JBNU_CE_02",
+    "Title": "C++프로그래밍",
+    "Source": "JBNU",
+    "Concepts": [
+      "Object-Oriented Design (객체지향 설계)",
+      "Class & Object (클래스와 객체)",
+      "Inheritance & Polymorphism (상속과 다형성)",
+      "Template & STL (템플릿과 표준 템플릿 라이브러리)",
+      "Operator Overloading (연산자 중복)"
+    ],
+    "Prerequisites": [],
+    "Description": "C언어 기초를 바탕으로 객체지향 언어인 C++를 이용해 문제 특성에 맞는 데이터형 설계 능력과 소프트웨어 개발 능력을 갖춘다.",
+    "COSS_Link": { "Score": 5, "Field": "소프트웨어 개발" },
+    "Competency": ["C++", "STL", "Object-Oriented Analysis"]
+  },
+  {
+    "ID": "JBNU_CE_03",
+    "Title": "논리설계",
+    "Source": "JBNU",
+    "Concepts": [
+      "Boolean Algebra (부울 대수)",
+      "Logic Gates (논리 게이트)",
+      "Combinational Circuits (조합 회로)",
+      "Sequential Circuits (순차 회로)",
+      "Flip-flops & Counters (플립플롭과 카운터)"
+    ],
+    "Prerequisites": [],
+    "Description": "디지털 시스템의 기본 개념과 동작 원리를 이해하고, 기본 소자 및 회로 설계 이론을 학습하여 디지털 시스템 설계에 대한 시각을 넓힌다.",
+    "COSS_Link": { "Score": 2, "Field": "하드웨어/임베디드" },
+    "Competency": ["Digital Logic", "Circuit Design", "K-Map Optimization"]
+  },
+  {
+    "ID": "JBNU_CE_04",
+    "Title": "선형대수학",
+    "Source": "JBNU",
+    "Concepts": [
+      "Vector Space (벡터 공간)",
+      "Matrix Operations (행렬 연산)",
+      "Eigenvalues & Eigenvectors (고유값과 고유벡터)",
+      "Linear Transformation (선형 변환)",
+      "Orthogonality (직교성)"
+    ],
+    "Prerequisites": [],
+    "Description": "공학 및 경제학 등에 필요한 선형대수 이론과 응용 방법을 습득하여 수학적 사고력과 컴퓨터공학 응용 능력을 기른다.",
+    "COSS_Link": { "Score": 10, "Field": "인공지능/딥러닝수학" },
+    "Competency": ["Matrix Theory", "Mathematical Modeling", "Python(NumPy) Basics"]
+  },
+  {
+    "ID": "JBNU_CE_05",
+    "Title": "이산수학",
+    "Source": "JBNU",
+    "Concepts": [
+      "Set Theory (집합론)",
+      "Propositional Logic (명제 논리)",
+      "Graph Theory (그래프 이론)",
+      "Combinatorics (조합론)",
+      "Recurrence Relations (점화식)"
+    ],
+    "Prerequisites": [],
+    "Description": "이산 수학의 이론을 디지털 컴퓨터 기능에 맞게 재구성하고, 전산 분야 이론을 수학적 언어로 정리하는 방법론을 공부한다.",
+    "COSS_Link": { "Score": 8, "Field": "알고리즘/AI기초" },
+    "Competency": ["Logical Thinking", "Proof Techniques", "Algorithm Analysis Foundation"]
+  },
+  {
+    "ID": "JBNU_CE_06",
+    "Title": "컴퓨터공학총론",
+    "Source": "JBNU",
+    "Concepts": [
+      "Computer Science Overview (컴퓨터공학 개요)",
+      "Data Representation (데이터 표현)",
+      "OS & Network Basics (운영체제 및 네트워크 기초)",
+      "Software Life Cycle (소프트웨어 생명주기)",
+      "Recent Tech Trends (최신 기술 동향)"
+    ],
+    "Prerequisites": [],
+    "Description": "컴퓨터공학 전공생이 4년간 배울 내용을 주제별로 소개하고, 최신 동향 파악 및 학습 동기를 부여한다.",
+    "COSS_Link": { "Score": 4, "Field": "IT 교양/진로탐색" },
+    "Competency": ["IT Literacy", "Career Planning", "Tech Roadmap Understanding"]
+  },
+  {
+    "ID": "JBNU_CE_07",
+    "Title": "알고리즘",
+    "Source": "JBNU",
+    "Concepts": [
+      "Time Complexity Analysis (시간 복잡도 분석)",
+      "Divide and Conquer (분할 정복)",
+      "Dynamic Programming (동적 계획법)",
+      "Greedy Algorithms (탐욕 알고리즘)",
+      "Graph Search (BFS/DFS) (그래프 탐색)"
+    ],
+    "Prerequisites": ["JBNU_CE_01", "JBNU_CE_05"],
+    "Description": "주어진 문제를 이해하고 효율적인 알고리즘을 설계 및 분석하는 능력을 배양하며, 컴퓨터 공학 응용 분야의 핵심 기초를 다진다.",
+    "COSS_Link": { "Score": 9, "Field": "AI/데이터분석 최적화" },
+    "Competency": ["Problem Solving", "Algorithm Optimization", "Python/C++ Coding Test Prep"]
+  },
+  {
+    "ID": "JBNU_CE_08",
+    "Title": "컴퓨터구조",
+    "Source": "JBNU",
+    "Concepts": [
+      "Instruction Set Architecture (명령어 집합 구조)",
+      "CPU Pipelining (CPU 파이프라이닝)",
+      "Memory Hierarchy & Cache (메모리 계층과 캐시)",
+      "Computer Arithmetic (컴퓨터 연산)",
+      "I/O Systems (입출력 시스템)"
+    ],
+    "Prerequisites": ["JBNU_CE_03"],
+    "Description": "컴퓨터 구조와 프로그래밍 환경을 이해하고, 프로젝트를 통해 하드웨어 설계 개념 습득 및 실습을 수행한다.",
+    "COSS_Link": { "Score": 5, "Field": "시스템 소프트웨어/HPC" },
+    "Competency": ["Computer Organization", "Assembly Language", "System Optimization"]
+  },
+  {
+    "ID": "JBNU_CE_09",
+    "Title": "객체지향프로그래밍",
+    "Source": "JBNU",
+    "Concepts": [
+      "Java OOP Concepts (자바 객체지향 개념)",
+      "Encapsulation & Inheritance (캡슐화와 상속)",
+      "Polymorphism & Interface (다형성과 인터페이스)",
+      "GUI Programming (Swing/AWT) (GUI 프로그래밍)",
+      "Event Handling (이벤트 처리)"
+    ],
+    "Prerequisites": ["JBNU_CE_02"],
+    "Description": "JAVA 언어를 통해 객체지향 프로그래밍의 기본 개념(캡슐화, 상속, 다형성)을 익히고 GUI 및 웹 프로그래밍 기초를 학습한다.",
+    "COSS_Link": { "Score": 6, "Field": "백엔드/앱개발" },
+    "Competency": ["Java", "Swing/JFX", "Design Pattern Basics"]
+  },
+  {
+    "ID": "JBNU_CE_10",
+    "Title": "데이터통신",
+    "Source": "JBNU",
+    "Concepts": [
+      "OSI 7 Layer Model (OSI 7계층 모델)",
+      "Signal Encoding (신호 인코딩)",
+      "Multiplexing (다중화)",
+      "Error Detection & Correction (오류 검출 및 수정)",
+      "Packet Switching (패킷 교환)"
+    ],
+    "Prerequisites": [],
+    "Description": "네트워크 통신을 위한 요소 기술과 인터네트워킹 기술, 근거리 네트워크 시스템 기술을 습득한다.",
+    "COSS_Link": { "Score": 6, "Field": "네트워크/IoT" },
+    "Competency": ["Network Theory", "Protocol Analysis", "Data Transmission Principles"]
+  },
+  {
+    "ID": "JBNU_CE_11",
+    "Title": "리눅스프로그래밍",
+    "Source": "JBNU",
+    "Concepts": [
+      "System Calls (시스템 호출)",
+      "Process Management (프로세스 관리)",
+      "IPC (Inter-Process Communication)",
+      "Socket Programming (소켓 프로그래밍)",
+      "Shell Scripting (쉘 스크립팅)"
+    ],
+    "Prerequisites": ["JBNU_CE_02"],
+    "Description": "리눅스 시스템의 기본 개념과 커맨드를 익히고, 시스템 콜 및 프로세스 간 통신(IPC), 소켓 프로그래밍 실습을 통해 시스템 레벨의 프로그래밍 능력을 배양함",
+    "COSS_Link": { "Score": 7, "Field": "백엔드/클라우드인프라" },
+    "Competency": ["Linux/Unix", "POSIX API", "Multi-threading (Pthreads)"]
+  },
+  {
+    "ID": "JBNU_CE_12",
+    "Title": "초급프로젝트",
+    "Source": "JBNU",
+    "Concepts": [
+      "System Design (시스템 설계)",
+      "Implementation Strategy (구현 전략)",
+      "Debugging & Testing (디버깅 및 테스트)",
+      "Project Documentation (프로젝트 문서화)",
+      "Team Collaboration (팀 협업)"
+    ],
+    "Prerequisites": ["JBNU_CE_01", "JBNU_CE_02"],
+    "Description": "프로그래밍 언어를 이용하여 초급 단계의 시스템을 직접 설계하고 구현하며, 실제 소프트웨어 개발 생명주기를 경험함",
+    "COSS_Link": { "Score": 4, "Field": "소프트웨어 개발 실무" },
+    "Competency": ["Project Management", "Git/GitHub", "Problem Solving"]
+  },
+  {
+    "ID": "JBNU_CE_13",
+    "Title": "확률및통계",
+    "Source": "JBNU",
+    "Concepts": [
+      "Probability Distributions (확률 분포)",
+      "Bayesian Inference (베이지안 추론)",
+      "Hypothesis Testing (가설 검정)",
+      "Random Variables (확률 변수)",
+      "Statistical Analysis (통계적 분석)"
+    ],
+    "Prerequisites": ["JBNU_CE_04"],
+    "Description": "컴퓨터공학 및 자연현상 시뮬레이션에 필요한 확률적 분포와 통계적 처리 기법을 습득하여 데이터 분석 및 문제 해결 능력을 기름",
+    "COSS_Link": { "Score": 10, "Field": "인공지능/데이터사이언스" },
+    "Competency": ["Data Analysis", "R/Python (SciPy)", "Statistical Modeling"]
+  },
+  {
+    "ID": "JBNU_CE_14",
+    "Title": "데이터베이스",
+    "Source": "JBNU",
+    "Concepts": [
+      "Relational Database Model (관계형 데이터베이스 모델)",
+      "SQL (Structured Query Language)",
+      "Normalization (정규화)",
+      "Transaction Management (트랜잭션 관리)",
+      "Data Indexing (데이터 인덱싱)"
+    ],
+    "Prerequisites": ["JBNU_CE_01"],
+    "Description": "대량의 데이터로부터 효율적인 데이터베이스를 구축하고 검색하는 이론을 학습하며, SQL 및 데이터 모델링 기술을 습득함",
+    "COSS_Link": { "Score": 9, "Field": "데이터 엔지니어링" },
+    "Competency": ["SQL", "MySQL/Oracle", "ERD Design"]
+  },
+  {
+    "ID": "JBNU_CE_15",
+    "Title": "운영체제",
+    "Source": "JBNU",
+    "Concepts": [
+      "Process Synchronization (프로세스 동기화)",
+      "Memory Management (메모리 관리)",
+      "Virtual Memory (가상 메모리)",
+      "CPU Scheduling (CPU 스케줄링)",
+      "File Systems (파일 시스템)"
+    ],
+    "Prerequisites": ["JBNU_CE_08", "JBNU_CE_11"],
+    "Description": "운영체제의 핵심 원리인 프로세스, 메모리, 입출력 관리를 이해하고 시스템 자원을 효율적으로 활용하는 능력을 배양함",
+    "COSS_Link": { "Score": 6, "Field": "시스템 소프트웨어" },
+    "Competency": ["OS Internals", "Concurrency Control", "System Tuning"]
+  },
+  {
+    "ID": "JBNU_CE_16",
+    "Title": "인공지능",
+    "Source": "JBNU",
+    "Concepts": [
+      "Machine Learning Basics (머신러닝 기초)",
+      "Search Algorithms (탐색 알고리즘)",
+      "Knowledge Representation (지식 표현)",
+      "Neural Networks Intro (신경망 기초)",
+      "Intelligent Agents (지능형 에이전트)"
+    ],
+    "Prerequisites": ["JBNU_CE_01", "JBNU_CE_13"],
+    "Description": "인간의 지능 영역을 공학적으로 구현하기 위한 제반 기술을 학습하고, 머신러닝 및 지능형 프로그램 개발 능력을 함양함",
+    "COSS_Link": { "Score": 10, "Field": "인공지능 핵심" },
+    "Competency": ["Python", "Scikit-Learn", "AI Algorithms"]
+  },
+  {
+    "ID": "JBNU_CE_17",
+    "Title": "모바일프로그래밍",
+    "Source": "JBNU",
+    "Concepts": [
+      "Mobile App Architecture (모바일 앱 아키텍처)",
+      "UI/UX Implementation (UI/UX 구현)",
+      "Activity Lifecycle (액티비티 생명주기)",
+      "Sensor Integration (센서 연동)",
+      "Mobile Networking (모바일 네트워킹)"
+    ],
+    "Prerequisites": ["JBNU_CE_09"],
+    "Description": "스마트폰 환경에 적합한 프로그래밍 기초를 이해하고 모바일 소프트웨어 구조 분석 및 실제 앱 구축 능력을 기룸",
+    "COSS_Link": { "Score": 5, "Field": "모바일 애플리케이션" },
+    "Competency": ["Android/iOS", "Kotlin/Swift", "Mobile API Usage"]
+  },
+  {
+    "ID": "JBNU_CE_18",
+    "Title": "수치해석및최적화",
+    "Source": "JBNU",
+    "Concepts": [
+      "Numerical Integration (수치 적분)",
+      "Optimization Algorithms (최적화 알고리즘)",
+      "Root Finding (근 찾기)",
+      "Matrix Decomposition (행렬 분해)",
+      "Error Analysis (오차 분석)"
+    ],
+    "Prerequisites": ["JBNU_CE_04", "JBNU_CE_02"],
+    "Description": "공학적 문제 해결을 위한 수학적 모델링과 프로그래밍 기법을 학습하며, 비선형 방정식 및 최적화 문제를 해결하는 능력을 배양함",
+    "COSS_Link": { "Score": 9, "Field": "AI 최적화/시뮬레이션" },
+    "Competency": ["MATLAB/Python", "Numerical Algorithms", "Mathematical Modeling"]
+  },
+  {
+    "ID": "JBNU_CE_19",
+    "Title": "프로그래밍언어론",
+    "Source": "JBNU",
+    "Concepts": [
+      "Language Paradigms (언어 패러다임)",
+      "Syntax & Semantics (구문과 의미론)",
+      "Type Systems (타입 시스템)",
+      "Functional Programming (함수형 프로그래밍)",
+      "Logic Programming (논리 프로그래밍)"
+    ],
+    "Prerequisites": ["JBNU_CE_01"],
+    "Description": "다양한 프로그래밍 언어의 정의, 역사, 기본 원리를 이해하고 구조적/논리적 측면에서 언어의 패러다임을 학습함",
+    "COSS_Link": { "Score": 3, "Field": "컴퓨터 과학 이론" },
+    "Competency": ["Language Analysis", "BNF Notation", "Lambda Calculus"]
+  },
+  {
+    "ID": "JBNU_CE_20",
+    "Title": "컴퓨터네트워크",
+    "Source": "JBNU",
+    "Concepts": [
+      "TCP/IP Stack (TCP/IP 스택)",
+      "Routing Algorithms (라우팅 알고리즘)",
+      "Congestion Control (혼잡 제어)",
+      "Application Layer Protocols (응용 계층 프로토콜)",
+      "Network Security Basics (네트워크 보안 기초)"
+    ],
+    "Prerequisites": ["JBNU_CE_10"],
+    "Description": "컴퓨터 상호 간 통신을 위한 네트워크 전반을 소프트웨어적 관점에서 학습하며 인터넷 작동 원리와 프로토콜을 심층 이해함",
+    "COSS_Link": { "Score": 7, "Field": "네트워크/분산시스템" },
+    "Competency": ["Socket Programming", "Wireshark", "Network Architecture"]
+  },
+  {
+    "ID": "JBNU_CE_21",
+    "Title": "기계학습",
+    "Source": "JBNU",
+    "Concepts": [
+      "Neural Networks (신경망)",
+      "Support Vector Machine (SVM)",
+      "Ensemble Methods (앙상블 기법)",
+      "Pattern Recognition (패턴 인식)",
+      "Deep Learning Basics (딥러닝 기초)"
+    ],
+    "Prerequisites": ["JBNU_CE_16", "JBNU_CE_04", "JBNU_CE_13"],
+    "Description": "인공지능 전공 필수 과목으로, 인식 문제를 푸는 기초 이론과 신경망, SVM 등을 학습하고 오픈 소스를 활용한 실습을 통해 실무 능력을 배양함",
+    "COSS_Link": { "Score": 10, "Field": "머신러닝/딥러닝" },
+    "Competency": ["Python (PyTorch/TensorFlow)", "Scikit-Learn", "Model Training"]
+  },
+  {
+    "ID": "JBNU_CE_22",
+    "Title": "데이터마이닝",
+    "Source": "JBNU",
+    "Concepts": [
+      "Clustering (군집화)",
+      "Classification & Regression (분류 및 회귀)",
+      "Recommender Systems (추천 시스템)",
+      "Association Rule Mining (연관 규칙 마이닝)",
+      "Dimensionality Reduction (차원 축소)"
+    ],
+    "Prerequisites": ["JBNU_CE_14", "JBNU_CE_07"],
+    "Description": "대규모 데이터에서 정보를 분석하는 이론과 알고리즘(군집화, 추천 시스템 등)을 학습하고 Python을 활용해 실제 데이터를 분석함",
+    "COSS_Link": { "Score": 9, "Field": "데이터사이언스" },
+    "Competency": ["Python (Pandas/Numpy)", "Data Visualization", "Algorithm Implementation"]
+  },
+  {
+    "ID": "JBNU_CE_23",
+    "Title": "디지털시스템설계",
+    "Source": "JBNU",
+    "Concepts": [
+      "HDL Syntax (하드웨어 기술 언어 문법)",
+      "FPGA Design Flow (FPGA 설계 흐름)",
+      "Synthesis & Simulation (합성 및 시뮬레이션)",
+      "Digital Logic Design (디지털 논리 설계)",
+      "Timing Analysis (타이밍 분석)"
+    ],
+    "Prerequisites": ["JBNU_CE_03", "JBNU_CE_08"],
+    "Description": "HDL(Hardware Description Language)의 기본 문법을 익히고 이를 활용하여 디지털 시스템을 설계하는 기법을 학습함",
+    "COSS_Link": { "Score": 3, "Field": "반도체/하드웨어 설계" },
+    "Competency": ["Verilog/VHDL", "FPGA Tools", "Hardware Modeling"]
+  },
+  {
+    "ID": "JBNU_CE_24",
+    "Title": "산학실전캡스톤1",
+    "Source": "JBNU",
+    "Concepts": [
+      "Requirement Analysis (요구사항 분석)",
+      "Project Planning (프로젝트 기획)",
+      "Self-directed Learning (자기주도 학습)",
+      "Technical Documentation (기술 문서 작성)",
+      "Presentation Skills (발표 능력)"
+    ],
+    "Prerequisites": ["JBNU_CE_12"],
+    "Description": "산업체 수요 기반의 SW 프로젝트 주제를 선정하여, 학생 스스로 필요한 지식을 학습하고 구현, 결과 보고, 데모를 수행하는 종합 설계 과정",
+    "COSS_Link": { "Score": 5, "Field": "실무 프로젝트" },
+    "Competency": ["Cooperation", "Problem Definition", "Full-stack Development"]
+  },
+  {
+    "ID": "JBNU_CE_25",
+    "Title": "소프트웨어공학",
+    "Source": "JBNU",
+    "Concepts": [
+      "Software Life Cycle (소프트웨어 생명주기)",
+      "UML (Unified Modeling Language)",
+      "Requirements Engineering (요구공학)",
+      "Testing & Verification (테스트 및 검증)",
+      "Maintenance (유지보수)"
+    ],
+    "Prerequisites": ["JBNU_CE_09"],
+    "Description": "소프트웨어의 정의, 구조, 기능을 이해하고 요구분석, 명세, 구현, 검증 등 개발 전 과정을 학습하며 UML 도구를 활용해 실습함",
+    "COSS_Link": { "Score": 6, "Field": "PM/QA/SE" },
+    "Competency": ["UML Diagramming", "Software Architecture", "QA Methodologies"]
+  },
+  {
+    "ID": "JBNU_CE_26",
+    "Title": "암호론",
+    "Source": "JBNU",
+    "Concepts": [
+      "Symmetric Key Cryptography (대칭키 암호)",
+      "Public Key Cryptography (공개키 암호)",
+      "Hash Functions (해시 함수)",
+      "Digital Signatures (전자 서명)",
+      "Cryptanalysis Basics (암호 해독 기초)"
+    ],
+    "Prerequisites": ["JBNU_CE_05", "JBNU_CE_13"],
+    "Description": "현대 암호 기술의 주요 이론과 최신 동향을 이해하고, 국내외 표준 암호 기술 및 응용 지식을 습득함",
+    "COSS_Link": { "Score": 8, "Field": "정보보안/블록체인" },
+    "Competency": ["Encryption Algorithms", "Security Protocols", "Mathematical Cryptography"]
+  },
+  {
+    "ID": "JBNU_CE_27",
+    "Title": "웹서비스설계",
+    "Source": "JBNU",
+    "Concepts": [
+      "Web Architecture (웹 아키텍처)",
+      "Frontend/Backend Integration (프론트/백엔드 통합)",
+      "REST API Design (REST API 설계)",
+      "Multimedia Processing (멀티미디어 처리)",
+      "Web Interface Design (웹 인터페이스 설계)"
+    ],
+    "Prerequisites": ["JBNU_CE_09", "JBNU_CE_14"],
+    "Description": "웹 프로그래밍의 기본 개념과 멀티미디어 정보처리 기술을 학습하고, 이를 바탕으로 실제 웹 서비스를 구축하는 실습을 진행함",
+    "COSS_Link": { "Score": 8, "Field": "풀스택 웹 개발" },
+    "Competency": ["HTML/CSS/JS", "Web Frameworks", "API Development"]
+  },
+  {
+    "ID": "JBNU_CE_28",
+    "Title": "컴퓨터그래픽스",
+    "Source": "JBNU",
+    "Concepts": [
+      "3D Rendering Pipeline (3D 렌더링 파이프라인)",
+      "Geometric Transformations (기하 변환)",
+      "Shading & Lighting (쉐이딩 및 조명)",
+      "Rasterization (래스터화)",
+      "Texture Mapping (텍스처 매핑)"
+    ],
+    "Prerequisites": ["JBNU_CE_04", "JBNU_CE_02"],
+    "Description": "컴퓨터 그래픽스의 이론 및 구현법을 이해하고, 현재 널리 사용되는 최신 기법을 학습하여 실용적인 그래픽스 구현 능력을 갖춤",
+    "COSS_Link": { "Score": 7, "Field": "게임/메타버스/VR" },
+    "Competency": ["OpenGL/DirectX", "Computer Graphics Theory", "3D Math"]
+  },
+  {
+    "ID": "JBNU_CE_29",
+    "Title": "클라우드컴퓨팅",
+    "Source": "JBNU",
+    "Concepts": [
+      "Cloud Service Models (IaaS, PaaS, SaaS)",
+      "Virtualization (가상화 기술)",
+      "Auto Scaling (오토 스케일링)",
+      "Deployment Pipeline (배포 파이프라인)",
+      "Containerization (컨테이너화)"
+    ],
+    "Prerequisites": ["JBNU_CE_20", "JBNU_CE_15"],
+    "Description": "AWS, Google Cloud 등 상용 클라우드 서비스를 활용해 실제 웹 서비스를 배포하고 Auto Scaling 등을 적용하는 실습을 진행함",
+    "COSS_Link": { "Score": 9, "Field": "클라우드 엔지니어링" },
+    "Competency": ["AWS/GCP/Azure", "Docker/Kubernetes", "DevOps Basics"]
+  },
+  {
+    "ID": "JBNU_CE_30",
+    "Title": "IT창업",
+    "Source": "JBNU",
+    "Concepts": [
+      "Business Model Generation (비즈니스 모델 수립)",
+      "Intellectual Property Rights (지적재산권)",
+      "Market Analysis (시장 분석)",
+      "Startup Strategy (창업 전략)",
+      "Tech Entrepreneurship (기술 기업가정신)"
+    ],
+    "Prerequisites": [],
+    "Description": "SW 기술 창업에 필요한 전반적인 내용과 IT 시장 흐름을 이해하고, 창업 아이템 구체화 및 기업 운영 지식을 학습함",
+    "COSS_Link": { "Score": 3, "Field": "창업/비즈니스" },
+    "Competency": ["Business Planning", "Market Research", "Startup Management"]
+  },
+  {
+    "ID": "JBNU_CE_31",
+    "Title": "네트워크보안",
+    "Source": "JBNU",
+    "Concepts": [
+      "Network Threats & Attacks (네트워크 위협 및 공격)",
+      "Firewalls & IDS (방화벽 및 침입 탐지 시스템)",
+      "Secure Protocols (SSL/TLS, IPSec) (보안 프로토콜)",
+      "VPN Technology (가상 사설망 기술)",
+      "Penetration Testing Basics (모의 해킹 기초)"
+    ],
+    "Prerequisites": ["JBNU_CE_20", "JBNU_CE_26"],
+    "Description": "컴퓨터 네트워크의 보안 위협 및 대응 방안을 익히고, 해킹 기법 분석 및 대응 시스템 구축 실습을 수행함",
+    "COSS_Link": { "Score": 9, "Field": "정보보안/사이버보안" },
+    "Competency": ["Network Forensics", "Packet Analysis", "Security Policy Design"]
+  },
+  {
+    "ID": "JBNU_CE_32",
+    "Title": "산학실전캡스톤2",
+    "Source": "JBNU",
+    "Concepts": [
+      "Advanced Project Design (심화 프로젝트 설계)",
+      "AI/IoT Integration (AI/IoT 융합)",
+      "System Optimization (시스템 최적화)",
+      "Technical Presentation (기술 발표)",
+      "Team Management (팀 관리)"
+    ],
+    "Prerequisites": ["JBNU_CE_24"],
+    "Description": "인공지능, IoT, 클라우드 등 신기술을 중심으로 한 산업체 수요 기반 프로젝트를 주도적으로 구현하고 문제 해결 역량을 강화함",
+    "COSS_Link": { "Score": 6, "Field": "실무 프로젝트 심화" },
+    "Competency": ["Full-Cycle Development", "Technology Integration", "Prototype Production"]
+  },
+  {
+    "ID": "JBNU_CE_33",
+    "Title": "인간-컴퓨터상호작용",
+    "Source": "JBNU",
+    "Concepts": [
+      "UX Design Principles (UX 디자인 원칙)",
+      "Cognitive Psychology (인지 심리학)",
+      "Usability Testing (사용성 평가)",
+      "Multimodal Interface (다중 모드 인터페이스)",
+      "Universal Design (유니버설 디자인)"
+    ],
+    "Prerequisites": ["JBNU_CE_27"],
+    "Description": "인간의 인지적 특성을 이해하고 사용자 중심의 인터페이스(UI/UX)를 설계, 구현, 평가하는 방법론을 학습함",
+    "COSS_Link": { "Score": 7, "Field": "HCI/UI/UX" },
+    "Competency": ["User Research", "Prototyping Tools (Figma)", "Interaction Design"]
+  },
+  {
+    "ID": "JBNU_CE_34",
+    "Title": "오픈소스소프트웨어개발",
+    "Source": "JBNU",
+    "Concepts": [
+      "Open Source Licensing (오픈소스 라이선스)",
+      "Git Workflow (Git 워크플로우)",
+      "CI/CD Pipelines (지속적 통합/배포)",
+      "Code Review Culture (코드 리뷰 문화)",
+      "Contribution Strategy (기여 전략)"
+    ],
+    "Prerequisites": ["JBNU_CE_12"],
+    "Description": "오픈소스 생태계의 가치를 이해하고, 대규모 OSS 프로젝트 분석 및 기여(Contribution) 과정을 통해 협업 능력을 배양함",
+    "COSS_Link": { "Score": 6, "Field": "DevOps/오픈소스" },
+    "Competency": ["Git/GitHub Advanced", "Code Analysis", "Collaboration Tools"]
+  },
+  {
+    "ID": "JBNU_CE_35",
+    "Title": "임베디드시스템",
+    "Source": "JBNU",
+    "Concepts": [
+      "Embedded Architecture (임베디드 아키텍처)",
+      "Firmware Programming (펌웨어 프로그래밍)",
+      "Interrupt Handling (인터럽트 처리)",
+      "Sensor Control (센서 제어)",
+      "RTOS Basics (실시간 운영체제 기초)"
+    ],
+    "Prerequisites": ["JBNU_CE_08", "JBNU_CE_15"],
+    "Description": "내장형 시스템의 하드웨어 구성과 동작 원리를 이해하고, 센서 및 액추에이터를 제어하는 펌웨어 개발 실습을 진행함",
+    "COSS_Link": { "Score": 7, "Field": "IoT/임베디드" },
+    "Competency": ["C/Embedded C", "Microcontroller (Arduino/RPi)", "Hardware Control"]
+  },
+  {
+    "ID": "JBNU_CE_36",
+    "Title": "센서네트워크",
+    "Source": "JBNU",
+    "Concepts": [
+      "WSN Architecture (무선 센서 네트워크 구조)",
+      "Zigbee/IEEE 802.15.4 (통신 프로토콜)",
+      "Embedded OS (TinyOS/Contiki)",
+      "IoT Monitoring (IoT 모니터링)",
+      "Energy Efficiency (에너지 효율성)"
+    ],
+    "Prerequisites": ["JBNU_CE_10"],
+    "Description": "다양한 센서들로 구성된 네트워크 구조와 프로토콜을 학습하고, 환경/헬스케어 모니터링 등 IoT 응용 프로그램을 개발함",
+    "COSS_Link": { "Score": 8, "Field": "IoT/네트워크" },
+    "Competency": ["Network Programming", "Sensor Integration", "IoT Protocols"]
+  },
+  {
+    "ID": "JBNU_CE_37",
+    "Title": "컴파일러",
+    "Source": "JBNU",
+    "Concepts": [
+      "Lexical Analysis (어휘 분석)",
+      "Syntax Analysis (구문 분석)",
+      "Semantic Analysis (의미 분석)",
+      "Code Generation (코드 생성)",
+      "Optimization Techniques (최적화 기법)"
+    ],
+    "Prerequisites": ["JBNU_CE_01", "JBNU_CE_19"],
+    "Description": "프로그래밍 언어 번역기의 원리를 이해하고, 언어 인식 및 분석 과정을 통해 실제 컴파일러 또는 인터프리터를 구현하는 능력을 함양함",
+    "COSS_Link": { "Score": 4, "Field": "시스템 소프트웨어" },
+    "Competency": ["Automata Theory", "Parser Generators (Yacc/Lex)", "Language Design"]
+  },
+  {
+    "ID": "JBNU_CE_38",
+    "Title": "자연어처리",
+    "Source": "JBNU",
+    "Concepts": [
+      "Word Embedding (단어 임베딩)",
+      "Sequence Modeling (RNN/LSTM) (시퀀스 모델링)",
+      "Transformer & BERT (트랜스포머와 BERT)",
+      "Machine Translation (기계 번역)",
+      "Dialogue Systems (대화 시스템)"
+    ],
+    "Prerequisites": ["JBNU_CE_21", "JBNU_CE_16"],
+    "Description": "딥러닝 기반의 자연어처리 핵심 기술(임베딩, 트랜스포머 등)을 학습하고 챗봇, 번역기 등 AI 응용 서비스를 구현함",
+    "COSS_Link": { "Score": 10, "Field": "인공지능/NLP" },
+    "Competency": ["PyTorch/TensorFlow", "Hugging Face Transformers", "NLP Pipelines"]
+  },
+  {
+    "ID": "JBNU_CE_39",
+    "Title": "컴퓨터비전",
+    "Source": "JBNU",
+    "Concepts": [
+      "Image Processing (영상 처리)",
+      "Feature Detection (특징점 검출)",
+      "Object Recognition (객체 인식)",
+      "3D Reconstruction (3차원 복원)",
+      "Convolutional Neural Networks (CNN)"
+    ],
+    "Prerequisites": ["JBNU_CE_04", "JBNU_CE_16"],
+    "Description": "시각 정보를 획득, 처리, 분석하는 컴퓨터 비전의 기초와 최신 딥러닝 기법을 학습하여 영상 처리 및 객체 인식 시스템을 구현함",
+    "COSS_Link": { "Score": 10, "Field": "인공지능/비전" },
+    "Competency": ["OpenCV", "Deep Learning for Vision", "Image Analysis"]
+  },
+  {
+    "ID": "JBNU_CE_40",
+    "Title": "게임및혼합현실",
+    "Source": "JBNU",
+    "Concepts": [
+      "Game Engine Architecture (게임 엔진 아키텍처)",
+      "VR/AR Principles (가상/증강현실 원리)",
+      "Physics Engine (물리 엔진)",
+      "3D Interaction (3D 인터랙션)",
+      "XR Application Dev (XR 응용 개발)"
+    ],
+    "Prerequisites": ["JBNU_CE_28"],
+    "Description": "게임 엔진의 동작 원리와 XR(VR/AR) 구현 기술을 학습하고, 혼합현실 응용 분야의 최신 이슈와 개발 방법을 다룸",
+    "COSS_Link": { "Score": 7, "Field": "메타버스/게임개발" },
+    "Competency": ["Unity/Unreal Engine", "C#/C++", "XR SDKs"]
+  },
+  {
+    "ID": "JBNU_CE_41",
+    "Title": "산학실전캡스톤3",
+    "Source": "JBNU",
+    "Concepts": [
+      "Advanced Problem Solving (고급 문제 해결)",
+      "Industrial Cooperation (산학 협력)",
+      "Commercialization Strategy (사업화 전략)",
+      "Mentoring & Consulting (멘토링 및 컨설팅)",
+      "Portfolio Development (포트폴리오 개발)"
+    ],
+    "Prerequisites": ["JBNU_CE_32"],
+    "Description": "창업 및 IT기업 인턴십과 연계하여 실무 전문가와의 협업을 통해 개발 능력을 고도화하고, 사회 진출을 위한 최종적인 문제 해결 역량을 완성함",
+    "COSS_Link": { "Score": 5, "Field": "현장 실무/취업 연계" },
+    "Competency": ["Professional Networking", "Advanced Project Mgmt", "Real-world Deployment"]
+  },
+  {
+    "ID": "JBNU_CE_42",
+    "Title": "시스템보안",
+    "Source": "JBNU",
+    "Concepts": [
+      "Buffer Overflow (버퍼 오버플로우)",
+      "Secure Coding (시큐어 코딩)",
+      "Access Control Models (접근 제어 모델)",
+      "Malware Analysis (악성코드 분석)",
+      "System Hardening (시스템 강화)"
+    ],
+    "Prerequisites": ["JBNU_CE_15", "JBNU_CE_02"],
+    "Description": "시스템 운영 및 서비스 개발 시 발생할 수 있는 보안 이슈(취약점)를 학습하고, 안전한 시스템 설정을 위한 보안 기술을 습득함",
+    "COSS_Link": { "Score": 9, "Field": "시스템 보안/해킹방어" },
+    "Competency": ["Linux Security", "C/C++ Security", "Vulnerability Scanning"]
+  },
+  {
+    "ID": "JBNU_CE_43",
+    "Title": "암호응용",
+    "Source": "JBNU",
+    "Concepts": [
+      "PKI (Public Key Infrastructure)",
+      "Blockchain Basics (블록체인 기초)",
+      "Authentication Protocols (인증 프로토콜)",
+      "Cryptographic Standards (암호 표준)",
+      "Privacy Preservation (프라이버시 보호)"
+    ],
+    "Prerequisites": ["JBNU_CE_26"],
+    "Description": "현대 암호 기술의 심화 이론과 최신 동향을 파악하고, 블록체인이나 인증 시스템 등 실제 산업 표준에 적용되는 암호 응용 기술을 학습함",
+    "COSS_Link": { "Score": 8, "Field": "블록체인/핀테크보안" },
+    "Competency": ["Blockchain (Ethereum/Hyperledger)", "Security Architecture", "Crypto Libraries"]
+  },
+  {
+    "ID": "JBNU_CE_44",
+    "Title": "정보검색",
+    "Source": "JBNU",
+    "Concepts": [
+      "Inverted Index (역색인)",
+      "Ranking Algorithms (TF-IDF/BM25)",
+      "Web Crawling (웹 크롤링)",
+      "Search Evaluation (검색 성능 평가)",
+      "Relevance Feedback (적합성 피드백)"
+    ],
+    "Prerequisites": ["JBNU_CE_01", "JBNU_CE_07"],
+    "Description": "인터넷 정보 검색의 핵심 이론인 색인, 랭킹, 문서 표현을 학습하고 검색 엔진의 구조와 성능 평가 방법을 다룸",
+    "COSS_Link": { "Score": 9, "Field": "검색엔진/데이터엔지니어링" },
+    "Competency": ["Elasticsearch/Solr", "Python (NLP)", "Search Engine Design"]
+  },
+  {
+    "ID": "JBNU_CE_45",
+    "Title": "SW인턴십1",
+    "Source": "JBNU",
+    "Concepts": [
+      "Field Practice (현장 실습)",
+      "Corporate Culture (기업 문화)",
+      "Practical Skill Application (실무 기술 적용)",
+      "Troubleshooting in Production (운영 환경 문제해결)",
+      "Career Development (경력 개발)"
+    ],
+    "Prerequisites": ["JBNU_CE_06"],
+    "Description": "학교에서 배운 이론을 산업 현장에서 직접 실습하며 기업 문화를 익히고, 취업 후 즉시 활용 가능한 실무 적응력과 설계 능력을 배양함",
+    "COSS_Link": { "Score": 5, "Field": "인턴십/커리어" },
+    "Competency": ["Communication", "Industry Tools (Jira/Slack)", "Agile Methodology"]
+  }
+]
