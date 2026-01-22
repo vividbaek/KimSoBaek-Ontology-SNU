@@ -1,7 +1,10 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from backend.data_loader import DataLoader
-from backend.models import GraphResponse
+from backend.models import GraphResponse, Subject
+from backend.recommender import Recommender
+from backend.reasoner import Reasoner
+from typing import List
 
 app = FastAPI(title="Curriculum Recommender System")
 
@@ -14,21 +17,20 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-from backend.recommender import Recommender
-from typing import List
+# ... existing middleware ...
 
-# ... existing imports ...
-
-# Initialize Data Loader
+# Initialize Data Loader & Reasoner
 data_loader = DataLoader()
 recommender: Recommender = None
+reasoner: Reasoner = None
 
 @app.on_event("startup")
 async def startup_event():
-    global recommender
+    global recommender, reasoner
     data_loader.load_data()
     recommender = Recommender(data_loader.nodes, data_loader.edges, data_loader.subjects)
-    print(f"Data Loaded: {len(data_loader.nodes)} nodes, {len(data_loader.edges)} edges")
+    reasoner = Reasoner() # Load RDF Graph
+    print(f"Data Loaded: {len(data_loader.nodes)} nodes. RDF Triples: {len(reasoner.g)}")
 
 @app.get("/health")
 def health_check():
@@ -38,11 +40,71 @@ def health_check():
 def get_graph():
     return GraphResponse(nodes=data_loader.nodes, edges=data_loader.edges)
 
-@app.get("/roadmap", response_model=List[dict]) 
-# Using List[dict] to return subject dictionaries directly or we can use Subject model if properly exported
-# For simplicity let's return list of Subject models dumps? No, response_model can handle it.
+@app.get("/roadmap", response_model=List[dict])
 def get_roadmap(grade: str, track: str):
-    if not recommender:
-        return []
-    roadmap = recommender.get_roadmap(grade, track)
-    return roadmap
+    # Using SPARQL Reasoner preferred now, but let's keep old one as fallback or switch?
+    # User asked for "Ontology Inference". Let's use Reasoner.
+    if reasoner:
+        return reasoner.recommend_roadmap(track)
+    return []
+
+@app.get("/recommend/interest", response_model=List[dict])
+def recommend_interest(subject_title: str):
+    if reasoner:
+        return reasoner.recommend_forward(subject_title)
+    return []
+
+@app.get("/chat")
+def chat(query: str):
+    """
+    Simple Rule-based Chatbot (NL -> SPARQL Logic)
+    """
+    query = query.lower()
+    answer = ""
+    roadmap = []
+    
+    try:
+        if "추천" in query or "로드맵" in query or "어떻게" in query:
+            # Check for Track keywords
+            if "ai" in query or "인공지능" in query:
+                roadmap = reasoner.recommend_roadmap("AI 모델러")
+                answer = "🤖 **AI 모델러** 트랙을 위한 로드맵을 찾았습니다!<br>기초 수학부터 시작해서 딥러닝 심화 과정까지 수강하시는 것을 추천합니다."
+            elif "데이터" in query:
+                roadmap = reasoner.recommend_roadmap("데이터 엔지니어")
+                answer = "📊 **데이터 엔지니어** 트랙 로드맵입니다.<br>데이터베이스와 빅데이터 처리 기술을 중심으로 학습해보세요."
+            elif "백엔드" in query:
+                roadmap = reasoner.recommend_roadmap("백엔드 개발자")
+                answer = "💻 **백엔드 개발자** 로드맵입니다.<br>Java와 시스템 설계를 탄탄히 다지는 것이 중요합니다."
+            else:
+                 answer = "어떤 분야에 관심이 있으신가요? (예: AI, 데이터, 백엔드)"
+        
+        elif "다음" in query or "뭐 들을까" in query or "후수" in query:
+             # Extract Subject Name? (Simple heuristic)
+             # Try to match known subjects in query
+             found_subj = None
+             # Iterate all nodes to find match in query (Inefficient but okay for small graph)
+             # Optimally we should use Named Entity Recognition
+             known_titles = ["선형대수학", "자료구조", "파이썬", "머신러닝", "딥러닝", "자바", "프로그래밍"]
+             for t in known_titles:
+                 if t in query:
+                     found_subj = t
+                     break
+             
+             if found_subj:
+                 roadmap = reasoner.recommend_forward(found_subj)
+                 if roadmap:
+                     names = ", ".join([s['Title'] for s in roadmap[:3]])
+                     answer = f"🔍 **{found_subj}**을(를) 재밌게 들으셨다면, 다음 단계로 **{names}** 등을 추천합니다.<br>관련된 과목들을 그래프에 표시해 드렸어요!"
+                 else:
+                     answer = f"🤔 **{found_subj}** 과목의 다음 단계 정보가 충분하지 않네요."
+             else:
+                 answer = "어떤 과목을 들으셨나요? (예: 선형대수학 듣고 뭐 들을까?)"
+                 
+        else:
+            answer = "죄송해요, 아직 배우고 있는 중이라 간단한 질문만 이해할 수 있어요.<br>예: 'AI 트랙 추천해줘', '선형대수학 다음엔 뭐 들어?'"
+
+        return {"answer": answer, "roadmap": roadmap}
+        
+    except Exception as e:
+        print(f"Chat Error: {e}")
+        return {"answer": "오류가 발생했습니다.", "roadmap": []}

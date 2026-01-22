@@ -1,0 +1,76 @@
+@prefix : <http://example.org/curriculum/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Classes
+:Subject a owl:Class ;
+    rdfs:label "Subject" .
+
+:JBNUSubject a owl:Class ;
+    rdfs:subClassOf :Subject ;
+    rdfs:label "JBNU Subject" .
+
+:COSSSubject a owl:Class ;
+    rdfs:subClassOf :Subject ;
+    rdfs:label "COSS Subject" .
+
+:Competency a owl:Class ;
+    rdfs:label "Competency/Skill" .
+
+:Track a owl:Class ;
+    rdfs:label "Career Track" .
+
+# Object Properties
+:hasPrerequisite a owl:ObjectProperty, owl:TransitiveProperty ;
+    rdfs:domain :Subject ;
+    rdfs:range :Subject ;
+    rdfs:label "has prerequisite" .
+
+:teaches a owl:ObjectProperty ;
+    rdfs:domain :Subject ;
+    rdfs:range :Competency ;
+    rdfs:label "teaches competency" .
+
+:requiresCompetency a owl:ObjectProperty ;
+    rdfs:domain :Track ;
+    rdfs:range :Competency ;
+    rdfs:label "requires competency" .
+
+:relatedTo a owl:ObjectProperty, owl:SymmetricProperty ;
+    rdfs:domain :Subject ;
+    rdfs:range :Subject ;
+    rdfs:label "is related to" .
+
+:equivalentTo a owl:ObjectProperty, owl:SymmetricProperty ;
+    rdfs:subPropertyOf owl:sameAs ;
+    rdfs:domain :Subject ;
+    rdfs:range :Subject ;
+    rdfs:label "is equivalent to" .
+
+# Datatype Properties
+:hasTitle a owl:DatatypeProperty ;
+    rdfs:domain :Subject ;
+    rdfs:range xsd:string .
+
+:hasSemester a owl:DatatypeProperty ;
+    rdfs:domain :Subject ;
+    rdfs:range xsd:string .
+
+:hasDescription a owl:DatatypeProperty ;
+    rdfs:domain :Subject ;
+    rdfs:range xsd:string .
+
+:offeredInSource a owl:DatatypeProperty ;
+    rdfs:domain :Subject ;
+    rdfs:range xsd:string .
+
+# Pre-defined Tracks
+:AIModeler a :Track ;
+    rdfs:label "AI 모델러" ;
+    :requiresCompetency :Competency_MachineLearning, :Competency_DeepLearning, :Competency_Python .
+
+:DataEngineer a :Track ;
+    rdfs:label "데이터 엔지니어" ;
+    :requiresCompetency :Competency_Database, :Competency_BigData .

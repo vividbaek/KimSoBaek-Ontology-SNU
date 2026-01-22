@@ -1,9 +1,9 @@
 import networkx as nx
 from typing import List, Set, Dict
-from backend.models import Subject, GraphNode, GraphEdge, COSSLink
+from backend.models import Subject, Node, Edge
 
 class Recommender:
-    def __init__(self, nodes: List[GraphNode], edges: List[GraphEdge], subjects: Dict[str, Subject]):
+    def __init__(self, nodes: List[Node], edges: List[Edge], subjects: Dict[str, Subject]):
         self.subjects = subjects
         self.graph = nx.DiGraph()
         

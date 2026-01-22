@@ -1,37 +1,28 @@
-from typing import List, Optional, Dict
-from pydantic import BaseModel, Field
-
-class COSSLink(BaseModel):
-    Score: int
-    Field: str
+from pydantic import BaseModel
+from typing import List, Optional
 
 class Subject(BaseModel):
-    id: str = Field(alias="ID")
-    title: str = Field(alias="Title")
-    source: str = Field(alias="Source")
-    semester: str = Field(alias="Semester", default="Unknown")
-    concepts: List[str] = Field(alias="Concepts", default_factory=list)
-    prerequisites: List[str] = Field(alias="Prerequisites", default_factory=list)
-    description: str = Field(alias="Description", default="")
-    competency: List[str] = Field(alias="Competency", default_factory=list)
-    coss_link: Optional[COSSLink] = Field(alias="COSS_Link", default=None)
-    
-    # Graph specific fields
-    type: str = "Subject"  # JBNU or COSS
-    related_to: List[str] = [] # List of IDs this subject is related to
+    ID: str
+    Title: str
+    Semester: str = "Unknown"
+    Concepts: List[str] = []
+    Prerequisites: List[str] = []
+    # New Field
+    Domain: str = "General" 
 
-class GraphNode(BaseModel):
+class Node(BaseModel):
     id: str
     label: str
-    type: str # 'JBNU' or 'COSS'
+    type: str # JBNU or COSS
     semester: str
     concepts: List[str]
+    domain: str # New Field for Grouping
 
-class GraphEdge(BaseModel):
+class Edge(BaseModel):
     source: str
     target: str
-    type: str # 'sameAs' or 'prerequisite'
-    
+    type: str # prerequisite or sameAs
+
 class GraphResponse(BaseModel):
-    nodes: List[GraphNode]
-    edges: List[GraphEdge]
+    nodes: List[Node]
+    edges: List[Edge]
